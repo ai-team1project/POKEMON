@@ -1,0 +1,85 @@
+.main__under {
+  width: 100vw;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  height: 66vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* 검은색 배경에 50% 투명도 */
+  z-index: 1; /* 오버레이가 이미지 위에 오도록 설정 */
+}
+
+.main__under__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 가로 4개 */
+  grid-template-rows: repeat(2, 1fr); /* 세로 2개 */
+
+  width: 1256px;
+  height: 410px;
+}
+
+.main__nuder__card {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  cursor: pointer; /* 커서를 포인터로 변경 */
+}
+
+.main__under__album {
+  display: flex;
+
+  width: 422px;
+  height: 313px;
+}
+
+.main__under__album > img {
+  width: 100%;
+  height: 100%;
+}
+
+.main__under__info {
+  opacity: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+
+  width: 475px;
+  height: 313px;
+
+  position: absolute;
+  top: 0; /* 이미지 위로 텍스트가 오도록 설정 */
+  left: 0; /* 텍스트가 좌측에서 시작되도록 설정 */
+  z-index: 2; /* 텍스트가 이미지 위에 오도록 설정 */
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  transition: opacity 0.3s ease; /* 부드러운 투명도 효과 */
+}
+
+.main__nuder__card:hover .main__under__info {
+  opacity: 1; /* 마우스를 올리면 정보 표시 */
+}
+
+.main__under__info > button {
+  width: fit-content;
+
+  border: white;
+  padding: 7px 11px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 18px;
+  border-radius: 18px;
+  transition: background 0.3s ease;
+  background-color: transparency;
+}

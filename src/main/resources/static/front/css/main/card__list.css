@@ -1,0 +1,59 @@
+.card__list {
+  width: 100vw;
+  background-color: black;
+  padding: 40px 0;
+}
+
+.card__container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.crad__info {
+  width: 282px;
+  height: 368px;
+}
+
+.card__album {
+  width: 282px;
+  height: 186px;
+}
+
+.card__album > img {
+  width: 100%;
+  height: 100%;
+}
+
+.card__under {
+  display: flex;
+  flex-direction: column;
+
+  width: 282px;
+  height: 160px;
+
+  color: white;
+  background-color: red;
+
+  font-size: 22px;
+}
+
+.card__under__info {
+  margin: 20px;
+}
+
+.card__btn {
+  width: fit-content;
+
+  padding: 7px 11px;
+  border-radius: 16px;
+  border: none;
+
+  font-weight: 500;
+
+  background-color: #4b2323;
+  color: white;
+
+  margin-top: 25px;
+}

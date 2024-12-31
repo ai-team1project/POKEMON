@@ -1,0 +1,100 @@
+
+.animation__under {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 1250px;
+  margin: 0 auto;
+
+  width: 100vw;
+  padding: 50px 0 130px;
+}
+
+.animation__under > ul {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+
+  padding: 0 20px 13px 20px;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  border-bottom: 2px solid #eee;
+}
+
+.animation__under__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 가로 4개의 구역 */
+  grid-template-rows: repeat(2, 1fr); /* 세로 2개의 구역 */
+
+  width: 1250px;
+  height: 880px;
+}
+
+.animation__under__card {
+  width: 312px;
+  height: 400px;
+  margin: 20px 0;
+  padding: 0 9px;
+  position: relative; /* 자식 요소의 위치 설정을 위한 relative */
+  overflow: hidden;
+}
+
+.animation__under__card__album {
+  position: absolute;
+  width: 282px;
+  height: 400px;
+}
+
+.animation__under__card__album > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율을 유지하면서 크기 맞추기 */
+}
+
+.animation__under__containe__info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  width: 232px;
+  height: 320px;
+
+  background-color: rgba(0, 0, 0, 0.7); /* 배경색을 연하게 */
+  padding: 40px 25px;
+
+  position: absolute;
+  bottom: 0;
+  left: 9px;
+  right: 0;
+
+  transform: translateY(100%); /* 처음엔 텍스트 영역이 보이지 않도록 */
+  z-index: 2; /* 텍스트가 배경 위에 올라오도록 */
+  color: white; /* 텍스트 색상 */
+}
+
+.animation__under__containe__info > h3 {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.animation__under__contain__inner {
+  word-wrap: break-word; /* 단어가 상자 밖으로 넘치지 않도록 강제로 줄바꿈 */
+  word-break: break-word; /* 길게 이어진 단어도 줄바꿈 */
+  overflow: hidden; /* 상자 밖으로 텍스트가 넘지 않도록 */
+
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.animation__under__card:hover .animation__under__overlay {
+  opacity: 1; /* 호버 시 배경색이 보이도록 */
+}
+
+.animation__under__card:hover .animation__under__containe__info {
+  transform: translateY(0); /* 호버 시 텍스트가 보이도록 */
+}

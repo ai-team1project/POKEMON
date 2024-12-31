@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>애니메이션</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" th:href="@{/front/css/common/reset.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/animation/animation__list.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/animation/animation__top.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/animation/animation__under.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/animation/animation__video.css}" />
+    <script th:src="@{/front/js/animation/animation.js}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+
+<section class="animation__top">
+    <!-- Swiper -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="https://pokemonkorea.co.kr/2025_M8">
+                    <article class="animation__top__cover">
+                        <div class="animation__top__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/12/2024-12-02_09-35-32-79746-1733099732.png"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="animation__top__info">
+                            <h2 class="animation__top__tit">
+                                「극장판 포켓몬스터 AG: 뮤와 파동의 용사 루카리오」2025년
+                                1월 개봉 예정
+                                <img
+                                        src="https://pokemonkorea.co.kr/img/icon/icon_more2_lg.png"
+                                        alt=""
+                                />
+                            </h2>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="https://pokemonkorea.co.kr/2025_M8">
+                    <article class="animation__top__cover">
+                        <div class="animation__top__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/12/2024-12-02_09-35-32-79746-1733099732.png"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="animation__top__info">
+                            <h2 class="animation__top__tit">
+                                「극장판 포켓몬스터 AG: 뮤와 파동의 용사 루카리오」2025년
+                                1월 개봉 예정
+                                <img
+                                        src="https://pokemonkorea.co.kr/img/icon/icon_more2_lg.png"
+                                        alt=""
+                                />
+                            </h2>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="https://pokemonkorea.co.kr/2025_M8">
+                    <article class="animation__top__cover">
+                        <div class="animation__top__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/12/2024-12-02_09-35-32-79746-1733099732.png"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="animation__top__info">
+                            <h2 class="animation__top__tit">
+                                「극장판 포켓몬스터 AG: 뮤와 파동의 용사 루카리오」2025년
+                                1월 개봉 예정
+                                <img
+                                        src="https://pokemonkorea.co.kr/img/icon/icon_more2_lg.png"
+                                        alt=""
+                                />
+                            </h2>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="https://pokemonkorea.co.kr/2025_M8">
+                    <article class="animation__top__cover">
+                        <div class="animation__top__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/12/2024-12-02_09-35-32-79746-1733099732.png"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="animation__top__info">
+                            <h2 class="animation__top__tit">
+                                「극장판 포켓몬스터 AG: 뮤와 파동의 용사 루카리오」2025년
+                                1월 개봉 예정
+                                <img
+                                        src="https://pokemonkorea.co.kr/img/icon/icon_more2_lg.png"
+                                        alt=""
+                                />
+                            </h2>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+<section class="animation__new__list">
+    <h2>새로운 소식</h2>
+    <div class="animation__new__container">
+        <a th:href="${animationNewList.pageUrl}"  th:each="animationNewList : ${animationNewList}">
+            <article class="animation__new__card">
+                <div class="animation__new__card__album">
+                    <img
+                            th:src="${animationNewList.imageUrl}"
+                            alt=""
+                    />
+                </div>
+                <div class="animation__new__content">
+                    <div class="aanimation__new__info">
+                        <div class="animation__upper">
+                            <p th:text="${animationNewList.title}">주니어 토너먼트 2024 시즌2 시작!</p>
+                        </div>
+                        <div class="animation__card__under">
+                            <p th:text="${animationNewList.sub_title}">카드 게임</p>
+                            <p th:text="${animationNewList.next_title}">2024년 12월 12일</p>
+                            <button class="animation__btn">
+                                <img
+                                        th:src="${animationNewList.sub_image}"
+                                        alt=""
+                                />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </a>
+    </div>
+    <div class="animation__more">
+        <a href="https://pokemonkorea.co.kr/news/3">
+            <div class="animation__more__text">더보기</div>
+            <div class="animation__more__image">
+                <img src="https://pokemonkorea.co.kr/img/icon/icon_more.png" />
+            </div>
+        </a>
+    </div>
+</section>
+<section class="animation__video">
+    <h2>새로운 영상</h2>
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <article class="animation__video__swiper">
+                    <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/eJWz1Wr7lEM?si=6cPI2uAH5aY4oJlY"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                    ></iframe>
+                </article>
+            </div>
+            <div class="swiper-slide">
+                <article class="animation__video__swiper">
+                    <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/eJWz1Wr7lEM?si=6cPI2uAH5aY4oJlY"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                    ></iframe>
+                </article>
+            </div>
+            <div class="swiper-slide">
+                <article class="animation__video__swiper">
+                    <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/eJWz1Wr7lEM?si=6cPI2uAH5aY4oJlY"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                    ></iframe>
+                </article>
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <div class="animation__video__more">
+        <a href="https://pokemonkorea.co.kr/news/3">
+            <div class="animation__video__more__text">더보기</div>
+            <div class="animation__video__more__image">
+                <img src="https://pokemonkorea.co.kr/img/icon/icon_more.png" />
+            </div>
+        </a>
+    </div>
+</section>
+<section class="animation__under">
+    <ul>
+        <li>TV 애니메이션</li>
+        <li>극장판</li>
+    </ul>
+    <div class="animation__under__container">
+        <a href="https://pokemonkorea.co.kr/animation/view/14069">
+            <article class="animation__under__card">
+                <div class="animation__under__card__album">
+                    <img
+                            src="https://data1.pokemonkorea.co.kr/newdata/2024/01/2024-01-16_14-10-44-17065-1705381844.png"
+                            alt=""
+                    />
+                </div>
+                <div class="animation__under__containe__info">
+                    <h3>포켓몬스터(2023)</h3>
+                    <p class="animation__under__contain__inner">
+                        포켓몬스터, 줄여서 말하면 포켓몬! 이 별에 사는 신비하고 신비한
+                        생물. 하늘, 바다, 숲, 길거리에서 찾아볼 수 있다. 신비한 펜던트를
+                        가진 팔데아 출신의 소녀, 리코. 수수께끼의 몬스터볼을 가진 관동
+                        출신의 소년, 로드. 광대한 포켓몬스터의 세계를…
+                    </p>
+                </div>
+            </article>
+        </a>
+    </div>
+    <div class="animation__more">
+        <a href="https://pokemonkorea.co.kr/news/3">
+            <div class="animation__more__text">더보기</div>
+            <div class="animation__more__image">
+                <img src="https://pokemonkorea.co.kr/img/icon/icon_more.png" />
+            </div>
+        </a>
+    </div>
+
+
+</section>
+</body>
+</html>

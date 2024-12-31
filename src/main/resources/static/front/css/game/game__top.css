@@ -1,0 +1,66 @@
+.game__top {
+  width: 99vw;
+  height: 80vh;
+  background-color: rgba(247, 255, 199, 0.5);
+}
+
+.game__top__cover {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 1127px;
+  height: 845px;
+}
+
+.game__top__album {
+  width: 1127px;
+  height: 627px;
+}
+
+.game__top__album > img {
+  width: 100%;
+  height: 100%;
+}
+
+.game__top__info {
+  height: 110px;
+  padding: 50px 110px 41px 70px;
+
+  background-color: black;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+
+  position: relative;
+  text-align: left;
+}
+
+.game__top__tit > img {
+  position: absolute;
+  top: 85px;
+  right: 50px;
+}
+
+.game__top .swiper-button-next,
+.game__top .swiper-button-prev {
+  color: #000000;
+  background-color: rgb(255, 255, 255); /* 버튼 배경 투명도 */
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.game__top .swiper-button-next {
+  right: 100px;
+}
+
+.game__top .swiper-button-prev {
+  left: 100px;
+}

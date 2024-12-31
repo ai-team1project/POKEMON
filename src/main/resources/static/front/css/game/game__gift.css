@@ -1,0 +1,87 @@
+.game__gift {
+  width: 100vw;
+
+  background-image: url("https://pokemonkorea.co.kr/img/game/gift_bg.jpg");
+
+  padding: 70px 0;
+}
+
+.game__gift > h2 {
+  text-align: center;
+
+  color: rgb(0, 0, 0);
+
+  margin-bottom: 40px;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.game__gift__swiper {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.game__gift__swiper > a {
+  width: 300px;
+}
+
+.game__gift__swiper > img {
+  width: 100%;
+  height: 290px;
+  padding: 0 0 12px;
+}
+
+.game__gift__info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  width: 100%;
+  color: black;
+  margin-top: 20px;
+}
+
+.info__tit {
+  width: fit-content;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #000;
+  color: white;
+  display: flex;
+  margin: 0 auto;
+  padding: 7px 11px;
+}
+
+.info__sub {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.game__gift .swiper-button-next,
+.game__gift .swiper-button-prev {
+  color: #000000;
+  background-color: rgb(255, 255, 255); /* 버튼 배경 투명도 */
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.game__gift .swiper-button-next {
+  right: 250px;
+}
+
+.game__gift .swiper-button-prev {
+  left: 250px;
+}

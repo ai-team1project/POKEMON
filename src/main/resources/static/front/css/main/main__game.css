@@ -1,0 +1,83 @@
+.main__game {
+  width: 100vw;
+  height: 60vh;
+  background-image: url("https://pokemonkorea.co.kr/img/main/sect_game_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 100px 0 140px;
+}
+
+.main__game__container {
+  display: flex;
+  gap: 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.main__game__left {
+  width: 530px;
+  height: 840px;
+
+  position: relative;
+  top: 0px;
+}
+
+.main__game__left > img {
+  width: 100%;
+  height: 100%;
+}
+
+.main_game__right > h2 {
+  text-align: center;
+  margin-bottom: 40px;
+
+  font-size: 50px;
+  font-weight: 700;
+
+  color: #fff;
+}
+
+.mina__game__right {
+  width: 830px;
+  height: 637px;
+}
+
+.main__game__card__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+
+  width: 830px;
+  height: 537px;
+}
+
+.main__game__card {
+  width: 277px;
+  height: 248px;
+}
+
+.main__game__album {
+  width: 237px;
+  height: 143px;
+}
+
+.main__game__album > img {
+  width: 100%;
+  height: 100%;
+}
+
+.main__game__info {
+  width: 237px;
+  height: 100px;
+
+  background-color: white;
+  color: black;
+}
+
+.main__game__info__inner {
+  padding: 15px 13px 0;
+  font-size: 20px;
+  font-weight: 700;
+}

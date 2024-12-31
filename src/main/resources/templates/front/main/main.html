@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-<link rel="stylesheet" th:href="@{/front/css/style.css}">
-<link rel="stylesheet" th:href="@{/front/css/common/reset.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/swiper__container.css}"/>
-<link rel="stylesheet" th:href="@{/front/css/main/card__list.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/new__list.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/new__video.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/main__game.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/card__game.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/main__product.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/main__animation.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/main__under.css}" />
-<script th:src="@{/front/js/main/main.js}" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" th:href="@{/front/css/common/reset.css"} />
+    <link rel="stylesheet" th:href="@{/front/css/main/swiper__container.css}"/>
+    <link rel="stylesheet" th:href="@{/front/css/main/card__list.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/new__list.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/new__video.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/main__game.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/card__game.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/main__product.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/main__animation.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/main__under.css}" />
+    <script th:src="@{/front/js/main/main.js}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
 <main>
-    <header th:replace="~{front/outlines/_header::common}"></header>
-
     <section class="swiper__container">
         <!-- Slider main container -->
         <div class="swiper">
@@ -345,7 +346,7 @@
                             <img th:src="${mainProduct.imageUrl}" alt=""/>
                         </div>
                         <div class="main__product__info">
-                            <span th:text="${mainProduct.title}">포켓몬 스토어 「팬텀」 키캡</span>
+                            <span th:text="${mainUnder.title}">포켓몬 스토어 「팬텀」 키캡</span>
                         </div>
                     </a>
                 </article>
@@ -412,8 +413,8 @@
     <section class="main__under">
         <div class="overlay"></div>
         <div class="main__under__container">
-            <a th:href="${mainUnder.pageUrl}" th:each="mainUnder : ${mainUnder}">
-                <article class="main__nuder__card">
+            <a th:href="${mainUnder.pageUrl}">
+                <article class="main__nuder__card" th:each="mainUnder : ${mainUnder}">
                     <div class="main__under__album">
                         <img
                                 th:src="${mainUnder.imageUrl}"
@@ -428,6 +429,5 @@
             </a>
         </div>
     </section>
-    <footer th:replace="~{front/outlines/_footer::common}"></footer>
 </main>
 </html>
