@@ -1,0 +1,54 @@
+.new__video {
+  width: 100vw;
+  height: 80vh;
+  background-color: #000;
+
+  padding: 70px 0;
+}
+
+.new__video > h2 {
+  text-align: center;
+
+  color: white;
+
+  margin-bottom: 40px;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.new__video__swiper {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.new__video__swiper > iframe {
+  width: 763px;
+  height: 475px;
+  display: flex;
+  margin: 0 auto;
+}
+
+/* new__video 슬라이더 */
+.new__video .swiper-button-next,
+.new__video .swiper-button-prev {
+  color: #000000;
+  background-color: rgb(255, 255, 255); /* 버튼 배경 투명도 */
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.new__video .swiper-button-next {
+  right: 250px;
+}
+
+.new__video .swiper-button-prev {
+  left: 250px;
+}

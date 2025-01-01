@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-<link rel="stylesheet" th:href="@{/front/css/style.css}">
-<link rel="stylesheet" th:href="@{/front/css/common/reset.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/swiper__container.css}"/>
-<link rel="stylesheet" th:href="@{/front/css/main/card__list.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/new__list.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/new__video.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/main__game.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/card__game.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/main__product.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/main__animation.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/main__under.css}" />
-<script th:src="@{/front/js/main/main.js}" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" th:href="@{/front/css/common/reset.css"} />
+    <link rel="stylesheet" th:href="@{/front/css/main/swiper__container.css}"/>
+    <link rel="stylesheet" th:href="@{/front/css/main/card__list.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/new__list.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/new__video.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/main__game.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/card__game.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/main__product.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/main__animation.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/main/main__under.css}" />
+    <script th:src="@{/front/js/main/main.js}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
 <main>
-    <header th:replace="~{front/outlines/_header::common}"></header>
-
     <section class="swiper__container">
         <!-- Slider main container -->
         <div class="swiper">
@@ -29,37 +30,28 @@
                 <div class="swiper-slide" th:each="mainSwiper : ${mainSwiper}">
                     <article class="main__swiper">
                         <a th:href="${mainSwiper.pageUrl}">
-                            <div class="main__album">
-                                <img
-                                        th:src="${mainSwiper.imageUrl}"
-                                        alt=""
-                                />
-                            </div>
-                            </a>
+                            <img
+                                    th:src="${mainSwiper.imageUrl}"
+                                    alt=""
+                            /></a>
                     </article>
                 </div>
                 <div class="swiper-slide" th:each="mainSwiper : ${mainSwiper}">
                     <article class="main__swiper">
                         <a th:href="${mainSwiper.pageUrl}">
-                            <div class="main__album">
-                                <img
-                                        th:src="${mainSwiper.imageUrl}"
-                                        alt=""
-                                />
-                            </div>
-                        </a>
+                            <img
+                                    th:src="${mainSwiper.imageUrl}"
+                                    alt=""
+                            /></a>
                     </article>
                 </div>
                 <div class="swiper-slide" th:each="mainSwiper : ${mainSwiper}">
                     <article class="main__swiper">
                         <a th:href="${mainSwiper.pageUrl}">
-                            <div class="main__album">
-                                <img
-                                        th:src="${mainSwiper.imageUrl}"
-                                        alt=""
-                                />
-                            </div>
-                        </a>
+                            <img
+                                    th:src="${mainSwiper.imageUrl}"
+                                    alt=""
+                            /></a>
                     </article>
                 </div>
             </div>
@@ -221,23 +213,20 @@
         <div class="card__game__container">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" th:each="mainList : ${mainList}">
                         <article class="card__game__content">
                             <div class="card__game__album">
-                                <img
-                                        src="https://data1.pokemonkorea.co.kr/newdata/2024/09/2024-09-09_09-22-09-62411-1725841329.png"
-                                        alt=""
-                                />
+                                <img th:src="${mainList.imageUrl}" alt=""/>
                             </div>
                             <div class="card__game__info">
-                                <h3 class="card__game__tit">
+                                <h3 th:text="${mainList.title}" class="card__game__tit">
                                     다채로운 에너지로 기술을 구사해보자!
                                 </h3>
-                                <p class="card__game__sub">
+                                <p th:text="${mainList.sub_title}" class="card__game__sub">
                                     포켓몬 카드 게임 확장팩 「변환의 가면」 9월 대발매!
                                 </p>
                                 <div class="card__game_more">
-                                    <a href="https://pokemonkorea.co.kr/news">
+                                    <a th:href="${mainList.pageUrl}">
                                         <div class="new__more__text">더보기</div>
                                         <div class="card__game_more__image">
                                             <img
@@ -249,23 +238,20 @@
                             </div>
                         </article>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" th:each="mainList : ${mainList}">
                         <article class="card__game__content">
                             <div class="card__game__album">
-                                <img
-                                        src="https://data1.pokemonkorea.co.kr/newdata/2024/09/2024-09-09_09-22-09-62411-1725841329.png"
-                                        alt=""
-                                />
+                                <img th:src="${mainList.imageUrl}" alt=""/>
                             </div>
                             <div class="card__game__info">
-                                <h3 class="card__game__tit">
+                                <h3 th:text="${mainList.title}" class="card__game__tit">
                                     다채로운 에너지로 기술을 구사해보자!
                                 </h3>
-                                <p class="card__game__sub">
+                                <p th:text="${mainList.sub_title}" class="card__game__sub">
                                     포켓몬 카드 게임 확장팩 「변환의 가면」 9월 대발매!
                                 </p>
                                 <div class="card__game_more">
-                                    <a href="https://pokemonkorea.co.kr/news">
+                                    <a th:href="${mainList.pageUrl}">
                                         <div class="new__more__text">더보기</div>
                                         <div class="card__game_more__image">
                                             <img
@@ -277,23 +263,20 @@
                             </div>
                         </article>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" th:each="mainList : ${mainList}">
                         <article class="card__game__content">
                             <div class="card__game__album">
-                                <img
-                                        src="https://data1.pokemonkorea.co.kr/newdata/2024/09/2024-09-09_09-22-09-62411-1725841329.png"
-                                        alt=""
-                                />
+                                <img th:src="${mainList.imageUrl}" alt=""/>
                             </div>
                             <div class="card__game__info">
-                                <h3 class="card__game__tit">
+                                <h3 th:text="${mainList.title}" class="card__game__tit">
                                     다채로운 에너지로 기술을 구사해보자!
                                 </h3>
-                                <p class="card__game__sub">
+                                <p th:text="${mainList.sub_title}" class="card__game__sub">
                                     포켓몬 카드 게임 확장팩 「변환의 가면」 9월 대발매!
                                 </p>
                                 <div class="card__game_more">
-                                    <a href="https://pokemonkorea.co.kr/news">
+                                    <a th:href="${mainList.pageUrl}">
                                         <div class="new__more__text">더보기</div>
                                         <div class="card__game_more__image">
                                             <img
@@ -363,7 +346,7 @@
                             <img th:src="${mainProduct.imageUrl}" alt=""/>
                         </div>
                         <div class="main__product__info">
-                            <span th:text="${mainProduct.title}">포켓몬 스토어 「팬텀」 키캡</span>
+                            <span th:text="${mainUnder.title}">포켓몬 스토어 「팬텀」 키캡</span>
                         </div>
                     </a>
                 </article>
@@ -430,64 +413,8 @@
     <section class="main__under">
         <div class="overlay"></div>
         <div class="main__under__container">
-            <a th:href="${mainUnder.pageUrl}" th:each="mainUnder : ${mainUnder}">
-                <article class="main__nuder__card">
-                    <div class="main__under__album">
-                        <img
-                                th:src="${mainUnder.imageUrl}"
-                                alt=""
-                        />
-                    </div>
-                    <div class="main__under__info">
-                        <button th:text="${mainUnder.sub_title}">게임</button>
-                        <span th:text="${mainUnder.title}">「 Pokémon UNITE」</span>
-                    </div>
-                </article>
-            </a>
-            <a th:href="${mainUnder.pageUrl}" th:each="mainUnder : ${mainUnder}">
-                <article class="main__nuder__card">
-                    <div class="main__under__album">
-                        <img
-                                th:src="${mainUnder.imageUrl}"
-                                alt=""
-                        />
-                    </div>
-                    <div class="main__under__info">
-                        <button th:text="${mainUnder.sub_title}">게임</button>
-                        <span th:text="${mainUnder.title}">「 Pokémon UNITE」</span>
-                    </div>
-                </article>
-            </a>
-            <a th:href="${mainUnder.pageUrl}" th:each="mainUnder : ${mainUnder}">
-                <article class="main__nuder__card">
-                    <div class="main__under__album">
-                        <img
-                                th:src="${mainUnder.imageUrl}"
-                                alt=""
-                        />
-                    </div>
-                    <div class="main__under__info">
-                        <button th:text="${mainUnder.sub_title}">게임</button>
-                        <span th:text="${mainUnder.title}">「 Pokémon UNITE」</span>
-                    </div>
-                </article>
-            </a>
-            <a th:href="${mainUnder.pageUrl}" th:each="mainUnder : ${mainUnder}">
-                <article class="main__nuder__card">
-                    <div class="main__under__album">
-                        <img
-                                th:src="${mainUnder.imageUrl}"
-                                alt=""
-                        />
-                    </div>
-                    <div class="main__under__info">
-                        <button th:text="${mainUnder.sub_title}">게임</button>
-                        <span th:text="${mainUnder.title}">「 Pokémon UNITE」</span>
-                    </div>
-                </article>
-            </a>
-            <a th:href="${mainUnder.pageUrl}" th:each="mainUnder : ${mainUnder}">
-                <article class="main__nuder__card">
+            <a th:href="${mainUnder.pageUrl}">
+                <article class="main__nuder__card" th:each="mainUnder : ${mainUnder}">
                     <div class="main__under__album">
                         <img
                                 th:src="${mainUnder.imageUrl}"
@@ -502,6 +429,5 @@
             </a>
         </div>
     </section>
-    <footer th:replace="~{front/outlines/_footer::common}"></footer>
 </main>
 </html>
