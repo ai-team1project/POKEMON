@@ -3,11 +3,21 @@
 }
 
 .main__swiper {
+  display: flex;
+  justify-content: center;
+
   width: 100vw;
+  margin-top: 120px;
 }
 
-.main__swiper > img {
+.main__album {
+width: 1691px;
+height:628px;
+}
+
+.main__album > img {
   width: 100%;
+  height: 100%;
 }
 
 /* Swiper 버튼 공통 스타일 */

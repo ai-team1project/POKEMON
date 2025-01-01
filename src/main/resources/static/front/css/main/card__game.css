@@ -1,5 +1,7 @@
 .card__game {
   width: 100vw;
+  margin-top: 40px;
+  background: #f8f9fa;
 }
 
 .card__game > h2 {
@@ -22,10 +24,8 @@
   display: flex;
 
   justify-content: center;
-  gap: 100px;
+  gap: 90px;
 
-  width: 100%;
-  height: 100%;
 }
 
 .card__game__album {
@@ -102,3 +102,29 @@
   width: 100%;
   height: 100%;
 }
+
+/* new__video 슬라이더 */
+.card__game .swiper-button-next,
+.card__game .swiper-button-prev {
+  color: #000000;
+  background-color: rgb(255, 255, 255); /* 버튼 배경 투명도 */
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.card__game .swiper-button-next {
+  right: 30px;
+}
+
+.card__game .swiper-button-prev {
+  left: 30px;
+}
+

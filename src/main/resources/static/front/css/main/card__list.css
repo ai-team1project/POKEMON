@@ -40,8 +40,15 @@
 }
 
 .card__under__info {
+
   margin: 20px;
 }
+
+.card__under__info > span {
+      color: white;
+
+}
+
 
 .card__btn {
   width: fit-content;

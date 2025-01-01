@@ -67,6 +67,11 @@
   transition: opacity 0.3s ease; /* 부드러운 투명도 효과 */
 }
 
+
+.main__under__info > span {
+     color: white;
+}
+
 .main__nuder__card:hover .main__under__info {
   opacity: 1; /* 마우스를 올리면 정보 표시 */
 }
