@@ -1,0 +1,175 @@
+/* 카테고리 */
+
+.card-deck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 100px 0;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.card-deck > nav {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card-deck ul {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #343a40;
+
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+}
+
+.category:hover {
+  color: #6c757d;
+}
+
+.category:active {
+  color: black;
+  border-bottom: 5px solid #d63836;
+}
+
+.category {
+  text-decoration: none;
+  color: #b3b3b3;
+
+  font-size: 21px;
+  font-weight: bold;
+}
+
+/* 카드 레이아웃 */
+.grid-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* 2개의 열, 각 열은 1fr (fractional unit) */
+  grid-gap: 30px 20px; /* 그리드 항목 간 간격 */
+
+  position: relative;
+  z-index: 0;
+}
+
+/* 카드 */
+.card > a {
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  position: relative;
+  z-index: 1;
+  border-bottom: 5px solid #0080ff;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card__title {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+}
+
+.card__head {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.card__sub {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+}
+
+.card__sub > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+  border-bottom: none;
+  gap: 0;
+}
+
+.card__sub__date:before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0.8em;
+  margin: 0 10px;
+  border-left: 1px solid #9b9fa8;
+  opacity: 0.5;
+}
+
+.card__sub__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #0080ff;
+
+  border: none;
+  border-radius: 15px;
+  padding: 10px 13px;
+}
+
+/* 더보기 */
+.more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  border: none;
+  background-color: #343a40;
+
+  width: 450px;
+  padding: 20px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+
+  transform: skew(-20deg);
+}
+
+.more > button {
+  background-color: transparent;
+  all: unset; /* 모든 기본 스타일을 초기화 */
+  display: inline-block; /* 기본적인 블록 스타일 설정 */
+  cursor: pointer; /* 클릭 가능한 느낌 */
+  font: inherit; /* 부모 요소의 글꼴 상속 */
+  color: inherit; /* 부모 요소의 텍스트 색상 상속 */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transform: skew(20deg);
+}
+
+.more span {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
