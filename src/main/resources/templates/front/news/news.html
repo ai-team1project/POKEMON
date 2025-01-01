@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../common/reset.css" />
-    <link rel="stylesheet" href="css/card-deck.css" />
-    <link rel="stylesheet" href="css/link.css" />
-    <link rel="stylesheet" href="css/search.css" />
+    <title>소식</title>
+    <link rel="stylesheet" th:href="@{/front/css/style.css}">
+    <link rel="stylesheet" th:href="@{/front/css/common/reset.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/news/search.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/news/link.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/news/card-deck.css}" />
+
+
     <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -18,6 +21,8 @@
 </head>
 <body>
 <main>
+    <header th:replace="~{front/outlines/_header::common}"></header>
+
     <section class="search">
         <span>소식</span>
         <div class="search__bar">
@@ -31,7 +36,7 @@
     </section>
     <section class="link">
         <a class="logo" href="https://pokemonkorea.co.kr/">
-            <img src="img/main_logo.png" alt="" />
+            <img src="front/images/main_logo.png" alt="" />
         </a>
         <span>
           <i class="fa-solid fa-chevron-right"></i>
@@ -65,93 +70,29 @@
             </ul>
         </nav>
         <div class="grid-layout">
-            <article class="card">
-                <a class="" href="">
+            <article class="card" th:each="newsList : ${newsList}">
+
+                <a
+                        th:href="${newsList.pageUrl}"
+                        target="_self"
+                >
+
                     <div class="card__album">
                         <img
                                 class="card__album__img"
-                                src="img/2024-12-12_18-56-33-52636-1733997393.png"
+                                th:src="${newsList.imageUrl}"
                                 alt=""
                         />
                     </div>
                     <div class="card__title">
-                        <h1 class="card__head">주니어 토너먼트 2024 시즌2 시작!</h1>
-                        <div class="card__sub">
+                        <h1 class="card__head" th:text="${newsList.title}">주니어 토너먼트 2024 시즌2 시작!</h1>
+                        <div class="card__sub" th:text="${newsList.sub_title}">
                             <ul>
                                 <li class="card__sub__theme">카드 게임</li>
                                 <li class="card__sub__date">2024년 12월 12일</li>
                             </ul>
                             <button class="card__sub__button">
-                                <img src="img/icon_go.png" alt="" />
-                            </button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-            <article class="card">
-                <a class="" href="">
-                    <div class="card__album">
-                        <img
-                                class="card__album__img"
-                                src="img/2024-12-12_18-56-33-52636-1733997393.png"
-                                alt=""
-                        />
-                    </div>
-                    <div class="card__title">
-                        <h1 class="card__head">주니어 토너먼트 2024 시즌2 시작!</h1>
-                        <div class="card__sub">
-                            <ul>
-                                <li class="card__sub__theme">카드 게임</li>
-                                <li class="card__sub__date">2024년 12월 12일</li>
-                            </ul>
-                            <button class="card__sub__button">
-                                <img src="img/icon_go.png" alt="" />
-                            </button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-            <article class="card">
-                <a class="" href="">
-                    <div class="card__album">
-                        <img
-                                class="card__album__img"
-                                src="img/2024-12-12_18-56-33-52636-1733997393.png"
-                                alt=""
-                        />
-                    </div>
-                    <div class="card__title">
-                        <h1 class="card__head">주니어 토너먼트 2024 시즌2 시작!</h1>
-                        <div class="card__sub">
-                            <ul>
-                                <li class="card__sub__theme">카드 게임</li>
-                                <li class="card__sub__date">2024년 12월 12일</li>
-                            </ul>
-                            <button class="card__sub__button">
-                                <img src="img/icon_go.png" alt="" />
-                            </button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-            <article class="card">
-                <a class="" href="">
-                    <div class="card__album">
-                        <img
-                                class="card__album__img"
-                                src="img/2024-12-12_18-56-33-52636-1733997393.png"
-                                alt=""
-                        />
-                    </div>
-                    <div class="card__title">
-                        <h1 class="card__head">주니어 토너먼트 2024 시즌2 시작!</h1>
-                        <div class="card__sub">
-                            <ul>
-                                <li class="card__sub__theme">카드 게임</li>
-                                <li class="card__sub__date">2024년 12월 12일</li>
-                            </ul>
-                            <button class="card__sub__button">
-                                <img src="img/icon_go.png" alt="" />
+                                <img src="front/images/icon_go.png" alt="" />
                             </button>
                         </div>
                     </div>
@@ -167,6 +108,8 @@
             </button>
         </div>
     </section>
+
+    <footer th:replace="~{front/outlines/_footer::common}"></footer>
 </main>
 </body>
 </html>

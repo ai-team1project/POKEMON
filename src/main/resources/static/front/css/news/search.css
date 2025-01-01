@@ -11,7 +11,7 @@ a {
   gap: 20px;
   padding: 80px 20px;
 
-  background-image: url("../img/news_nav_bg.jpg");
+  background-image: url("front/images/news_nav_bg.jpg");
 }
 
 .search > span {

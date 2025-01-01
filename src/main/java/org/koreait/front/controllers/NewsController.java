@@ -12,8 +12,9 @@ import java.util.List;
 public class NewsController {
 
     @GetMapping("/news")
-    public String news (Model model) {
+    public String card (Model model) {
         List<BaseModel> newsList = new ArrayList<>();
+
         newsList.add(new BaseModel("포켓몬 카드 게임×환상의 포켓몬 GET 대작전!","카드 게임 2024년 11월 22일","https://data1.pokemonkorea.co.kr/newdata/2024/11/2024-11-22_18-30-28-22148-1732267828.png","https://pokemonkorea.co.kr/news/2/15458?cate=0&sword="));
         newsList.add(new BaseModel("스칼렛&바이올렛 확장팩 「초전브레이커」11월 대발매!"," 카드 게임 2024년 11월 19일","https://data1.pokemonkorea.co.kr/newdata/2024/11/2024-11-19_11-49-19-86393-1731984559.png","https://pokemoncard.co.kr/card/675"));
         newsList.add(new BaseModel("2025 코리안리그 시즌1 대회 참가 안내"," 카드 게임 2024년 11월 01일","https://data1.pokemonkorea.co.kr/newdata/2024/11/2024-11-01_15-15-57-14985-1730441757.jpg","https://pokemonkorea.co.kr/news/2/15030?cate=0&sword="));
