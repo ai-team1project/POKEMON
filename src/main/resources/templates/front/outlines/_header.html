@@ -16,7 +16,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/game/game">
                         <div>
                             <i class="icon game"></i>
                             <th:block th:text="#{게임}"></th:block>
@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a th:href="@{/animation}">
                         <div>
                             <i class="icon animation"></i>
                             <th:block th:text="#{애니메이션}"></th:block>
@@ -40,7 +40,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a th:href="@{/goods}">
                         <div>
                             <i class="icon products"></i>
                             <th:block th:text="#{상품}"></th:block>
@@ -67,6 +67,7 @@
                         <i class="icon login"></i>
                         <th:block th:text="#{MYPAGE}"></th:block>
                     </a>
+
                     <a th:if="${@memberUtil.isAdmin()}" th:href="@{/admin}" target="_blank">
                         <i class="icon login"></i>
                         <th:block th:text="#{사이트관리}"></th:block>
