@@ -55,13 +55,13 @@
   object-fit: cover; /* 이미지 비율을 유지하면서 크기 맞추기 */
 }
 
-.animation__under__containe__info {
+.animation__under__contain__info {
   display: flex;
   flex-direction: column;
   gap: 30px;
 
-  width: 232px;
-  height: 320px;
+  width: 281px;
+  height: 400px;
 
   background-color: rgba(0, 0, 0, 0.7); /* 배경색을 연하게 */
   padding: 40px 25px;
@@ -73,12 +73,13 @@
 
   transform: translateY(100%); /* 처음엔 텍스트 영역이 보이지 않도록 */
   z-index: 2; /* 텍스트가 배경 위에 올라오도록 */
-  color: white; /* 텍스트 색상 */
 }
 
-.animation__under__containe__info > h3 {
+.animation__under__contain__info > h3 {
   font-size: 23px;
   font-weight: 700;
+
+  color: white; /* 텍스트 색상 */
 }
 
 .animation__under__contain__inner {
@@ -89,12 +90,14 @@
   line-height: 1.5;
   font-size: 15px;
   font-weight: 500;
+
+  color: white;
 }
 
 .animation__under__card:hover .animation__under__overlay {
   opacity: 1; /* 호버 시 배경색이 보이도록 */
 }
 
-.animation__under__card:hover .animation__under__containe__info {
+.animation__under__card:hover .animation__under__contain__info {
   transform: translateY(0); /* 호버 시 텍스트가 보이도록 */
 }

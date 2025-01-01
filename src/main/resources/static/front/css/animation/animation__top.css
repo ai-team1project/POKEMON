@@ -1,0 +1,72 @@
+.animation__top {
+  width: 100vw;
+  height: 80vh;
+  background-color: rgba(247, 255, 199, 0.5);
+}
+
+.animation__top__cover {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 1127px;
+  height: 845px;
+
+  margin-top: 121px;
+}
+
+.animation__top__album {
+  width: 1127px;
+  height: 627px;
+}
+
+.animation__top__album > img {
+  width: 100%;
+  height: 100%;
+}
+
+.animation__top__info {
+  height: 110px;
+  padding: 35px 110px 41px 70px;
+
+  background-color: black;
+  color: #fff;
+  font-size: 27px;
+  font-weight: 700;
+
+  position: relative;
+  text-align: left;
+}
+
+.animation__top__tit {
+    color: white;
+}
+
+.animation__top__tit > img {
+  position: absolute;
+  top: 38px;
+  right: 50px;
+}
+
+.animation__top .swiper-button-next,
+.animation__top .swiper-button-prev {
+  color: #000000;
+  background-color: rgb(255, 255, 255); /* 버튼 배경 투명도 */
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.animation__top .swiper-button-next {
+  right: 100px;
+}
+
+.animation__top .swiper-button-prev {
+  left: 100px;
+}
