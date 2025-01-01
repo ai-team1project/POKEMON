@@ -6,6 +6,8 @@ a {
   width: 100vw;
   background-color: #f7f7f7;
   padding: 55px 0 70px;
+
+  margin-top: 80px;
 }
 
 .animation__new__list > h2 {
