@@ -6,14 +6,95 @@ main {
 /* 회원가입, 로그인 공통 E */
 
 /* 로그인 S */
+
+.login__layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+}
+
 .login-box {
     width: 470px;
     margin: 0 auto;
 }
 
+.login__logo__album {
+    width: 200px;
+}
+
 .login-logo {
     display: block;
     margin: 0 auto;
+
+    width:100%;
+
+
 }
 
+.input__box{
+  outline: none;
+  border: none;
+  font-size: 17px;
+  color: #6c757d;
+  width: 100%;
+  }
+
+.input__mapper {
+    width: 450px;
+    background-color: white;
+    padding: 15px 30px;
+    display: flex;
+
+    border: 1px solid #ced4da;
+    }
+
+.login__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  border: none;
+  background-color: black;
+
+  width: 450px;
+  padding: 20px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+
+  transform: skew(-20deg);
+}
+
+.links {
+    display:flex;
+    gap: 20px;
+
+    font-size: 15px;
+}
+
+.login_agree {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap: 10px;
+
+    background-color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 23px;
+
+    font-size: 18px;
+}
+
+.agree_arrow {
+    font-size:10px;
+    font-weight: 700px;
+}
 /* 로그인 E */
