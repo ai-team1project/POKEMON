@@ -109,7 +109,18 @@
 .card__head {
   font-weight: bolder;
   font-size: 20px;
+
+   display: -webkit-box;                /* 텍스트를 박스 형태로 배치 */
+   -webkit-box-orient: vertical;        /* 텍스트가 세로로 쌓이도록 설정 */
+   -webkit-line-clamp: 2;               /* 최대 두 줄까지만 표시 */
+   overflow: hidden;                    /* 넘치는 텍스트는 숨김 */
+   text-overflow: ellipsis;             /* 잘린 텍스트 끝에 '...'을 추가 */
+   line-height: 1.5em;                  /* 줄 높이 설정 */
+   max-height: 3em;                     /* 두 줄의 최대 높이 설정 (line-height * 2) */
+   position: relative;                  /* 자식 요소를 정확히 위치시키기 위해 relative 설정 */
 }
+
+
 
 .card__sub {
   display: flex;

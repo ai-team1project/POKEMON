@@ -13,7 +13,7 @@ main {
     justify-content: center;
     align-items: center;
 
-    gap: 15px;
+    gap: 10px;
 }
 
 .login-box {
@@ -23,6 +23,7 @@ main {
 
 .login__logo__album {
     width: 200px;
+    margin-bottom: 10px;
 }
 
 .login-logo {
@@ -57,6 +58,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 5px;
+  margin: 10px 0;
 
   border: none;
   background-color: black;
@@ -71,11 +73,37 @@ main {
   transform: skew(-20deg);
 }
 
+.auto-login {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.auto-login > input {
+    color: #666;
+    margin: 2px 0 0 0;
+}
+
+.auto-login > label {
+    color: #666;
+}
+
 .links {
     display:flex;
+    align-items:center;
+    justify-content: center;
     gap: 20px;
+    padding: 12px 150px;
+    border-bottom: 1px solid #d0d0d0;
 
     font-size: 15px;
+    color: #d0d0d0;
+}
+
+.links > a {
+    width: 95px;
+    color: #666;
 }
 
 .login_agree {
@@ -84,6 +112,7 @@ main {
     justify-content:center;
     align-items:center;
     gap: 10px;
+    margin:15px;
 
     background-color: white;
     border: none;
