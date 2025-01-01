@@ -98,3 +98,110 @@ main {
     font-weight: 700px;
 }
 /* 로그인 E */
+
+/* 회원가입 S */
+.join__container {
+    height: 1050px;
+    max-width: 580px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.join__content {
+    padding: 30px 25px 55px;
+}
+
+.content__form {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #bbb;
+}
+
+h2 {
+    font-size: 26px;
+    margin: 4px 0 25px;
+    height: 27px;
+}
+
+.auth-box {
+    padding: 0 0 10px 0;
+}
+
+.auth-code {
+    width: 300px;
+}
+
+.timer {
+    display: block;
+    padding-right: 10px;
+}
+
+.auth__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth__message {
+    display: flex;
+    align-items: center
+}
+
+.auth-btn {
+    cursor: pointer;
+}
+
+.row > input,
+.row > select {
+    margin: 0 0 10px 0;
+    width: 530px;
+    height: 53px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    border: 1px solid #bbb;
+    font-size: 14px;
+}
+
+.join__password {
+    display:block;
+    margin: 2px 0 10px 0;
+    font-size: 12px;
+    color: #767676;
+}
+
+.address-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.address-row > input {
+    width: 350px;
+}
+
+.search-address {
+    width: 170px;
+    height: 53px;
+    padding: 10px
+    font-weight: 400;
+    color: #fff;
+    background: #454545;
+    border: 1px solid #454545;
+}
+
+.gray {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+.join__btn {
+    width: 90%;
+    margin: 0 20px;
+    padding: 17px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    background: #da343c;
+    border: 1px solid #da343c;
+    transform: skew(-20deg);
+    cursor: pointer;
+}
+/* 회원가입 E */
