@@ -1,3 +1,7 @@
+body {
+	overflow-x: hidden;
+}
+
 .news {
   width: 100vw;
   background-color: #f7f7f7;
