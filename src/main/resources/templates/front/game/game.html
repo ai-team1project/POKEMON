@@ -9,14 +9,17 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" th:href="@{/front/css/style.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/common/reset.css}" />
     <link rel="stylesheet" th:href="@{/front/css/game/game_news.css}" />
     <link rel="stylesheet" th:href="@{/front/css/game/game.css}" />
     <link rel="stylesheet" th:href="@{/front/css/game/game__top.css}" />
     <link rel="stylesheet" th:href="@{/front/css/game/game__gift.css}" />
-    <script th:src="@{front/js/game/game.js}" defer></script>
+    <script th:src="@{front/js/game.js}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
+<header th:replace="~{front/outlines/_header::common}"></header>
     <section class="game__top">
     <!-- Swiper -->
     <div class="swiper">
@@ -219,6 +222,7 @@
             </div>
         </a>
     </div>
+    <footer th:replace="~{front/outlines/_footer::common}"></footer>
 </main>
 </body>
 </html>
