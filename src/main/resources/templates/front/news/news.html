@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{front/layouts/main}">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>소식</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" th:href="@{/front/css/style.css}">
-    <link rel="stylesheet" th:href="@{/front/css/common/reset.css}" />
+    <!--<link rel="stylesheet" th:href="@{/front/css/common/reset.css}" />-->
+    <link rel="stylesheet" th:href="@{/front/css/news/layout.css}" />
     <link rel="stylesheet" th:href="@{/front/css/news/search.css}" />
     <link rel="stylesheet" th:href="@{/front/css/news/link.css}" />
     <link rel="stylesheet" th:href="@{/front/css/news/card-deck.css}" />
@@ -20,9 +27,10 @@
     />
 </head>
 <body>
-<main>
-    <header th:replace="~{front/outlines/_header::common}"></header>
+<main layout:fragment="content">
+    <!--<header th:replace="~{front/outlines/_header::common}"></header>-->
 
+    <div class="container">
     <section class="search">
         <span>소식</span>
         <div class="search__bar">
@@ -38,7 +46,7 @@
         <a class="logo" href="https://pokemonkorea.co.kr/">
             <img src="front/images/main_logo.png" alt="" />
         </a>
-        <span>
+        <span >
           <i class="fa-solid fa-chevron-right"></i>
         </span>
         <a class="text" href="https://pokemonkorea.co.kr/news">소식</a>
@@ -86,13 +94,12 @@
                     </div>
                     <div class="card__title">
                         <h1 class="card__head" th:text="${newsList.title}">주니어 토너먼트 2024 시즌2 시작!</h1>
-                        <div class="card__sub" th:text="${newsList.sub_title}">
+                        <div class="card__sub">
                             <ul>
-                                <li class="card__sub__theme">카드 게임</li>
-                                <li class="card__sub__date">2024년 12월 12일</li>
+                                <li class="card__sub__title" th:text="${newsList.sub_title}">카드 게임</li>
                             </ul>
                             <button class="card__sub__button">
-                                <img src="front/images/icon_go.png" alt="" />
+                                <img th:src="@{front/images/icon_go.png}" alt="" />
                             </button>
                         </div>
                     </div>
@@ -102,14 +109,15 @@
         <div class="more">
             <button>
                 <span>더보기</span>
-                <span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </span>
+                <span class="more__arrow">
+                <i class="fa-solid fa-chevron-down"></i>
+                </span>
             </button>
         </div>
     </section>
 
-    <footer th:replace="~{front/outlines/_footer::common}"></footer>
+    <!--<footer th:replace="~{front/outlines/_footer::common}"></footer>-->
+    </div>
 </main>
 </body>
 </html>

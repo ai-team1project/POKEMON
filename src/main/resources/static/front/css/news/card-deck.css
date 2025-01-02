@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 30px;
   padding: 100px 0;
   width: 100%;
   max-width: 1250px;
@@ -19,7 +19,7 @@
 
 .card-deck ul {
   padding-bottom: 50px;
-  border-bottom: 1px solid #343a40;
+  border-bottom: 1.5px solid #e9ecef;
 
   display: flex;
   width: 100%;
@@ -34,14 +34,16 @@
 .category:active {
   color: black;
   border-bottom: 5px solid #d63836;
+  padding: 15px 25px;
 }
 
 .category {
   text-decoration: none;
   color: #b3b3b3;
 
-  font-size: 21px;
+  font-size: 23px;
   font-weight: bold;
+  padding: 15px 25px;
 }
 
 /* 카드 레이아웃 */
@@ -75,6 +77,8 @@
   position: relative;
   z-index: 1;
   border-bottom: 5px solid #0080ff;
+
+  transition: all 0.3s;
 }
 
 .card:hover {
@@ -105,7 +109,18 @@
 .card__head {
   font-weight: bolder;
   font-size: 20px;
+
+   display: -webkit-box;                /* 텍스트를 박스 형태로 배치 */
+   -webkit-box-orient: vertical;        /* 텍스트가 세로로 쌓이도록 설정 */
+   -webkit-line-clamp: 2;               /* 최대 두 줄까지만 표시 */
+   overflow: hidden;                    /* 넘치는 텍스트는 숨김 */
+   text-overflow: ellipsis;             /* 잘린 텍스트 끝에 '...'을 추가 */
+   line-height: 1.5em;                  /* 줄 높이 설정 */
+   max-height: 3em;                     /* 두 줄의 최대 높이 설정 (line-height * 2) */
+   position: relative;                  /* 자식 요소를 정확히 위치시키기 위해 relative 설정 */
 }
+
+
 
 .card__sub {
   display: flex;
@@ -151,13 +166,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 2px;
 
   border: none;
   background-color: #343a40;
 
-  width: 450px;
-  padding: 20px;
+  width: 400px;
+  padding: 7px;
 
   color: white;
   font-weight: bold;
@@ -186,4 +201,8 @@
   color: white;
   font-weight: bold;
   font-size: 20px;
+}
+
+.more__arrow > i {
+color:white;
 }
