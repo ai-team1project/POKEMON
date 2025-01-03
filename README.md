@@ -24,6 +24,9 @@
 <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"> 
 <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
 <img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=for-the-badge&logo=Thymeleaf&logoColor=white">
+<img src="https://img.shields.io/badge/oclc-#007DBA?style=flat-square&logo=oclc&logoColor=white"/>
+
+
 
 
 # 3. UserFlow 작성
@@ -126,3 +129,5 @@
 - 로그인 시 접근 가능하도록 설정
 - 승리 여부에 따라 승률 반영
 - 랭킹 조회
+### 회의록 
+https://level-throat-c67.notion.site/16f30930082780b19472f44abb775790
