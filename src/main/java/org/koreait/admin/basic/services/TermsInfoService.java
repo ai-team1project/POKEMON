@@ -1,3 +1,4 @@
+
 package org.koreait.admin.basic.services;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -12,6 +13,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 import static org.springframework.data.domain.Sort.Order.asc;
 
@@ -23,7 +25,7 @@ public class TermsInfoService {
     private final ObjectMapper om;
 
     public Terms get(String code) {
-        return service.get(String.format("term_%s", code), Terms.class);
+        return Objects.requireNonNullElseGet(service.get(String.format("term_%s", code), Terms.class), Terms::new);
     }
 
     public List<Terms> getList() {
@@ -32,11 +34,11 @@ public class TermsInfoService {
         List<CodeValue> items = (List<CodeValue>)repository.findAll(codeValue.code.startsWith("term_"), Sort.by(asc("code")));
         if (items != null) {
             return items.stream().map(item -> {
-               try {
-                   return om.readValue(item.getValue(), Terms.class);
-               } catch(JsonProcessingException e) {}
+                try {
+                    return om.readValue(item.getValue(), Terms.class);
+                } catch(JsonProcessingException e) {}
 
-               return null;
+                return null;
             }).filter(terms -> terms != null).toList();
         }
 
