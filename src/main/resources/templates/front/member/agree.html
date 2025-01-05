@@ -2,7 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{front/layouts/main}">
-<script th:src="@{/front/js/member/agree.js}" defer></script>
+
+
+
 <main layout:fragment="content" class="agreemain">
     <h1 th:text="#{약관동의}"></h1>
     <form name="frmAgree" method="POST" th:action="@{/member/join}" autocomplete="off" th:object="${requestAgree}">
