@@ -3,7 +3,7 @@ a {
   text-decoration-line: none;
 }
 
-.search {
+.news__search {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +14,7 @@ a {
   background-image: url("/front/images/news_nav_bg.jpg");
 }
 
-.search > span {
+.news__search > span {
   color: white;
   font-size: 50px;
   font-weight: bold;
@@ -46,7 +46,7 @@ a {
   color:white;
 }
 
-.search input {
+.news__search input {
   outline: none;
   border: none;
   font-size: 17px;
@@ -54,6 +54,6 @@ a {
   width: 100%;
 }
 
-.search > input:focus {
+.news__search > input:focus {
   outline: none;
 }
