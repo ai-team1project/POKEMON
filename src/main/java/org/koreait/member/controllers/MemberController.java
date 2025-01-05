@@ -56,7 +56,7 @@ public class MemberController {
     /* 회원 페이지 CSS */
     @ModelAttribute("addCss")
     public List<String> addCss() {
-        return List.of("member/style");
+        return List.of("member/style","member/agree");
     }
 
     @GetMapping("/login")
