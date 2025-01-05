@@ -1,4 +1,3 @@
-
 package org.koreait.member.services;
 
 import com.querydsl.core.BooleanBuilder;
