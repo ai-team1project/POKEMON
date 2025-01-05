@@ -34,9 +34,8 @@
 # 3. UserFlow 작성
 
 ---
-![포켓몬 도감 프로젝트 _ 깃마인드 _ 사용자관점](https://github.com/user-attachments/assets/a8365b0c-9f10-4673-96e4-f0a2309bda08)
-![포켓몬 도감 프로젝트 _ 깃마인드 _ 관리자관점](https://github.com/user-attachments/assets/7834f511-9002-477d-b5d6-0fc015713ad8)
 
+![포켓몬 깃마인드](https://github.com/user-attachments/assets/308f81bf-bd82-412b-84ba-7204e6c93578)
 
 
 

@@ -58,11 +58,7 @@ public class MemberController {
         public List<String> addCss() {
             return List.of("member/style","member/agree","member/agreeStyle");
         }
-    @ModelAttribute("addScript")
-    public List<String> addScript() {
-        // JavaScript 파일 리스트
-        return List.of("member/agree");
-    }
+
 
     @GetMapping("/login")
     public String login(@ModelAttribute RequestLogin form, Errors errors, Model model) {
@@ -88,10 +84,12 @@ public class MemberController {
      *
      * @return
      */
+
     @GetMapping("/agree")
     public String joinAgree(Model model) {
         commonProcess("agree", model);
-
+        String addScript = "member/agree"; // 정확한 경로로 설정
+        model.addAttribute("addScript", addScript);
         return utils.tpl("member/agree");
     }
 
@@ -194,6 +192,6 @@ public class MemberController {
         // 공통 스크립트
         model.addAttribute("addCommonScript", addCommonScript);
 
-
+        model.addAttribute("addScript", addScript);
     }
 }
