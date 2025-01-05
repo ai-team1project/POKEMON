@@ -1,0 +1,35 @@
+/* 기본 스타일 */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    font-size: 18px;
+    display: inline-block;
+    margin-left: 10px;
+    user-select: none;
+    transition: transform 0.3s ease; /* 버튼 회전 애니메이션 */
+}
+
+.terms-content {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    display: none;  /* 초기에는 숨김 */
+}
+
+/* 토글 버튼 상태 변경 */
+.toggle-btn.open {
+    transform: rotate(180deg);  /* 버튼 회전 */
+}
+
+.terms-check-all {
+    margin-bottom: 20px;
+}
