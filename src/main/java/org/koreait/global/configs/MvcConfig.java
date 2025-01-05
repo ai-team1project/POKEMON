@@ -21,9 +21,11 @@ public class MvcConfig implements WebMvcConfigurer {
      */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/**")
-                .addResourceLocations("classpath:/static/");
+        // static 리소스 처리
+        registry.addResourceHandler("/**") // "/resources/**"로 매핑
+                .addResourceLocations("classpath:/static/"); // static 폴더에서 리소스를 찾음
     }
+
 
     /**
      * PATCH, PUT, DELETE 등등

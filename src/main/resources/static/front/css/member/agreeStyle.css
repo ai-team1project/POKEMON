@@ -12,6 +12,7 @@
 border-bottom:2px solid black;
 margin-bottom:30px;
 margin-top:15px;
+padding-bottom:15px;
 }
 .agreesection{
 
@@ -58,6 +59,7 @@ color:#ffffff;
    font-weight: bold;
 font-style:normal;
     cursor: pointer;
+    padding-top:15px;
 }
 .terms-check-all{
 border-bottom:2px solid black;
