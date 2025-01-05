@@ -1,25 +1,38 @@
+/* 기본 약관 내용 숨기기 */
+.terms-content {
+    display: none; /* 기본적으로 숨김 */
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: max-height 0.3s ease-out;
+    max-height: 0; /* 내용이 펼쳐지지 않으면 max-height는 0 */
+    overflow: hidden;
+}
 
-    .terms-content {
-        display: none; /* 기본적으로 숨김 */
-        margin-top: 10px;
-        background-color: #f9f9f9;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-    }
+/* 'open' 클래스가 추가되면 내용이 펼쳐짐 */
+.terms-content.open {
+    display: block;
+    max-height: 500px; /* 충분히 큰 값을 주어 내용이 펼쳐질 때 보이도록 함 */
+}
 
-    .terms-content.open {
-        display: block; /* 토글 시 보이도록 */
-    }
+/* 토글 버튼(화살표) 기본 스타일 */
+.toggle-btn {
+    cursor: pointer;
+    font-size: 18px;
+    color: #007bff;
+    margin-left: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
 
-    .toggle-btn {
-        cursor: pointer;
-        color: #007bff;
-        text-decoration: underline;
-        font-size: 14px;
-    }
+/* 토글된 상태에서 화살표 회전 */
+.toggle-btn.open {
+    transform: rotate(90deg); /* 펼쳐지면 화살표를 90도 회전 */
+}
 
-    .toggle-btn:hover {
-        text-decoration: none;
-    }
-
+/* 화살표에 마우스를 올렸을 때 색상 변경 */
+.toggle-btn:hover {
+    color: #0056b3;
+}

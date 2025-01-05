@@ -54,10 +54,10 @@ public class MemberController {
     }
     
     /* 회원 페이지 CSS */
-    @ModelAttribute("addCss")
-    public List<String> addCss() {
-        return List.of("member/style","member/agree");
-    }
+        @ModelAttribute("addCss")
+        public List<String> addCss() {
+            return List.of("member/style","member/agree");
+        }
 
     @GetMapping("/login")
     public String login(@ModelAttribute RequestLogin form, Errors errors, Model model) {
