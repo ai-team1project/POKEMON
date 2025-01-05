@@ -1,0 +1,26 @@
+/* 오른쪽 메뉴 */
+.menu {
+  position: fixed; /* 고정된 오른쪽 위치 */
+  top: 80px;
+  right: 129px;
+
+  width: 100px; /* 메뉴 크기 설정 */
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.menu__btn {
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #f7d913;
+  cursor: pointer;
+
+  font-size: 20px;
+  font-weight: bold;
+}
