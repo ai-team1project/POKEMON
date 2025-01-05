@@ -27,16 +27,16 @@ public class SecurityConfig {
 
         /* 인증 설정 S - 로그인, 로그아웃 */
         http.formLogin(c -> {
-           c.loginPage("/member/login") // 로그인 양식을 처리할 주소
-                   .usernameParameter("email")
-                   .passwordParameter("password")
-                   .failureHandler(new LoginFailureHandler())
-                   .successHandler(new LoginSuccessHandler());
+            c.loginPage("/member/login") // 로그인 양식을 처리할 주소
+                    .usernameParameter("email")
+                    .passwordParameter("password")
+                    .failureHandler(new LoginFailureHandler())
+                    .successHandler(new LoginSuccessHandler());
         });
 
         http.logout(c -> {
-           c.logoutRequestMatcher(new AntPathRequestMatcher("/member/logout"))
-                   .logoutSuccessUrl("/member/login");
+            c.logoutRequestMatcher(new AntPathRequestMatcher("/member/logout"))
+                    .logoutSuccessUrl("/member/login");
         });
         /* 인증 설정 E */
 

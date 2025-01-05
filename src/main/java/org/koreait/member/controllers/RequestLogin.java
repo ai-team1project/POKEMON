@@ -18,4 +18,3 @@ public class RequestLogin implements Serializable {
 
     private List<String> errorCodes;
 }
-

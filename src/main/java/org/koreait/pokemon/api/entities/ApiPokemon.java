@@ -28,4 +28,3 @@ public class ApiPokemon {
 
     private List<Genus> genera;
 }
-

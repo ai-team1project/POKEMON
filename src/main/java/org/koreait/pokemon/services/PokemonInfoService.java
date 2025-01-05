@@ -168,7 +168,7 @@ public class PokemonInfoService {
         QPokemon pokemon = QPokemon.pokemon;
 
         return queryFactory.select(pokemon.seq.max())
-                    .from(pokemon)
-                    .fetchFirst();
+                .from(pokemon)
+                .fetchFirst();
     }
 }
