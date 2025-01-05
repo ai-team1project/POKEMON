@@ -1,3 +1,4 @@
+
 window.addEventListener("DOMContentLoaded", function() {
 
     const sendButton = document.getElementById("send-auth-code");

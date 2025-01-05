@@ -54,9 +54,14 @@ public class MemberController {
     }
 
     /* 회원 페이지 CSS */
-    @ModelAttribute("addCss")
-    public List<String> addCss() {
-        return List.of("member/style");
+        @ModelAttribute("addCss")
+        public List<String> addCss() {
+            return List.of("member/style","member/agree","member/agreeStyle");
+        }
+    @ModelAttribute("addScript")
+    public List<String> addScript() {
+        // JavaScript 파일 리스트
+        return List.of("member/agree");
     }
 
     @GetMapping("/login")
@@ -189,7 +194,6 @@ public class MemberController {
         // 공통 스크립트
         model.addAttribute("addCommonScript", addCommonScript);
 
-        // front 스크립트
-        model.addAttribute("addScript", addScript);
+
     }
 }
