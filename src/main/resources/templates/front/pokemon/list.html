@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{front/layouts/main}">
+<link rel="stylesheet" th:href="@{/front/css/pokemon/list.css}">
 <main layout:fragment="content">
 
     <th:block th:replace="~{front/pokemon/_search::search}"></th:block>
