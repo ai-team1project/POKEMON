@@ -1,12 +1,11 @@
-.right {
+.mypage__right {
   width: 625px; /* 고정 너비 */
   padding: 40px; /* 내부 여백 */
 
   position: relative;
 
-  border: 2px solid #000;
   overflow: hidden;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 .pokemon {

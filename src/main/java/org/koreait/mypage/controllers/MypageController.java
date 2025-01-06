@@ -3,6 +3,7 @@ package org.koreait.mypage.controllers;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.koreait.front.model.Mypage;
 import org.koreait.global.annotations.ApplyErrorPage;
 import org.koreait.global.libs.Utils;
 import org.koreait.global.paging.CommonSearch;
@@ -58,8 +59,15 @@ public class MypageController {
     public String index(Model model) {
         commonProcess("main", model);
 
+        List<Mypage> mypageName = new ArrayList<>();
+        mypageName.add(new Mypage("닉네임" , "https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/002601.png"));
+        model.addAttribute("mypageName", mypageName);
+        
+        
         return utils.tpl("mypage/index");
     }
+
+    
 
     @GetMapping("/profile")
     public String profile(Model model) {
