@@ -16,6 +16,7 @@
     <link rel="stylesheet" th:href="@{/front/css/news/search.css}" />
     <link rel="stylesheet" th:href="@{/front/css/news/link.css}" />
     <link rel="stylesheet" th:href="@{/front/css/news/card_deck.css}" />
+    <script src="/front/js/news/news.js" defer></script>
     <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -76,7 +77,7 @@
                 </ul>
             </nav>
             <div class="grid-layout">
-                <article class="card" th:each="newsList : ${newsList}">
+                <article class="card" th:each="newsList : ${newsList}" >
 
                     <a
                             th:href="${newsList.pageUrl}"

@@ -3,6 +3,7 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{front/layouts/main}">
 <main layout:fragment="content">
+    <div class="message__container">
     <h1 th:text="#{쪽지_보내기}"></h1>
     <form name="frmSend" method="POST" th:action="@{/message}" autocomplete="off" th:object="${requestMessage}">
         <div class="error global" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
@@ -17,24 +18,31 @@
             </dd>
         </dl>
 
+
         <dl>
             <dt th:text="#{제목}"></dt>
             <dd>
-                <input type="text" name="subject" th:field="*{subject}">
+                <input calss= type="text" name="subject" th:field="*{subject}">
                 <div class="error" th:each="err : ${#fields.errors('subject')}" th:text="${err}"></div>
             </dd>
         </dl>
-
+        <div class="message__write">
         <dl>
             <dt th:text="#{내용}"></dt>
+        </dl>
+        <dl>
             <dd>
                 <textarea name="content" th:field="*{content}" id="content"></textarea>
                 <div class="error" th:each="err : ${#fields.errors('content')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+            <div class="button__collection">
+            <dd>
                 <button type="button" class="file-upload image" th:text="#{이미지_업로드}" th:data-gid="*{gid}" data-location="editor" data-image-only="true"></button>
                 <div class="uploaded-files" id="editor-files"></div>
             </dd>
-        </dl>
-        <dl>
+
+        <dl class="message__file">
             <dt>파일첨부</dt>
             <dd>
                 <button type="button" class="file-upload" th:text="#{파일_업로드}" th:data-gid="*{gid}" data-location="attach"></button>
@@ -45,7 +53,14 @@
             <button type="reset" class="btn" th:text="#{다시작성}"></button>
             <button type="submit" class="btn" th:text="#{전송하기}"></button>
         </div>
+        </div>
+        </div>
     </form>
+
+
+    </div>
+
     <script th:replace="~{common/_tpl_file::file-item}"></script>
+
 </main>
 </html>
