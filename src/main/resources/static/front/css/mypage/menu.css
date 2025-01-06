@@ -1,10 +1,10 @@
 /* 오른쪽 메뉴 */
 .menu {
-  position: fixed; /* 고정된 오른쪽 위치 */
-  top: 80px;
-  right: 129px;
-
-  width: 100px; /* 메뉴 크기 설정 */
+  position: fixed; /* 화면에서 고정 위치 */
+  top: 167px;       /* 원하는 고정된 위쪽 간격 */
+  right: 120px;     /* 오른쪽 간격 */
+  width: 100px;    /* 메뉴 크기 */
+  z-index: 1000;   /* 다른 요소 위에 표시 */
 }
 
 .menu__list {

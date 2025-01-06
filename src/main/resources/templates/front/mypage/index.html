@@ -3,24 +3,25 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{front/layouts/main}">
 <head>
-    <link rel="stylesheet" th:href="@{/front/css/common/reset.css}" />
-    <link rel="stylesheet" th:href="@{/front/css/mypage/index.css}" />
-    <link rel="stylesheet" th:href="@{/front/css/mypage/menu.css}" />
-    <link rel="stylesheet" th:href="@{/front/css/mypage/right.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/style.css}">
+    <link rel="stylesheet" href="/front/css/common/reset.css" />
+    <link rel="stylesheet" href="/front/css/mypage/index.css" />
+    <link rel="stylesheet" href="/front/css/mypage/menu.css" />
+    <link rel="stylesheet" href="/front/css/mypage/mypage__right.css" />
+
 </head>
 
 <main layout:fragment="content">
     <section class="mypage">
         <div class="mypage__left">
-            <h3>{닉네임}님의 미니홈피</h3>
+            <h3>님의 미니홈피</h3>
             <div class="mapage__album">
                 <img
-                        src="https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000604.png"
+                       src="https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000604.png"
                         alt="포켓몬 이미지"
                 />
             </div>
-            <span class="mypage__info">
-          {닉네임}의 미니홈피에 오신 것을 환영합니다!
+            <span class="mypage__info">의 미니홈피에 오신 것을 환영합니다!
         </span>
             <div class="option__list">
                 <span>포켓몬스터의 세계에 잘 왔다!</span>
@@ -35,14 +36,14 @@
             </div>
         </div>
 
-        <div class="right">
-            <img src="img/1.png" class="pokemon" alt="" id="charmander" />
-            <img src="img/2.png" class="pokemon" alt="" id="squirtle" />
-            <img src="img/3.png" class="pokemon" alt="" id="pikachu" />
-            <img src="img/4.png" class="pokemon" alt="" id="clefairy" />
-            <img src="img/5.png" class="pokemon" alt="" id="wugtrio" />
-            <img src="img/6.png" class="pokemon" alt="" id="meowth" />
-            <img src="img/7.png" class="pokemon" alt="" id="ditto" />
+        <div class="mypage__right">
+            <img src="/front/images/mypage/paili.png" class="pokemon" alt="" id="charmander" />
+            <img src="/front/images/mypage/kkobug-i.png" class="pokemon" alt="" id="squirtle" />
+            <img src="/front/images/mypage/pikachu.png" class="pokemon" alt="" id="pikachu" />
+            <img src="/front/images/mypage/ppippi.png" class="pokemon" alt="" id="clefairy" />
+            <img src="/front/images/mypage/doctrio.png" class="pokemon" alt="" id="wugtrio" />
+            <img src="/front/images/mypage/naong.png" class="pokemon" alt="" id="meowth" />
+            <img src="/front/images/mypage/metamong.png" class="pokemon" alt="" id="ditto" />
         </div>
 
         <!-- 오른쪽 메뉴 -->

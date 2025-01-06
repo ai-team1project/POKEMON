@@ -1,0 +1,268 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 전체 게임 리스트 항목 */
+.game__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+    align-items: center;
+}
+
+/* 각 게임 항목 */
+.li__list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 300px;  /* 기본 너비 */
+    transition: transform 0.3s ease;
+    max-width: 100%;
+}
+
+/* 게임 제목 및 설명 */
+.game__bot_text {
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #555;
+}
+
+.game__bot_text .game__title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.game__bot_text .test__mute {
+    color: #888;
+}
+
+/* 이미지 앨범 */
+.album {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.album > img {
+    width: 100%;
+    height: auto;
+}
+
+/* 게임 시리즈 링크 스타일 */
+.game__series {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+/* 게임 시리즈 링크에 마우스를 올렸을 때 스타일 */
+.game__series:hover {
+    color: red;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.more {
+    width: 300px;
+    height: 55px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    transform: skew(-20deg);
+    border: 1px solid transparent;
+}
+
+.more__text {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    transform: skew(20deg);
+}
+
+.more__image {
+    position: absolute;
+    right: 55px;
+    width: 10px;
+    height: 18px;
+    transform: skew(20deg);
+}
+
+.more__image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 1. iPhone / iPod / iPad */
+@media (max-width: 768px) and (device-width: 768px), /* iPad */
+       (max-width: 375px) and (device-width: 375px), /* iPhone */
+       (max-width: 414px) and (device-width: 414px) /* iPhone Plus */ {
+    .game__list {
+        display: block; /* 모바일에서는 한 열로 배치 */
+    }
+
+    .li__list {
+        width: 100%; /* 항목이 전체 너비를 차지 */
+        margin-bottom: 20px; /* 항목 간 여백 */
+    }
+
+    .more {
+        width: 90%; /* 버튼 크기 조정 */
+        margin-top: 20px;
+    }
+}
+
+/* 2. BlackBerry */
+@media (max-width: 768px) and (device-width: 768px) {
+    .game__list {
+        display: block;
+    }
+
+    .li__list {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .more {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+/* 3. Android */
+@media (max-width: 1080px) and (device-width: 1080px) {
+    /* Android 디바이스에 맞는 스타일 적용 */
+    .game__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2개의 열로 배치 */
+        grid-gap: 10px;
+    }
+
+    .li__list {
+        width: 100%;
+    }
+
+    .more {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+/* 4. Windows CE */
+@media (max-width: 800px) and (device-width: 800px) {
+    .game__list {
+        display: block;
+    }
+
+    .li__list {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .more {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+/* 5. LG (이전 LG 모델들) */
+@media (max-width: 1024px) and (device-width: 1024px) {
+    .game__list {
+        display: block;
+    }
+
+    .li__list {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .more {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+/* 6. Motorola (MOT) */
+@media (max-width: 720px) and (device-width: 720px) {
+    .game__list {
+        display: block;
+    }
+
+    .li__list {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .more {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+/* 7. Samsung */
+@media (max-width: 1440px) and (device-width: 1440px) {
+    .game__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4개의 열로 배치 */
+        grid-gap: 10px;
+    }
+
+    .li__list {
+        width: 100%;
+    }
+
+    .more {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+/* 8. Sony Ericsson */
+@media (max-width: 854px) and (device-width: 854px) {
+    .game__list {
+        display: block;
+    }
+
+    .li__list {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .more {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+/* 큰 화면 (데스크탑, 1280px 이상) */
+@media (min-width: 1280px) {
+    .game__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4개의 열로 배치 */
+        grid-gap: 20px;
+    }
+
+    .li__list {
+        width: 300px; /* 고정 크기 */
+    }
+
+    .more {
+        width: 250px; /* 고정 크기 */
+    }
+}
