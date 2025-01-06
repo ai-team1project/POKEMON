@@ -1,8 +1,9 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 * { font-family: "Noto Sans KR", sans-serif; box-sizing: border-box; outline: none; color: #000; }
 
 /* 기본 스타일 초기화 S */
-html { font-size: 13px; }
+html { font-size: 13px; } /* 1rem - 13px */
 body { margin: 120px 0 0; }
 a { text-decoration: none; }
 ul, ol { list-style: none; }
@@ -31,15 +32,14 @@ header {
     left: 0;
 }
 
-/* 기본 메뉴 스타일 */
 header .main-menu { max-width: 835px; min-width: 450px; width: 100%; display: flex; }
-/* 메뉴 항목에 스타일 */
 header .main-menu > li {
     width: 0;
     flex-grow: 1;
     border-right: 1px solid #ebebeb;
 }
 header .main-menu > li:first-of-type { border-left: 1px solid #ebebeb; }
+
 header .main-menu > li a {
     display: flex;
     align-items: center;
@@ -55,28 +55,49 @@ header .main-menu > li a:hover, header .main-menu > li a:hover * {
     color: #fff;
 }
 
-header .main-menu > li:nth-of-type(1) a:hover { background: #ffb040; }
-header .main-menu > li:nth-of-type(2) a:hover { background: #d63836; }
-header .main-menu > li:nth-of-type(3) a:hover { background: #1855a0; }
-header .main-menu > li:nth-of-type(4) a:hover { background: #264462; }
-header .main-menu > li:nth-of-type(5) a:hover { background: #793da7; }
-
-header .main-menu > li a:hover i {
-    background-size: contain;
+header .main-menu > li:nth-of-type(1) a:hover {
+    background: #ffb040;
 }
 
-header > .left {
-    display: flex;
-    flex-grow: 1;
+header .main-menu > li:nth-of-type(2) a:hover {
+    background: #d63836;
 }
 
-header > .left .logo {
-    max-width: 350px;
-    min-width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+header .main-menu > li:nth-of-type(3) a:hover {
+    background: #1855a0;
 }
+
+header .main-menu > li:nth-of-type(4) a:hover {
+    background: #264462;
+}
+
+header .main-menu > li:nth-of-type(5) a:hover {
+    background: #793da7;
+}
+
+
+header .main-menu > li:nth-of-type(1) a:hover i {
+    background: url("../images/icon_news_w.png") no-repeat center center;
+}
+
+header .main-menu > li:nth-of-type(2) a:hover i {
+    background: url("../images/icon_game_w.png") no-repeat center center;
+}
+
+header .main-menu > li:nth-of-type(3) a:hover i {
+    background: url("../images/icon_card_w.png") no-repeat center center;
+}
+
+header .main-menu > li:nth-of-type(4) a:hover i {
+    background: url("../images/icon_ani_w.png") no-repeat center center;
+}
+
+header .main-menu > li:nth-of-type(5) a:hover i {
+    background: url("../images/icon_ball_w.png") no-repeat center center;
+}
+
+header > .left { display: flex; flex-grow: 1; }
+header > .left .logo { max-width: 350px; min-width: 250px; display: flex; align-items: center; justify-content: center; }
 
 header .main-menu .icon {
     display: block;
@@ -85,13 +106,52 @@ header .main-menu .icon {
     margin: 0 auto;
 }
 
+header > .right .icon {
+    display: block;
+    width: 38px;
+    height: 38px;
+    margin: 0 auto;
+}
+
+header .icon.news {
+    background:url("../images/icon_news.png") no-repeat center center;
+}
+
+header .icon.game {
+    background:url("../images/icon_game.png") no-repeat center center;
+}
+
+header .icon.card-game {
+    background:url("../images/icon_card.png") no-repeat center center;
+}
+
+header .icon.animation {
+    background:url("../images/icon_ani.png") no-repeat center center;
+}
+
+header .icon.products {
+    background:url('../images/icon_ball.png') no-repeat center center;
+}
+
+header .icon.catalog {
+    background:url("../images/icon_ball_c.png") no-repeat center center;
+}
+
+header .icon.login {
+    background:url("../images/icon_login.png") no-repeat center center;
+}
+
+header .icon.search {
+    background: url("../images/icon_search.png") no-repeat center center;
+}
+
+
 header > .right {
     display: flex;
     width: 520px;
     justify-content: flex-end;
 }
 
-/* 모바일 화면의 오른쪽 메뉴 */
 header > .right > ul {
     display: flex;
     align-items: center;
@@ -154,17 +214,17 @@ footer {
 }
 
 .ft-menu {
-    display: flex;
-    gap: 15px;
+    display:flex;
+    gap:15px;
 }
 
 .ft-menu > li > a {
-    text-decoration-line: none;
-    color: white;
+    text-decoration-line:none;
+    color:white;
 }
 
 .top .ft-logo {
-    width: 200px;
+    width: 200px,
     height: 23px;
 }
 
@@ -173,10 +233,19 @@ footer {
     height: 100%;
 }
 
+.ft-menu {
+   display: flex;
+}
+
+.ft-bar {
+    margin-left: 15px;
+    color: gray;
+}
+
 .middlee {
-    max-width: 1250px;
+    max-width:1250px;
     margin: 0 auto;
-    display: flex;
+    display:flex;
     justify-content: space-between;
     padding: 30px 0;
     font-size: 13px;
@@ -188,13 +257,13 @@ footer {
 }
 
 .middleTit {
-    display: flex;
+    display:flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .sns {
-    display: flex;
+    display:flex;
 }
 
 .sns > li a > img {
@@ -204,31 +273,36 @@ footer {
 }
 
 .bottomm {
-    max-width: 1250px;
+    max-width:1250px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     color: #fff;
     font-size: 14px;
-    background: black;
+    background:black;
     margin-top: 20px;
     align-items: center;
 }
 
+.bottom {
+    background:black;
+}
+
+
 .bottom-left {
-    display: flex;
+    display:flex;
     flex-direction: column;
-    gap: 3px;
+    gap:3px;
 }
 
 .bottom .right {
-    display: flex;
+    display:flex;
     flex-direction: column;
-    gap: 3px;
+    gap:3px;
 }
 
-.right-bot {
-    padding-top: 30px;
+.right-bot{
+    padding-top:30px;
 }
 
 .ft-text {
@@ -262,70 +336,205 @@ footer {
 }
 /* 페이지네이션 E */
 
-/* 미디어 쿼리: 모바일 기기, 작은 화면에 대응 */
 
-@media (max-width: 768px) {
-    /* 모바일 화면에서 메뉴 아이콘 크기 변경 */
+/* iPhone, iPod, iPad, BlackBerry, Android, Windows CE, LG, MOT, SAMSUNG, SonyEricsson에 대한 미디어 쿼리 */
+
+/* iPhone */
+@media screen and (max-width: 480px) {
+    header {
+        height: 100px;
+    }
+    header .main-menu {
+        flex-direction: column;
+    }
+    header .main-menu > li {
+        border-right: none;
+        border-bottom: 1px solid #ebebeb;
+    }
+    header .main-menu > li:first-of-type {
+        border-left: none;
+    }
     header .main-menu > li a {
-        font-size: 1rem; /* 모바일 화면에서는 글씨 크기 줄이기 */
-        height: 80px;
+        font-size: 1rem;
+        height: 60px;
+        justify-content: flex-start;
+        padding-left: 15px;
     }
-
-    /* 로고 크기 조정 */
-    header .logo {
-        max-width: 200px;
-        min-width: 150px;
-    }
-
-    /* 오른쪽 메뉴 아이템 간격 좁히기 */
-    header > .right li {
-        margin: 0 10px;
-    }
-
-    /* 모바일 화면에서 move-to-store 크기 조정 */
     header .move-to-store {
         width: 160px;
         height: 100px;
     }
+    .pagination a {
+        min-width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    footer .top .topp {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
-/* 미디어 쿼리: 더 작은 화면 (예: 아이폰, 안드로이드 등) */
-@media (max-width: 480px) {
-    /* 메뉴 글씨 크기 및 높이 축소 */
+/* iPad, Android tablets (Landscape mode) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    header {
+        height: 100px;
+    }
+    header .main-menu {
+        flex-direction: row;
+    }
+    header .main-menu > li {
+        border-right: 1px solid #ebebeb;
+    }
     header .main-menu > li a {
-        font-size: 0.9rem;
-        height: 60px;
+        font-size: 1.1rem;
+        height: 100px;
+        justify-content: center;
+        padding-left: 20px;
     }
-
-    /* 로고 크기 더 작게 */
-    header .logo {
-        max-width: 150px;
-        min-width: 100px;
+    header .move-to-store {
+        width: 180px;
+        height: 100px;
     }
-
-    /* 메뉴 항목 가운데 정렬 */
-    header > .main-menu {
-        flex-direction: column;
+    .pagination a {
+        min-width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    footer .top .topp {
+        flex-direction: row;
         align-items: center;
     }
-
-    /* move-to-store 버튼 크기 축소 */
-    header .move-to-store {
-        width: 130px;
-        height: 80px;
+    footer .middlee {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
-/* iPhone, iPod, iPad 등 특정 기기 화면 */
-@media (max-width: 320px) {
-    /* 아주 작은 화면을 위한 추가 조정 */
-    header .main-menu > li a {
-        font-size: 0.8rem;
+/* Android (Portrait mode) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    header {
+        height: 100px;
     }
-
-    /* move-to-store 크기 */
+    header .main-menu {
+        flex-direction: row;
+    }
+    header .main-menu > li a {
+        font-size: 1.2rem;
+        height: 100px;
+        justify-content: center;
+    }
     header .move-to-store {
-        width: 120px;
+        width: 190px;
+        height: 120px;
+    }
+    .pagination a {
+        min-width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+    footer .top .topp {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    footer .middlee {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    footer .bottomm {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* iPad, Tablets (Portrait mode) */
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    header {
+        height: 120px;
+    }
+    header .main-menu {
+        flex-direction: row;
+    }
+    header .main-menu > li a {
+        font-size: 1.3rem;
+        height: 120px;
+        justify-content: center;
+    }
+    .pagination a {
+        min-width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Galaxy S7, Samsung, LG */
+@media screen and (max-width: 600px) {
+    header {
+        height: 90px;
+    }
+    header .main-menu {
+        flex-direction: column;
+    }
+    header .main-menu > li {
+        border-right: none;
+        border-bottom: 1px solid #ebebeb;
+    }
+    header .main-menu > li:first-of-type {
+        border-left: none;
+    }
+    header .main-menu > li a {
+        font-size: 1rem;
+        height: 60px;
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
+    header .move-to-store {
+        width: 160px;
+        height: 90px;
+    }
+    .pagination a {
+        min-width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    footer .top .topp {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Xperia, Sony Ericsson */
+@media screen and (max-width: 720px) {
+    header {
+        height: 100px;
+    }
+    header .main-menu {
+        flex-direction: column;
+    }
+    header .main-menu > li {
+        border-right: none;
+        border-bottom: 1px solid #ebebeb;
+    }
+    header .main-menu > li:first-of-type {
+        border-left: none;
+    }
+    header .main-menu > li a {
+        font-size: 1.1rem;
         height: 70px;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+    header .move-to-store {
+        width: 170px;
+        height: 100px;
+    }
+    .pagination a {
+        min-width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    footer .top .topp {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
