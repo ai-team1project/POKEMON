@@ -2,14 +2,18 @@
   max-width: 1250px; /* 최대 너비 제한 */
   margin: 0 auto;
   display: flex;
-  padding: 80px 0 155px; /* 상단/하단 패딩 */
-  background-color: pink; /* 전체 배경색 */
+  margin-top: 170px;
+
+  border: 1px solid black
 }
 
 /* 왼쪽 콘텐츠 */
 .mypage__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   width: 625px; /* 고정 너비 */
-  background-color: yellow; /* 배경색 */
+  background-color: #ebedea; /* 배경색 */
   padding: 40px; /* 내부 여백 */
 }
 

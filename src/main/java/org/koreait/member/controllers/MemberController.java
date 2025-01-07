@@ -84,10 +84,12 @@ public class MemberController {
      *
      * @return
      */
+
     @GetMapping("/agree")
     public String joinAgree(Model model) {
         commonProcess("agree", model);
-
+        String addScript = "member/agree"; // 정확한 경로로 설정
+        model.addAttribute("addScript", addScript);
         return utils.tpl("member/agree");
     }
 
