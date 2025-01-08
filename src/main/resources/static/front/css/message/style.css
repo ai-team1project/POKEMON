@@ -57,11 +57,12 @@ h1 {
     gap: 20px;
 }
 
-.message__write dt {
-    font-size: 15px;
+.box__style {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
-    position: relative;
-    left: -270px;
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .button__collection {

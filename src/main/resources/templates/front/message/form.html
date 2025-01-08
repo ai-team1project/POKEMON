@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{front/layouts/main}">
+
 <main layout:fragment="content">
     <div class="message__container">
     <h1 th:text="#{쪽지_보내기}"></h1>
@@ -29,7 +30,7 @@
             <dt th:text="#{내용}"></dt>
         </dl>
         <dl>
-            <dd>
+            <dd class="box__style">
                 <textarea name="content" th:field="*{content}" id="content"></textarea>
                 <div class="error" th:each="err : ${#fields.errors('content')}" th:text="${err}"></div>
             </dd>
@@ -38,21 +39,21 @@
             <div class="button__collection">
             <div class="button__group">
             <dd>
-                <button type="button" class="file-upload image" th:text="#{이미지_업로드}" th:data-gid="*{gid}" data-location="editor" data-image-only="true"></button>
+                <button type="button" class="file-upload image, shadow" th:text="#{이미지_업로드}" th:data-gid="*{gid}" data-location="editor" data-image-only="true"></button>
                 <div class="uploaded-files" id="editor-files"></div>
             </dd>
 
         <dl class="message__file">
             <!-- <dt>파일첨부</dt> -->
             <dd>
-                <button type="button" class="file-upload" th:text="#{파일_업로드}" th:data-gid="*{gid}" data-location="attach"></button>
+                <button type="button" class="file-upload, shadow" th:text="#{파일_업로드}" th:data-gid="*{gid}" data-location="attach"></button>
                 <div class="uploaded-files" id="attach-files"></div>
             </dd>
         </dl>
         </div>
         <div class="button__group">
-            <button type="reset" class="btn" th:text="#{다시작성}"></button>
-            <button type="submit" class="btn" th:text="#{전송하기}"></button>
+            <button type="reset" class="btn, shadow" th:text="#{다시작성}"></button>
+            <button type="submit" class="btn, shadow" th:text="#{전송하기}"></button>
         </div>
         </div>
 
