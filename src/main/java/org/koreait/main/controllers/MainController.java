@@ -42,12 +42,11 @@ public class MainController {
         // MainGame
         List<MainGame> mainGame = new ArrayList<>();
         mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "포켓몬 카드 게임 Pocket」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
-        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「포켓몬스터스칼렛・바이올렛 제로의 비보」<후편: 남청의 원반> 배포 개시!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
-        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「돌아온 명탐정 피카츄」 절찬 판매 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
-        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "포켓몬 카드 게임 Pocket」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
-        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "포켓몬 카드 게임 Pocket」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
-        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "포켓몬 카드 게임 Pocket」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
-        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "포켓몬 카드 게임 Pocket」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
+        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「포켓몬스터스칼렛・바이올렛 제로의 비보...", "https://data1.pokemonkorea.co.kr/newdata/2024/01/2024-01-03_10-14-01-31819-1704244441.png", "https://pokemonkorea.co.kr/sv_dlc"));
+        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「돌아온 명탐정 피카츄」 절찬 판매 중!", "https://data1.pokemonkorea.co.kr/newdata/2023/10/2023-10-20_09-34-24-16231-1697762064.png", "https://pokemonkorea.co.kr/detective_pikachu"));
+        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「포켓몬스터스칼렛・바이올렛」 공식 사이트", "https://data1.pokemonkorea.co.kr/newdata/2023/08/2023-08-09_11-22-23-13966-1691547743.png", "https://pokemonkorea.co.kr/sv"));
+        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「Pokémon Sleep」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2023/07/2023-07-19_11-36-13-69331-1689734173.png", "https://www.pokemonsleep.net/ko/"));
+        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「Pokémon Sleep」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2023/07/2023-07-14_12-10-49-57812-1689304249.png", "https://www.pokemongoplusplus.com/ko/"));
         model.addAttribute("mainGame", mainGame);
 
         // MainProduct
@@ -63,6 +62,13 @@ public class MainController {
 
         // MainUnder
         List<BaseModel> mainUnder = new ArrayList<>();
+        mainUnder.add(new BaseModel("「 Pokémon UNITE」", "게임", "https://data1.pokemonkorea.co.kr/newdata/2021/08/2021-08-23_13-11-29-34893-1629691889.png", "https://pokemonkorea.co.kr/pokemon-unite"));
+        mainUnder.add(new BaseModel("「 Pokémon UNITE」", "게임", "https://data1.pokemonkorea.co.kr/newdata/2021/08/2021-08-23_13-11-29-34893-1629691889.png", "https://pokemonkorea.co.kr/pokemon-unite"));
+        mainUnder.add(new BaseModel("「 Pokémon UNITE」", "게임", "https://data1.pokemonkorea.co.kr/newdata/2021/08/2021-08-23_13-11-29-34893-1629691889.png", "https://pokemonkorea.co.kr/pokemon-unite"));
+        mainUnder.add(new BaseModel("「 Pokémon UNITE」", "게임", "https://data1.pokemonkorea.co.kr/newdata/2021/08/2021-08-23_13-11-29-34893-1629691889.png", "https://pokemonkorea.co.kr/pokemon-unite"));
+        mainUnder.add(new BaseModel("「 Pokémon UNITE」", "게임", "https://data1.pokemonkorea.co.kr/newdata/2021/08/2021-08-23_13-11-29-34893-1629691889.png", "https://pokemonkorea.co.kr/pokemon-unite"));
+        mainUnder.add(new BaseModel("「 Pokémon UNITE」", "게임", "https://data1.pokemonkorea.co.kr/newdata/2021/08/2021-08-23_13-11-29-34893-1629691889.png", "https://pokemonkorea.co.kr/pokemon-unite"));
+        mainUnder.add(new BaseModel("「 Pokémon UNITE」", "게임", "https://data1.pokemonkorea.co.kr/newdata/2021/08/2021-08-23_13-11-29-34893-1629691889.png", "https://pokemonkorea.co.kr/pokemon-unite"));
         mainUnder.add(new BaseModel("「 Pokémon UNITE」", "게임", "https://data1.pokemonkorea.co.kr/newdata/2021/08/2021-08-23_13-11-29-34893-1629691889.png", "https://pokemonkorea.co.kr/pokemon-unite"));
         model.addAttribute("mainUnder", mainUnder);
 
