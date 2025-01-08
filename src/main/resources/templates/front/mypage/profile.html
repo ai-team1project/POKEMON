@@ -2,13 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{front/layouts/main}">
+
 <main layout:fragment="content">
     <form name="frmProfile" method="POST" th:action="@{/mypage/profile}" th:object="${requestProfile}" autocomplete="off">
         <input type="hidden" name="_method" value="PATCH">
         <div class="error global" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
-        <dl>
+
+        <div class="profile__container">
+        <div class="profile__top">
+            <h1>회원 정보 수정</h1>
+            <div class="profile__row">
+            <dl class="profile__gap">
             <dt th:text="#{프로필_이미지}"></dt>
-            <dd>
+            <dd class="profile__gap">
                 <div class="drag-upload profile-image"
                      data-image-only="true"
                      data-single="true"
@@ -29,11 +35,11 @@
                         th:text="#{이미지_업로드}"></button>
             </dd>
         </dl>
+        <div class="profile__right">
         <dl>
             <dt th:text="#{이메일}"></dt>
             <dd th:text="${profile.email}"></dd>
         </dl>
-
         <dl>
             <dt th:text="#{회원명}"></dt>
             <dd>
@@ -41,6 +47,13 @@
                 <div class="error" th:each="err : ${#fields.errors('name')}" th:text="${err}"></div>
             </dd>
         </dl>
+            <dl>
+                <dt th:text="#{닉네임}"></dt>
+                <dd>
+                    <input type="text" name="nickName" th:field="*{nickName}">
+                    <div class="error" th:each="err : ${#fields.errors('nickName')}" th:text="${err}"></div>
+                </dd>
+            </dl>
 
         <dl>
             <dt th:text="#{비밀번호}"></dt>
@@ -58,13 +71,6 @@
             </dd>
         </dl>
 
-        <dl>
-            <dt th:text="#{닉네임}"></dt>
-            <dd>
-                <input type="text" name="nickName" th:field="*{nickName}">
-                <div class="error" th:each="err : ${#fields.errors('nickName')}" th:text="${err}"></div>
-            </dd>
-        </dl>
         <dl>
             <dt th:text="#{성별}"></dt>
             <dd>
@@ -85,25 +91,29 @@
                 <div class="error" th:each="err : ${#fields.errors('birthDt')}" th:text="${err}"></div>
             </dd>
         </dl>
-
-        <dl>
+        </div>
+        </div>
+        <div class="profile__bottom">
+        <dl class="profile__gap">
             <dt th:text="#{주소}"></dt>
-            <dd>
+            <dd class="profile__gap">
                 <div class="row">
                     <button type='button' class='search-address' th:text="#{주소찾기}"></button>
-                    <input type="text" name="zipCode" th:field="*{zipCode}" th:placeholder="#{우편번호를_입력해주세요.}" readonly>
+                    <input class="address__input" type="text" name="zipCode" th:field="*{zipCode}" th:placeholder="#{우편번호를_입력해주세요.}" readonly>
 
                     <div class="error" th:each="err : ${#fields.errors('zipCode')}" th:text="${err}"></div>
                 </div>
+                <div class="row">
                 <div class="row">
                     <input type="text" name="address" th:field="*{address}" th:placeholder="#{기존주소를_입력해주세요.}" readonly>
 
                     <div class="error" th:each="err : ${#fields.errors('address')}" th:text="${err}"></div>
                 </div>
                 <div class="row">
-                    <input type="text" name="addressSub" th:field="*{addressSub}" th:placeholder="#{상세주소를_입력해주세요.}">
+                    <input class="address__sub__input" type="text" name="addressSub" th:field="*{addressSub}" th:placeholder="#{상세주소를_입력해주세요.}">
 
                     <div class="error" th:each="err : ${#fields.errors('addressSub')}" th:text="${err}"></div>
+                </div>
                 </div>
             </dd>
         </dl>
@@ -114,7 +124,12 @@
                 <label for="optionalTerms0" th:text="#{광고성_정보_전송에_대해_동의합니다.(선택)}"></label>
             </dd>
         </dl>
-        <button type="submit" th:text="#{수정하기}"></button>
+        <div class="button__center">
+        <button class="edit__button" type="submit" th:text="#{수정하기}"></button>
+        </div>
+        </div>
+        </div>
+        </div>
     </form>
 </main>
 </html>
