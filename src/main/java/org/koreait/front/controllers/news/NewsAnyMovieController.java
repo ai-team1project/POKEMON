@@ -11,7 +11,7 @@ import java.util.List;
 @Controller
 public class NewsAnyMovieController {
 
-    @GetMapping("/news/any&movie")
+    @GetMapping("/news/any-movie")
     public String card (Model model) {
         List<BaseModel> newsList = new ArrayList<>();
 

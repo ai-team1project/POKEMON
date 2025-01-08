@@ -81,22 +81,6 @@
   transition: all 0.3s;
 }
 
-.card__notice {
-  border-bottom: 5px solid #FED856;
-}
-
-.card__event {
-  border-bottom: 5px solid #47C565;
-}
-
-.card__game {
-  border-bottom: 5px solid #FF0000;
-}
-
-.card__any&movie {
- border-bottom: 5px solid #9E41CC;
-}
-
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
