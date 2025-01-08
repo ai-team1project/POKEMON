@@ -1,5 +1,5 @@
 server:
-  port: 9gi000
+  port: 9000
   servlet:
     session:
       cookie.name: bfb4c74f0
