@@ -1,4 +1,4 @@
-package org.koreait.front.controllers;
+package org.koreait.front.controllers.news;
 
 import org.koreait.front.common.BaseModel;
 import org.springframework.stereotype.Controller;
