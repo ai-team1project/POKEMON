@@ -16,6 +16,7 @@
     <link rel="stylesheet" th:href="@{/front/css/news/search.css}" />
     <link rel="stylesheet" th:href="@{/front/css/news/link.css}" />
     <link rel="stylesheet" th:href="@{/front/css/news/card_deck.css}" />
+   <!-- <script src="/front/js/news/news.js" defer></script> -->
     <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -53,30 +54,31 @@
             <nav>
                 <ul>
                     <li>
-                        <a class="category" href="">전체</a>
+                        <a class="category" th:href="@{/news}">전체</a>
                     </li>
                     <li>
-                        <a class="category" href="">공지</a>
+                        <a class="category" th:href="@{/news/notice}">공지</a>
                     </li>
                     <li>
-                        <a class="category" href="">이벤트</a>
+                        <a class="category" th:href="@{/news/event}">이벤트</a>
                     </li>
                     <li>
-                        <a class="category" href="">게임</a>
+                        <a class="category" th:href="@{/news/game}">게임</a>
                     </li>
                     <li>
-                        <a class="category" href="">카드 게임</a>
+                        <a class="category" th:href="@{/news/cardgame}">카드 게임</a>
                     </li>
                     <li>
-                        <a class="category" href="">애니&영화</a>
+                        <a class="category" th:href="@{/any&movie}">애니&영화</a>
                     </li>
                     <li>
-                        <a class="category" href="">상품</a>
+                        <a class="category" th:href="@{/news/product}">상품</a>
                     </li>
                 </ul>
             </nav>
             <div class="grid-layout">
-                <article class="card" th:each="newsList : ${newsList}">
+               <article class="card" th:each="newsList : ${newsList}" >
+                <!-- <article th:each="newsList : ${newsList}" th:class="'card__' + ${newsList.sub_title.replaceAll(' ', '')}"> -->
 
                     <a
                             th:href="${newsList.pageUrl}"
@@ -102,6 +104,7 @@
                             </div>
                         </div>
                     </a>
+                </article>
                 </article>
             </div>
             <div class="more">

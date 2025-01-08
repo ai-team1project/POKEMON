@@ -1,0 +1,87 @@
+.message__container {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+    padding: 100px;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.message_top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message__notice {
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+
+.message__title {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:10px;
+
+    width:100%;
+}
+
+.title__inputbar {
+    width: 100%;
+    background-color: white;
+}
+
+.title__inputbar > input {
+      outline: none;
+      // border: none;
+      font-size: 17px;
+      color: #6c757d;
+      width: 100%;
+}
+
+.message__write {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.box__style {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.button__collection {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+    padding-top: 15px;
+}
+
+.message__file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button__group {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    gap: 10px;
+}
