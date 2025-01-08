@@ -10,23 +10,21 @@
         <input type="hidden" name="email" th:field="*{email}">
         <input type="hidden" name="gid" th:field="*{gid}">
 
-        <dl th:if="${@memberUtil.isAdmin()}">
+        <div class="message_top">
+        <dl class="message__notice" th:if="${@memberUtil.isAdmin()}">
             <dt th:text="#{공지}"></dt>
             <dd>
                 <input type="checkbox" name="notice" value="true" id="notice" th:field="*{notice}">
                 <label for="notice" th:text="#{전체_메세지}"></label>
             </dd>
         </dl>
-
-
-        <dl>
-            <dt th:text="#{제목}"></dt>
-            <dd>
-                <input calss= type="text" name="subject" th:field="*{subject}">
+        <dl class="message__title">
+            <dt style="width:30px" th:text="#{제목}"></dt>
+            <dd class="title__inputbar">
+                <input type="text" name="subject" th:field="*{subject}">
                 <div class="error" th:each="err : ${#fields.errors('subject')}" th:text="${err}"></div>
             </dd>
         </dl>
-        <div class="message__write">
         <dl>
             <dt th:text="#{내용}"></dt>
         </dl>
@@ -36,25 +34,28 @@
                 <div class="error" th:each="err : ${#fields.errors('content')}" th:text="${err}"></div>
             </dd>
         </dl>
+        </div>
             <div class="button__collection">
+            <div class="button__group">
             <dd>
                 <button type="button" class="file-upload image" th:text="#{이미지_업로드}" th:data-gid="*{gid}" data-location="editor" data-image-only="true"></button>
                 <div class="uploaded-files" id="editor-files"></div>
             </dd>
 
         <dl class="message__file">
-            <dt>파일첨부</dt>
+            <!-- <dt>파일첨부</dt> -->
             <dd>
                 <button type="button" class="file-upload" th:text="#{파일_업로드}" th:data-gid="*{gid}" data-location="attach"></button>
                 <div class="uploaded-files" id="attach-files"></div>
             </dd>
         </dl>
-        <div class="button-group">
+        </div>
+        <div class="button__group">
             <button type="reset" class="btn" th:text="#{다시작성}"></button>
             <button type="submit" class="btn" th:text="#{전송하기}"></button>
         </div>
         </div>
-        </div>
+
     </form>
 
 

@@ -7,6 +7,45 @@
     gap: 50px;
     padding: 100px;
     border-bottom: 1px solid black;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.message_top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message__notice {
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+
+.message__title {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:10px;
+
+    width:100%;
+}
+
+.title__inputbar {
+    width: 100%;
+    background-color: white;
+}
+
+.title__inputbar > input {
+      outline: none;
+      // border: none;
+      font-size: 17px;
+      color: #6c757d;
+      width: 100%;
 }
 
 .message__write {
@@ -15,17 +54,33 @@
     align-items: center;
     justify-content: center;
 
-    gap: 30px;
+    gap: 20px;
+}
+
+.message__write dt {
+    font-size: 15px;
+
+    position: relative;
+    left: -270px;
 }
 
 .button__collection {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:space-between;
+
+    padding-top: 15px;
 }
 
-message__file {
+.message__file {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.button__group {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    gap: 10px;
 }
