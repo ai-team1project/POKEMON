@@ -12,7 +12,7 @@
 <link rel="stylesheet" th:href="@{/front/css/main/new__video.css}" />
 <link rel="stylesheet" th:href="@{/front/css/main/main__game.css}" />
 <link rel="stylesheet" th:href="@{/front/css/main/card__game.css}" />
-<link rel="stylesheet" th:href="@{/front/css/main/main__product.css}" />
+<link rel="stylesheet" href="/front/css/main/main__product.css" />
 <link rel="stylesheet" th:href="@{/front/css/main/main__animation.css}" />
 <link rel="stylesheet" th:href="@{/front/css/main/main__under.css}" />
 <script th:src="@{/front/js/main/main.js}" defer></script>
@@ -26,30 +26,6 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide" th:each="mainSwiper : ${mainSwiper}">
-                    <article class="main__swiper">
-                        <a th:href="${mainSwiper.pageUrl}">
-                            <div class="main__album">
-                                <img
-                                        th:src="${mainSwiper.imageUrl}"
-                                        alt=""
-                                />
-                            </div>
-                        </a>
-                    </article>
-                </div>
-                <div class="swiper-slide" th:each="mainSwiper : ${mainSwiper}">
-                    <article class="main__swiper">
-                        <a th:href="${mainSwiper.pageUrl}">
-                            <div class="main__album">
-                                <img
-                                        th:src="${mainSwiper.imageUrl}"
-                                        alt=""
-                                />
-                            </div>
-                        </a>
-                    </article>
-                </div>
                 <div class="swiper-slide" th:each="mainSwiper : ${mainSwiper}">
                     <article class="main__swiper">
                         <a th:href="${mainSwiper.pageUrl}">
@@ -407,13 +383,48 @@
                         />
                     </a>
                 </div>
-                <article class="main__product__content" th:each="mainProduct : ${mainProduct}">
-                    <a th:href="${mainProduct.pageUrl}">
+                <article class="main__product__content">
+                    <a
+                            href="https://pokemonstore.co.kr/pages/product/view.html?productNo=123486536&preview=true"
+                    >
                         <div class="main__product__album">
-                            <img th:src="${mainProduct.imageUrl}" alt=""/>
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-17_17-24-07-17384-1729153447.png"
+                                    alt=""
+                            />
                         </div>
                         <div class="main__product__info">
-                            <span th:text="${mainProduct.title}">포켓몬 스토어 「팬텀」 키캡</span>
+                            <span>포켓몬 스토어 「팬텀」 키캡</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="main__product__content">
+                    <a
+                            href="https://pokemonstore.co.kr/pages/product/list.html?depth=2&categoryNo=821387"
+                    >
+                        <div class="main__product__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-17_17-23-49-51186-1729153429.png"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="main__product__info">
+                            <span>포켓몬 스토어 「전통에디션」 자개 스티커</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="main__product__content">
+                    <a
+                            href="https://pokemonstore.co.kr/pages/product/list.html?depth=2&categoryNo=817211"
+                    >
+                        <div class="main__product__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-17_17-24-36-35264-1729153476.png"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="main__product__info">
+                            <span>포켓몬 스토어 실리콘 파우치</span>
                         </div>
                     </a>
                 </article>
@@ -429,13 +440,48 @@
                         />
                     </a>
                 </div>
-                <article class="main__product__content" th:each="mainProduct : ${mainProduct}">
-                    <a th:href="${mainProduct.pageUrl}">
+                <article class="main__product__content">
+                    <a
+                            href="https://e.kakao.com/t/gorapaduck-is-back?lang=ko&referer=co_mkt"
+                    >
                         <div class="main__product__album">
-                            <img th:src="${mainProduct.imageUrl}" alt=""/>
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/12/2024-12-06_10-34-07-66399-1733448847.jpg"
+                                    alt=""
+                            />
                         </div>
                         <div class="main__product__info">
-                            <span th:text="${mainProduct.title}">포켓몬 스토어 「팬텀」 키캡</span>
+                            <span>「내가왔덕 고라파덕」카카오 이모티콘 출시!! </span>
+                        </div>
+                    </a>
+                </article>
+                <article class="main__product__content">
+                    <a
+                            href="https://m.fredit.co.kr/product/detail?prdId=5365"
+                    >
+                        <div class="main__product__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/05/2024-05-30_14-20-26-24070-1717046426.jpg"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="main__product__info">
+                            <span>얼려먹고 거꾸로 먹는 포켓몬 야쿠르트!! </span>
+                        </div>
+                    </a>
+                </article>
+                <article class="main__product__content">
+                    <a
+                            href="https://smartstore.naver.com/damtuhstore"
+                    >
+                        <div class="main__product__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/04/2024-04-30_15-23-41-76986-1714458221.jpg"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="main__product__info">
+                            <span>포켓몬 콤부차 새로운 플레이버 출시! </span>
                         </div>
                     </a>
                 </article>
