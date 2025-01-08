@@ -29,6 +29,9 @@ public class MainController {
         // MainList
         List<BaseModel> mainList = new ArrayList<>();
         mainList.add(new BaseModel("업데이트 데이터(Ver.3.0.1) 배포 안내", "게임", "https://data1.pokemonkorea.co.kr/newdata/2022/12/2022-12-01_16-22-12-70846-1669879332.png", "https://www.nintendo.co.kr/switch/sv/updateData.html"));
+        mainList.add(new BaseModel("「Pokémon HOME」 업데이트 알림(Ver.3.2.1)", "게임", "https://data1.pokemonkorea.co.kr/newdata/2023/09/2023-09-13_10-14-29-86954-1694567669.png", "https://pokemonkorea.co.kr/pokemonhome/menu300?number=3245&mode=view"));
+        mainList.add(new BaseModel("「Pokémon Sleep」 절찬 배포 중!", "게임", "https://data1.pokemonkorea.co.kr/newdata/2024/01/2024-01-04_15-57-20-84474-1704351440.png", "https://www.pokemonsleep.net/ko/"));
+        mainList.add(new BaseModel("포켓몬스터 금은편: 은빛산 이야기 8월 10일 (토) 첫 방송! ", "애니&영화", "https://data1.pokemonkorea.co.kr/newdata/2024/08/2024-08-01_13-56-18-76741-1722488178.png", "https://www.pokemonkorea.co.kr/2024_3rd_project"));
         model.addAttribute("mainList", mainList);
 
         // NewNews
@@ -38,6 +41,12 @@ public class MainController {
 
         // MainGame
         List<MainGame> mainGame = new ArrayList<>();
+        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "포켓몬 카드 게임 Pocket」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
+        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「포켓몬스터스칼렛・바이올렛 제로의 비보」<후편: 남청의 원반> 배포 개시!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
+        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「돌아온 명탐정 피카츄」 절찬 판매 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
+        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "포켓몬 카드 게임 Pocket」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
+        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "포켓몬 카드 게임 Pocket」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
+        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "포켓몬 카드 게임 Pocket」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
         mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "포켓몬 카드 게임 Pocket」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
         model.addAttribute("mainGame", mainGame);
 
