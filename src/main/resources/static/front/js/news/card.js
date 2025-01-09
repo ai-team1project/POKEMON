@@ -2,9 +2,10 @@
     // 모든 card__sub__title 요소를 가져옵니다
     const subTitles = document.querySelectorAll('.card__sub__title');
 
+
     // 각 subTitle에 대해 반복하면서 색상 변경
     subTitles.forEach(subTitle => {
-      const textContent = subTitle.textContent.trim();  // 텍스트를 추출하고 양쪽 공백을 제거
+    const textContent = subTitle.textContent.trim();  // 텍스트를 추출하고 양쪽 공백을 제거
 
       // 카테고리별로 border-bottom 색상 지정
       if (textContent.includes("카드 게임")) {
@@ -28,3 +29,5 @@
       }
     });
   });
+
+

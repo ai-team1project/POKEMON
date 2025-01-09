@@ -129,6 +129,11 @@
   gap: 0px;
 }
 
+.card__sub__title > li {
+    font-size: 14px;
+    color: #666;
+}
+
 .card__sub > ul {
   display: flex;
   align-items: center;
