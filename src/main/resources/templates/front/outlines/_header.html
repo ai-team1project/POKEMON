@@ -58,6 +58,12 @@
                     </a>
                 </li>
                 <li>
+                    <a th:if="${(@memberUtil.isLogin() && !@memberUtil.isAdmin()) || (@memberUtil.isLogin() && @memberUtil.isAdmin())}" th:href="@{/member/logout}">
+                        <i class="icon logout"></i>
+                        <th:block th:text="#{로그아웃}"></th:block>
+                    </a>
+                </li>
+                <li>
                     <a th:unless="${@memberUtil.isLogin()}" th:href="@{/member/login}">
                         <i class="icon login"></i>
                         <th:block th:text="#{로그인}"></th:block>

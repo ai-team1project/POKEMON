@@ -141,6 +141,10 @@ header .icon.login {
     background:url("../images/icon_login.png") no-repeat center center;
 }
 
+header .icon.logout {
+    background:url("../images/icon_logout.png") no-repeat center center;
+}
+
 header .icon.search {
     background: url("../images/icon_search.png") no-repeat center center;
 }
@@ -160,6 +164,7 @@ header > .right > ul {
 
 header > .right li {
     margin: 0 15px;
+    white-space: nowrap;
 }
 
 header >.right li a {
