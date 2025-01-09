@@ -17,7 +17,6 @@
     <link rel="stylesheet" th:href="@{/front/css/news/card_deck.css}" />
     <script src="/front/js/news/card.js" defer></script>
     <script src="/front/js/news/more.js" defer></script>
-    <script src="/front/js/news/news.js" defer></script>
 
 
     <link
@@ -46,7 +45,7 @@
         </section>
         <section class="link">
             <a class="link__logo" href="https://pokemonkorea.co.kr/">
-                <img src="front/images/main_logo.png" alt="" />
+                <img th:src="@{/front/images/main_logo.png}" alt="" />
             </a>
             <span >
           <i class="fa-solid fa-chevron-right"></i>
@@ -102,7 +101,7 @@
                                     <li th:text="${newsList.sub_title}"></li>
                                 </ul>
                                 <button class="card__sub__button">
-                                    <img th:src="@{front/images/icon_go.png}" alt="" />
+                                    <img th:src="@{/front/images/icon_go.png}" alt="" />
                                 </button>
                             </div>
                         </div>
