@@ -35,7 +35,7 @@
   display: flex;
 
   width: 422px;
-  height: 313px;
+  height: 278px;
 }
 
 .main__under__album > img {
@@ -67,6 +67,7 @@
 
 
 .main__under__info > span {
+     font-size: 24px;
      color: white;
 }
 

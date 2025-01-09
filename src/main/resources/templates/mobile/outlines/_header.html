@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 토글 예제</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 <header th:fragment="common">
     <div class="left">
         <a th:href="@{/}" class="logo">
-            <img th:src="@{/mobile/images/main_logo.png}">
+            <img th:src="@{/front/images/main_logo.png}">
         </a>
-        <ul class="main-menu">
+        <button class="menu-toggle" id="menuToggle">☰</button> <!-- 토글 버튼 추가 -->
+        <ul class="main-menu" id="mainMenu">
             <li>
-                <a th:href="@{/news}">
+                <a th:href="@{/m.news}">
                     <div>
                         <i class="icon news"></i>
                         <th:block th:text="#{소식}"></th:block>
@@ -16,7 +24,7 @@
                 </a>
             </li>
             <li>
-                <a href="/game">
+                <a href="/m.game">
                     <div>
                         <i class="icon game"></i>
                         <th:block th:text="#{게임}"></th:block>
@@ -32,7 +40,7 @@
                 </a>
             </li>
             <li>
-                <a th:href="@{/animation}">
+                <a th:href="@{/m.animation}">
                     <div>
                         <i class="icon animation"></i>
                         <th:block th:text="#{애니메이션}"></th:block>
@@ -40,7 +48,7 @@
                 </a>
             </li>
             <li>
-                <a th:href="@{/goods}">
+                <a th:href="@{/m.goods}">
                     <div>
                         <i class="icon products"></i>
                         <th:block th:text="#{상품}"></th:block>
@@ -52,7 +60,7 @@
     <div class="right">
         <ul>
             <li>
-                <a th:href="@{/pokemon/list}">
+                <a th:href="@{/m.pokemon/list}">
                     <i class="icon catalog"></i>
                     <th:block th:text="#{포켓몬_도감}"></th:block>
                 </a>
@@ -83,4 +91,7 @@
         <a href="#" class="move-to-store"></a>
     </div>
 </header>
+
+<script th:src="@{/mobile/js/common.js} "></script>
+</body>
 </html>
