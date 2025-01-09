@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메뉴 토글 예제</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" th:href="@{mobile/css/common/menu.css">
 </head>
 <body>
 <header th:fragment="common">
     <div class="left">
+        <button class="menu-toggle" id="menuToggle">☰</button>
         <a th:href="@{/}" class="logo">
             <img th:src="@{/front/images/main_logo.png}">
         </a>
-        <button class="menu-toggle" id="menuToggle">☰</button> <!-- 토글 버튼 추가 -->
+         <!-- 토글 버튼 추가 -->
         <ul class="main-menu" id="mainMenu">
             <li>
                 <a th:href="@{/m.news}">
