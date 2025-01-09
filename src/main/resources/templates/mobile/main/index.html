@@ -1,8 +1,573 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-    layout:decorate="~{mobile/layouts/main}">
-    <main layout:fragment="content">
-        <h1>메인 영역(모바일)...</h1>
-    </main>
+<html xmlns:th="http://www.thymeleaf.org">
+<link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" th:href="@{/mobile/css/style.css}">
+
+<!-- <link rel="stylesheet" th:href="@{/front/css/common/reset.css}" /> -->
+<link rel="stylesheet" th:href="@{/mobile/css/m.main/swiper__container.css}"/>
+<link rel="stylesheet" th:href="@{/mobile/css/m.main/card__list.css}" />
+<link rel="stylesheet" th:href="@{/mobile/css/m.main/new__list.css}" />
+<link rel="stylesheet" th:href="@{/mobile/css/m.main/new__video.css}" />
+<link rel="stylesheet" th:href="@{/mobile/css/m.main/main__game.css}" />
+<link rel="stylesheet" th:href="@{/mobile/css/m.main/card__game.css}" />
+<link rel="stylesheet" th:href="@{/mobile/css/m.main/main__product.css}" />
+<link rel="stylesheet" th:href="@{/mobile/css/m.main/main__animation.css}" />
+<link rel="stylesheet" th:href="@{/mobile/css/m.main/main__under.css}" />
+<script th:src="@{/mobile/js/common.js}" defer></script>
+<script th:src="@{/mobile/js/main/main.js}" defer></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<main>
+    <header th:replace="~{mobile/outlines/_header::common}"></header>
+
+    <section class="swiper__container">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide" th:each="mainSwiper : ${mainSwiper}">
+                    <article class="main__swiper">
+                        <a th:href="${mainSwiper.pageUrl}">
+                            <div class="main__album">
+                                <img
+                                        th:src="${mainSwiper.imageUrl}"
+                                        alt=""
+                                />
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <section class="card__list">
+        <article class="card__container" th:each="mainList : ${mainList}">
+            <a th:href="${mainList.pageUrl}">
+                <div class="crad__info">
+                    <div class="card__album">
+                        <img
+                                th:src="${mainList.imageUrl}"
+                                alt=""
+                        />
+                    </div>
+                    <div class="card__under">
+                        <div class="card__under__info">
+                            <span th:text="${mainList.title}">업데이트 데이터(Ver.3.0.1)</span>
+                            <button th:text="${mainList.sub_title}" class="card__btn">게임</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </article>
+    </section>
+    <section class="new__list">
+        <h2>새로운 소식</h2>
+        <div class="new__container">
+            <a th:each="newNews : ${newNews}" th:href="${newNews.pageUrl}">
+                <article class="new__card">
+                    <div class="new__card__album">
+                        <img
+                                th:src="${newNews.imageUrl}"
+                                alt=""
+                        />
+                    </div>
+                    <div class="new__card_container">
+                        <div class="new__card__info">
+                            <div class="new__upper">
+                                <p th:text="${newNews.title}">2025 코리안리그 시즌2 개최!</p>
+                            </div>
+                            <div class="news__card__under">
+                                <p th:text="${newNews.sub_title}" >카드 게임 | 2024년 12월 12일</p>
+                                <button class="nuw__btn">
+                                    <img
+                                            src="https://pokemonkorea.co.kr/img/icon/icon_go.png"
+                                            alt=""
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+        </div>
+        <div class="new__more">
+            <a href="https://pokemonkorea.co.kr/news">
+                <div class="new__more__text">더보기</div>
+                <div class="new__more__image">
+                    <img src="https://pokemonkorea.co.kr/img/icon/icon_more.png" />
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="new__video" >
+        <h2>새로운 영상</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <article class="new__video__swiper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/FterbeO6oD0?si=wgUawjvKb09651C1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <article class="new__video__swiper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5ilaJeWiEWU?si=d2mgkLw-xHzi2jLo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <article class="new__video__swiper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xI0J7WOn4Gs?si=0KCYSOOvEc_oz66u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <article class="new__video__swiper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3OUQfbyFfIo?si=m4kDD1LECh7Ud1WH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <article class="new__video__swiper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dYQrNiG4ezU?si=KlCGzSOaHq8JOgsu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <article class="new__video__swiper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KLFrOIc_oq8?si=Jt3lGhKwFWVSLTCt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </article>
+                </div>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <section class="main__game">
+        <div class="main__game__container">
+            <div class="main__game__left">
+                <img
+                        src="https://pokemonkorea.co.kr/img/main/game_object2.png"
+                        alt=""
+                />
+            </div>
+            <div class="main_game__right">
+                <h2>게임</h2>
+                <div class="main__game__card__list">
+                    <a th:href="${mainGame.pageUrl}" th:each="mainGame : ${mainGame}">
+                        <article class="main__game__card">
+                            <div class="main__game__album">
+                                <img th:src="${mainGame.imageUrl}" alt=""/>
+                            </div>
+                            <div class="main__game__info">
+                                <div class="main__game__info__inner">
+                                    <span th:text="${mainGame.title}">「포켓몬 카드 게임 Pocket」 절찬 배포 중! </span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="card__game">
+        <h2>카드 게임</h2>
+        <div class="card__game__container">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <article class="card__game__content">
+                            <div class="card__game__album">
+                                <img
+                                        src="https://data1.pokemonkorea.co.kr/newdata/2024/09/2024-09-09_09-22-09-62411-1725841329.png"
+                                        alt=""
+                                />
+                            </div>
+                            <div class="card__game__info">
+                                <h3 class="card__game__tit">
+                                    다채로운 에너지로 기술을 구사해보자!
+                                </h3>
+                                <p class="card__game__sub">
+                                    포켓몬 카드 게임 확장팩 「변환의 가면」 9월 대발매!
+                                </p>
+                                <div class="card__game_more">
+                                    <a href="https://pokemonkorea.co.kr/news">
+                                        <div class="new__more__text">더보기</div>
+                                        <div class="card__game_more__image">
+                                            <img
+                                                    src="https://pokemonkorea.co.kr/img/icon/icon_more.png"
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card__game__content">
+                            <div class="card__game__album">
+                                <img
+                                        src="https://data1.pokemonkorea.co.kr/newdata/2024/09/2024-09-09_09-23-55-51087-1725841435.png"
+                                        alt=""
+                                />
+                            </div>
+                            <div class="card__game__info">
+                                <h3 class="card__game__tit">
+                                    세벗을 이끌고 복숭악동 ex 암약!
+                                </h3>
+                                <p class="card__game__sub">
+                                    포켓몬 카드 게임 강화 확장팩 「나이트원더러」 8월 대발매!
+                                </p>
+                                <div class="card__game_more">
+                                    <a href="https://pokemoncard.co.kr/card/650">
+                                        <div class="new__more__text">더보기</div>
+                                        <div class="card__game_more__image">
+                                            <img
+                                                    src="https://pokemonkorea.co.kr/img/icon/icon_more.png"
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card__game__content">
+                            <div class="card__game__album">
+                                <img
+                                        src="https://data1.pokemonkorea.co.kr/newdata/2024/07/2024-07-05_14-13-20-33636-1720156400.png"
+                                        alt=""
+                                />
+                            </div>
+                            <div class="card__game__info">
+                                <h3 class="card__game__tit">
+                                    강력한 덱으로 배틀 마스터가 되어보자!
+                                </h3>
+                                <p class="card__game__sub">
+                                    스칼렛&바이올렛 배틀 마스터 덱 「테라스탈 리자몽 ex」「파오젠 ex」 대발매!
+                                </p>
+                                <div class="card__game_more">
+                                    <a href="https://pokemoncard.co.kr/card/647">
+                                        <div class="new__more__text">더보기</div>
+                                        <div class="card__game_more__image">
+                                            <img
+                                                    src="https://pokemonkorea.co.kr/img/icon/icon_more.png"
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card__game__content">
+                            <div class="card__game__album">
+                                <img
+                                        src="https://data1.pokemonkorea.co.kr/newdata/2024/06/2024-06-10_11-33-02-30714-1717986782.png"
+                                        alt=""
+                                />
+                            </div>
+                            <div class="card__game__info">
+                                <h3 class="card__game__tit">
+                                    가면과 타입을 바꿔서 배틀하자 오거폰 ex 등장!
+                                </h3>
+                                <p class="card__game__sub">
+                                    포켓몬 카드 게임 확장팩「변환의 가면」6월 대발매!
+                                </p>
+                                <div class="card__game_more">
+                                    <a href="https://pokemoncard.co.kr/card/642">
+                                        <div class="new__more__text">더보기</div>
+                                        <div class="card__game_more__image">
+                                            <img
+                                                    src="https://pokemonkorea.co.kr/img/icon/icon_more.png"
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card__game__content">
+                            <div class="card__game__album">
+                                <img
+                                        src="https://data1.pokemonkorea.co.kr/newdata/2024/06/2024-06-10_11-53-25-30496-1717988005.png"
+                                        alt=""
+                                />
+                            </div>
+                            <div class="card__game__info">
+                                <h3 class="card__game__tit">
+                                    처음 해보는 포켓몬 카드 게임 모두 함께 배틀하자!
+                                </h3>
+                                <p class="card__game__sub">
+                                    포켓몬 카드 게임「배틀 아카데미」 대발매!
+                                </p>
+                                <div class="card__game_more">
+                                    <a href="https://pokemoncard.co.kr/card/628">
+                                        <div class="new__more__text">더보기</div>
+                                        <div class="card__game_more__image">
+                                            <img
+                                                    src="https://pokemonkorea.co.kr/img/icon/icon_more.png"
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card__game__content">
+                            <div class="card__game__album">
+                                <img
+                                        src="https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-04_19-01-24-63174-1728036084.jpg"
+                                        alt=""
+                                />
+                            </div>
+                            <div class="card__game__info">
+                                <h3 class="card__game__tit">
+                                    2025 코리안리그 시즌1
+                                </h3>
+                                <p class="card__game__sub">
+                                    2025 코리안리그 시즌1 개최 안내!
+                                </p>
+                                <div class="card__game_more">
+                                    <a href="https://pokemonkorea.co.kr/koreanleague_2025">
+                                        <div class="new__more__text">더보기</div>
+                                        <div class="card__game_more__image">
+                                            <img
+                                                    src="https://pokemonkorea.co.kr/img/icon/icon_more.png"
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <a
+                href="https://pokemonkorea.co.kr/card_vending_machine"
+                class="card__game__banner"
+        >
+            <img
+                    src="https://data1.pokemonkorea.co.kr/newdata/2020/09/2020-09-05_01-22-45-31389-1599236565.png"
+                    alt=""
+            />
+        </a>
+    </section>
+    <section class="main__product">
+        <h2>상품</h2>
+        <div class="main__product__container">
+            <div class="main__product__left">
+                <div class="main__product__tit">
+                    <h3>온라인 스토어</h3>
+                    <a href="https://www.pokemonstore.co.kr/"
+                    >MORE
+                        <img
+                                src="https://pokemonkorea.co.kr/img/icon/icon_more.png"
+                                alt=""
+                        />
+                    </a>
+                </div>
+                <article class="main__product__content">
+                    <a
+                            href="https://pokemonstore.co.kr/pages/product/view.html?productNo=123486536&preview=true"
+                    >
+                        <div class="main__product__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-17_17-24-07-17384-1729153447.png"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="main__product__info">
+                            <span>포켓몬 스토어 「팬텀」 키캡</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="main__product__content">
+                    <a
+                            href="https://pokemonstore.co.kr/pages/product/list.html?depth=2&categoryNo=821387"
+                    >
+                        <div class="main__product__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-17_17-23-49-51186-1729153429.png"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="main__product__info">
+                            <span>포켓몬 스토어 「전통에디션」 자개 스티커</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="main__product__content">
+                    <a
+                            href="https://pokemonstore.co.kr/pages/product/list.html?depth=2&categoryNo=817211"
+                    >
+                        <div class="main__product__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-17_17-24-36-35264-1729153476.png"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="main__product__info">
+                            <span>포켓몬 스토어 실리콘 파우치</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="main__product__right">
+                <div class="main__product__tit" >
+                    <h3>라이선스 상품</h3>
+                    <a href="https://pokemonkorea.co.kr/goods"
+                    >MORE
+                        <img
+                                src="https://pokemonkorea.co.kr/img/icon/icon_more.png"
+                                alt=""
+                        />
+                    </a>
+                </div>
+                <article class="main__product__content">
+                    <a
+                            href="https://e.kakao.com/t/gorapaduck-is-back?lang=ko&referer=co_mkt"
+                    >
+                        <div class="main__product__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/12/2024-12-06_10-34-07-66399-1733448847.jpg"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="main__product__info">
+                            <span>「내가왔덕 고라파덕」카카오 이모티콘 출시!! </span>
+                        </div>
+                    </a>
+                </article>
+                <article class="main__product__content">
+                    <a
+                            href="https://m.fredit.co.kr/product/detail?prdId=5365"
+                    >
+                        <div class="main__product__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/05/2024-05-30_14-20-26-24070-1717046426.jpg"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="main__product__info">
+                            <span>얼려먹고 거꾸로 먹는 포켓몬 야쿠르트!! </span>
+                        </div>
+                    </a>
+                </article>
+                <article class="main__product__content">
+                    <a
+                            href="https://smartstore.naver.com/damtuhstore"
+                    >
+                        <div class="main__product__album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/04/2024-04-30_15-23-41-76986-1714458221.jpg"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="main__product__info">
+                            <span>포켓몬 콤부차 새로운 플레이버 출시! </span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="main__animation">
+        <h2>애니메이션</h2>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide" th:each="mainAnimation : ${mainAnimation}">
+                    <a th:href="${mainAnimation.pageUrl}">
+                        <article class="main__animation__swiper">
+                            <div class="main__animation__album">
+                                <img
+                                        th:src="${mainAnimation.imageUrl}"
+                                        alt=""
+                                        class="img-fluid"
+                                />
+                            </div>
+                            <h3 th:text="${mainAnimation.title}">TV 애니메이션 포켓몬스터」테라스탈 데뷔 절찬 방영 중</h3>
+                        </article>
+                    </a>
+                </div>
+                <div class="swiper-slide" th:each="mainAnimation : ${mainAnimation}">
+                    <a th:href="${mainAnimation.pageUrl}">
+                        <article class="main__animation__swiper">
+                            <div class="main__animation__album">
+                                <img
+                                        th:src="${mainAnimation.imageUrl}"
+                                        alt=""
+                                        class="img-fluid"
+                                />
+                            </div>
+                            <h3 th:text="${mainAnimation.title}">TV 애니메이션 포켓몬스터」테라스탈 데뷔 절찬 방영 중</h3>
+                        </article>
+                    </a>
+                </div>
+                <div class="swiper-slide" th:each="mainAnimation : ${mainAnimation}">
+                    <a th:href="${mainAnimation.pageUrl}">
+                        <article class="main__animation__swiper">
+                            <div class="main__animation__album">
+                                <img
+                                        th:src="${mainAnimation.imageUrl}"
+                                        alt=""
+                                        class="img-fluid"
+                                />
+                            </div>
+                            <h3 th:text="${mainAnimation.title}">TV 애니메이션 포켓몬스터」테라스탈 데뷔 절찬 방영 중</h3>
+                        </article>
+                    </a>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <section class="main__under">
+        <div class="overlay"></div>
+        <div class="main__under__container">
+            <a th:href="${mainUnder.pageUrl}" th:each="mainUnder : ${mainUnder}">
+                <article class="main__nuder__card">
+                    <div class="main__under__album">
+                        <img
+                                th:src="${mainUnder.imageUrl}"
+                                alt=""
+                        />
+                    </div>
+                    <div class="main__under__info">
+                        <button th:text="${mainUnder.sub_title}">게임</button>
+                        <span th:text="${mainUnder.title}">「 Pokémon UNITE」</span>
+                    </div>
+                </article>
+            </a>
+        </div>
+    </section>
+
+    <footer th:replace="~{mobile/outlines/_footer::common}"></footer>
+</main>
 </html>

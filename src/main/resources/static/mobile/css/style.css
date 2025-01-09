@@ -1,18 +1,45 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-* { font-family: "Noto Sans KR", sans-serif; box-sizing: border-box; outline: none; color: #000; }
-
 /* 기본 스타일 초기화 S */
-html { font-size: 13px; } /* 1rem - 13px */
-body { margin: 120px 0 0; }
-a { text-decoration: none; }
-ul, ol { list-style: none; }
-ul, ol, dl, dt, dd { margin: 0; padding: 0; }
-img { border: 0; }
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    color: #000;
+}
+
+html {
+    font-size: 13px; /* 1rem - 13px */
+}
+
+body {
+    margin: 120px 0 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+ul, ol, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+}
 /* 기본 스타일 초기화 E */
 
 /* 공통 스타일 S */
-.layout-width { max-width: 1250px; min-width: 1100px; }
+.layout-width {
+    max-width: 1250px;
+    min-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 main {
     min-height: 500px;
 }
@@ -30,28 +57,42 @@ header {
     z-index: 10;
     top: 0;
     left: 0;
+    flex-wrap: wrap; /* flex-wrap 추가 */
+    padding: 0 15px; /* 좌우 여백 추가 */
 }
 
-header .main-menu { max-width: 835px; min-width: 450px; width: 100%; display: flex; }
+header .main-menu {
+    width: 100%;
+    max-width: 835px;
+    min-width: 450px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
 header .main-menu > li {
-    width: 0;
     flex-grow: 1;
     border-right: 1px solid #ebebeb;
+    text-align: center;
 }
-header .main-menu > li:first-of-type { border-left: 1px solid #ebebeb; }
+
+header .main-menu > li:first-of-type {
+    border-left: 1px solid #ebebeb;
+}
 
 header .main-menu > li a {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 120px;
-    width: 100%;
     font-size: 1.23rem;
     font-weight: 500;
     transition: all 0.5s;
 }
 
-header .main-menu > li a:hover, header .main-menu > li a:hover * {
+header .main-menu > li a:hover,
+header .main-menu > li a:hover * {
     color: #fff;
 }
 
@@ -75,7 +116,6 @@ header .main-menu > li:nth-of-type(5) a:hover {
     background: #793da7;
 }
 
-
 header .main-menu > li:nth-of-type(1) a:hover i {
     background: url("../images/icon_news_w.png") no-repeat center center;
 }
@@ -96,8 +136,20 @@ header .main-menu > li:nth-of-type(5) a:hover i {
     background: url("../images/icon_ball_w.png") no-repeat center center;
 }
 
-header > .left { display: flex; flex-grow: 1; }
-header > .left .logo { max-width: 350px; min-width: 250px; display: flex; align-items: center; justify-content: center; }
+/* 로고 영역 */
+header > .left {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+header > .left .logo {
+    max-width: 350px;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 header .main-menu .icon {
     display: block;
@@ -106,46 +158,7 @@ header .main-menu .icon {
     margin: 0 auto;
 }
 
-header > .right .icon {
-    display: block;
-    width: 38px;
-    height: 38px;
-    margin: 0 auto;
-}
-
-header .icon.news {
-    background:url("../images/icon_news.png") no-repeat center center;
-}
-
-header .icon.game {
-    background:url("../images/icon_game.png") no-repeat center center;
-}
-
-header .icon.card-game {
-    background:url("../images/icon_card.png") no-repeat center center;
-}
-
-header .icon.animation {
-    background:url("../images/icon_ani.png") no-repeat center center;
-}
-
-header .icon.products {
-    background:url('../images/icon_ball.png') no-repeat center center;
-}
-
-header .icon.catalog {
-    background:url("../images/icon_ball_c.png") no-repeat center center;
-}
-
-header .icon.login {
-    background:url("../images/icon_login.png") no-repeat center center;
-}
-
-header .icon.search {
-    background: url("../images/icon_search.png") no-repeat center center;
-}
-
-
+/* 오른쪽 영역 스타일 */
 header > .right {
     display: flex;
     width: 520px;
@@ -162,7 +175,7 @@ header > .right li {
     margin: 0 15px;
 }
 
-header >.right li a {
+header > .right li a {
     font-size: 1.077rem;
     color: #222;
 }
@@ -189,12 +202,59 @@ header .move-to-store::after {
     left: -15px;
     transform: skew(-45deg);
 }
+
+/* 메뉴 토글 버튼 및 메뉴를 위한 스타일 추가 S */
+.menu-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 11;
+}
+
+.menu-toggle.active {
+    transform: rotate(90deg);
+}
+
+.main-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main-menu li {
+    padding: 10px;
+    background-color: #333;
+}
+
+.main-menu li a {
+    color: white;
+    font-size: 1.23rem;
+    padding: 10px;
+    display: block;
+}
+
+.main-menu li a:hover {
+    background-color: #555;
+}
+
+.menu-toggle.active + .main-menu {
+    display: block;
+}
+/* 메뉴 토글 버튼 및 메뉴를 위한 스타일 추가 E */
+
 /* 사이트 상단 헤더 E */
 
 /* 사이트 하단 풋터 S */
 footer {
     height: 40vh;
-    background:black;
+    background: black;
 }
 
 .top {
@@ -202,7 +262,7 @@ footer {
 }
 
 .topp {
-    max-width:1250px;
+    max-width: 1250px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -214,17 +274,17 @@ footer {
 }
 
 .ft-menu {
-    display:flex;
-    gap:15px;
+    display: flex;
+    gap: 15px;
 }
 
 .ft-menu > li > a {
-    text-decoration-line:none;
-    color:white;
+    text-decoration-line: none;
+    color: white;
 }
 
 .top .ft-logo {
-    width: 200px,
+    width: 200px;
     height: 23px;
 }
 
@@ -234,7 +294,7 @@ footer {
 }
 
 .ft-menu {
-   display: flex;
+    display: flex;
 }
 
 .ft-bar {
@@ -243,9 +303,9 @@ footer {
 }
 
 .middlee {
-    max-width:1250px;
+    max-width: 1250px;
     margin: 0 auto;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     padding: 30px 0;
     font-size: 13px;
@@ -257,13 +317,13 @@ footer {
 }
 
 .middleTit {
-    display:flex;
+    display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .sns {
-    display:flex;
+    display: flex;
 }
 
 .sns > li a > img {
@@ -273,36 +333,35 @@ footer {
 }
 
 .bottomm {
-    max-width:1250px;
+    max-width: 1250px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     color: #fff;
     font-size: 14px;
-    background:black;
+    background: black;
     margin-top: 20px;
     align-items: center;
 }
 
 .bottom {
-    background:black;
+    background: black;
 }
 
-
 .bottom-left {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    gap:3px;
+    gap: 3px;
 }
 
 .bottom .right {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    gap:3px;
+    gap: 3px;
 }
 
-.right-bot{
-    padding-top:30px;
+.right-bot {
+    padding-top: 30px;
 }
 
 .ft-text {
@@ -335,206 +394,3 @@ footer {
     color: #fff;
 }
 /* 페이지네이션 E */
-
-
-/* iPhone, iPod, iPad, BlackBerry, Android, Windows CE, LG, MOT, SAMSUNG, SonyEricsson에 대한 미디어 쿼리 */
-
-/* iPhone */
-@media screen and (max-width: 480px) {
-    header {
-        height: 100px;
-    }
-    header .main-menu {
-        flex-direction: column;
-    }
-    header .main-menu > li {
-        border-right: none;
-        border-bottom: 1px solid #ebebeb;
-    }
-    header .main-menu > li:first-of-type {
-        border-left: none;
-    }
-    header .main-menu > li a {
-        font-size: 1rem;
-        height: 60px;
-        justify-content: flex-start;
-        padding-left: 15px;
-    }
-    header .move-to-store {
-        width: 160px;
-        height: 100px;
-    }
-    .pagination a {
-        min-width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-    footer .top .topp {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-/* iPad, Android tablets (Landscape mode) */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-    header {
-        height: 100px;
-    }
-    header .main-menu {
-        flex-direction: row;
-    }
-    header .main-menu > li {
-        border-right: 1px solid #ebebeb;
-    }
-    header .main-menu > li a {
-        font-size: 1.1rem;
-        height: 100px;
-        justify-content: center;
-        padding-left: 20px;
-    }
-    header .move-to-store {
-        width: 180px;
-        height: 100px;
-    }
-    .pagination a {
-        min-width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
-    }
-    footer .top .topp {
-        flex-direction: row;
-        align-items: center;
-    }
-    footer .middlee {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-/* Android (Portrait mode) */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    header {
-        height: 100px;
-    }
-    header .main-menu {
-        flex-direction: row;
-    }
-    header .main-menu > li a {
-        font-size: 1.2rem;
-        height: 100px;
-        justify-content: center;
-    }
-    header .move-to-store {
-        width: 190px;
-        height: 120px;
-    }
-    .pagination a {
-        min-width: 50px;
-        height: 50px;
-        font-size: 1.4rem;
-    }
-    footer .top .topp {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    footer .middlee {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    footer .bottomm {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-/* iPad, Tablets (Portrait mode) */
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
-    header {
-        height: 120px;
-    }
-    header .main-menu {
-        flex-direction: row;
-    }
-    header .main-menu > li a {
-        font-size: 1.3rem;
-        height: 120px;
-        justify-content: center;
-    }
-    .pagination a {
-        min-width: 55px;
-        height: 55px;
-        font-size: 1.5rem;
-    }
-}
-
-/* Galaxy S7, Samsung, LG */
-@media screen and (max-width: 600px) {
-    header {
-        height: 90px;
-    }
-    header .main-menu {
-        flex-direction: column;
-    }
-    header .main-menu > li {
-        border-right: none;
-        border-bottom: 1px solid #ebebeb;
-    }
-    header .main-menu > li:first-of-type {
-        border-left: none;
-    }
-    header .main-menu > li a {
-        font-size: 1rem;
-        height: 60px;
-        justify-content: flex-start;
-        padding-left: 15px;
-    }
-    header .move-to-store {
-        width: 160px;
-        height: 90px;
-    }
-    .pagination a {
-        min-width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-    footer .top .topp {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-/* Xperia, Sony Ericsson */
-@media screen and (max-width: 720px) {
-    header {
-        height: 100px;
-    }
-    header .main-menu {
-        flex-direction: column;
-    }
-    header .main-menu > li {
-        border-right: none;
-        border-bottom: 1px solid #ebebeb;
-    }
-    header .main-menu > li:first-of-type {
-        border-left: none;
-    }
-    header .main-menu > li a {
-        font-size: 1.1rem;
-        height: 70px;
-        justify-content: flex-start;
-        padding-left: 20px;
-    }
-    header .move-to-store {
-        width: 170px;
-        height: 100px;
-    }
-    .pagination a {
-        min-width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
-    }
-    footer .top .topp {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}

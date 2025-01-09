@@ -1,0 +1,53 @@
+.main__swiper {
+  display: flex;
+  justify-content: center;
+
+  width: 100vw;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+
+.main__album {
+width: 1691px;
+height:628px;
+}
+
+.main__album > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Swiper 버튼 공통 스타일 */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000000; /* 화살표 아이콘 색상 */
+  background-color: #ffffff; /* 버튼 배경색 */
+  border-radius: 50%; /* 원형 버튼 */
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* 이미지 위에 위치 */
+}
+
+/* 위치 조정 */
+.swiper-button-next {
+  right: 50px; /* 오른쪽 끝에서 20px 안쪽으로 이동 */
+}
+
+.swiper-button-prev {
+  left: 50px; /* 왼쪽 끝에서 20px 안쪽으로 이동 */
+}
+
+/* 화살표 아이콘 크기 조정 */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 30px; /* 화살표 크기 */
+  color: #000000;
+}
+
+

@@ -22,7 +22,7 @@ public class m_MainController {
     private final Utils utils;
 
 
-    @GetMapping("/")
+    @GetMapping("/m")
     // 메인 페이지
     public String index(Model model) {
         // MainList
@@ -113,6 +113,6 @@ public class m_MainController {
 
 
         // utils.tpl("main/index") 로 템플릿 경로 반환
-        return utils.tpl("main/index");
+        return "mobile/main/index";
     }
 }

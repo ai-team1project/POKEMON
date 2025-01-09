@@ -1,14 +1,16 @@
-document.getElementById('menuToggle').addEventListener('click', function() {
-    var menu = document.getElementById('mainMenu');
-    var menuToggleButton = document.getElementById('menuToggle');
+// 메뉴 토글 버튼과 메뉴 리스트 요소 가져오기
+const menuToggle = document.getElementById('menuToggle');
+const mainMenu = document.getElementById('mainMenu');
 
-    // 메뉴 열기/닫기
-    menu.classList.toggle('open');
-
-    // 아이콘 변경
-    if (menu.classList.contains('open')) {
-        menuToggleButton.innerHTML = '&times;';  // X로 변경
+// 버튼 클릭 시 메뉴 토글 및 버튼 모양 변경
+menuToggle.addEventListener('click', function() {
+    // 메뉴의 display 상태를 토글
+    if (mainMenu.style.display === 'block') {
+        mainMenu.style.display = 'none';
     } else {
-        menuToggleButton.innerHTML = '☰';  // ☰로 변경
+        mainMenu.style.display = 'block';
     }
+
+    // 버튼이 클릭될 때마다 'active' 클래스를 토글하여 버튼 모양 변경
+    menuToggle.classList.toggle('active');
 });
