@@ -197,6 +197,10 @@ h2 {
     color: #767676;
 }
 
+.birthDt-pointer {
+    cursor: pointer;
+}
+
 .address-row {
     display: flex;
     justify-content: space-between;
