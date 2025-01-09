@@ -23,6 +23,7 @@ header {
     height: 40px;
 }
 
+/* 메뉴 토글 버튼 스타일 */
 .menu-toggle {
     font-size: 30px;
     background: none;
@@ -30,19 +31,41 @@ header {
     color: white;
     cursor: pointer;
     margin-left: 20px;
-    display: none;  /* 기본적으로 버튼 숨기기 */
+    display: block;
 }
 
-/* 기본 메뉴 스타일 */
+.menu-icon {
+    font-size: 30px;
+}
+
+.close-icon {
+    font-size: 30px;
+    display: none;
+}
+
+/* 오른쪽에서 나오는 메뉴 */
 .main-menu {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: -250px;  /* 메뉴는 기본적으로 화면 밖에 위치 */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    transition: right 0.3s ease-in-out; /* 오른쪽에서 슬라이드 */
+}
+
+.main-menu.open {
+    right: 0;  /* 메뉴가 열리면 오른쪽에서 나타남 */
 }
 
 .main-menu li {
-    text-align: center;
+    text-align: left;
+    padding: 20px;
 }
 
 .main-menu a {
@@ -54,37 +77,11 @@ header {
     color: #f1f1f1;
 }
 
-/* 오른쪽 메뉴 */
-.right ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
+.main-menu i {
+    margin-right: 10px;
 }
 
-.right li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* 모바일 화면에서 메뉴 숨기기 및 토글 버튼 보이게 하기 */
-@media (max-width: 768px) {
-    .main-menu {
-        display: none;  /* 모바일 화면에서는 기본적으로 숨김 */
-        flex-direction: column;  /* 세로로 배치 */
-        gap: 10px;
-        background-color: #333;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 20px;
-    }
-
-    .menu-toggle {
-        display: block;  /* 모바일 화면에서는 버튼 보이게 하기 */
-    }
-
-    .main-menu.open {
-        display: flex;  /* 버튼 클릭 시 메뉴가 보이도록 설정 */
-    }
+/* 기본적으로 메뉴는 열려 있지 않지만, 버튼을 클릭하면 열리도록 */
+.menu-toggle {
+    display: block;
 }

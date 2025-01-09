@@ -1,8 +1,14 @@
-// JavaScript (script.js)
 document.getElementById('menuToggle').addEventListener('click', function() {
-    const menu = document.getElementById('mainMenu');
+    var menu = document.getElementById('mainMenu');
+    var menuToggleButton = document.getElementById('menuToggle');
 
-    // 메뉴가 숨겨져 있으면 보이도록, 보이면 숨기도록 토글
+    // 메뉴 열기/닫기
     menu.classList.toggle('open');
+
+    // 아이콘 변경
+    if (menu.classList.contains('open')) {
+        menuToggleButton.innerHTML = '&times;';  // X로 변경
+    } else {
+        menuToggleButton.innerHTML = '☰';  // ☰로 변경
+    }
 });
-ㅎ
