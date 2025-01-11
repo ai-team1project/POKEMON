@@ -1,0 +1,18 @@
+.items {
+   display: flex;
+   flex
+    flex-wrap: wrap;  /* 5개씩 줄바꿈 */
+    justify-content: space-between; /* 공간을 고르게 배치 */
+    max-width: 1250px; /* 최대 너비를 1250px로 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+.item {
+ width: 32%; /* 한 줄에 3개씩 배치되도록 32%로 설정 */
+ margin-bottom: 10px; /* 이미지 간격 */
+}
+
+.pokemon__info {
+    display: flex;
+}
+
