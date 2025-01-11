@@ -11,7 +11,6 @@
   width: 1127px;
   height: 845px;
 
-  margin-top: 121px;
 }
 
 body {
@@ -29,8 +28,8 @@ body {
 }
 
 .animation__top__info {
-  height: 110px;
-  padding: 35px 110px 41px 70px;
+  height: 130px;
+      padding: 43px 110px 41px 32px;
 
   background-color: black;
   color: #fff;
@@ -38,17 +37,22 @@ body {
   font-weight: 700;
 
   position: relative;
-  text-align: left;
 }
 
 .animation__top__tit {
     color: white;
+    font-size: 32px;
+
+    position: relative;
+    top: -50px;
+
 }
 
 .animation__top__tit > img {
-  position: absolute;
-  top: 38px;
-  right: 50px;
+    position: absolute;
+        top: 35px;
+
+    right: -70px;
 }
 
 .animation__top .swiper-button-next,
