@@ -35,8 +35,18 @@ h1 {
     width:100%;
 }
 
+.title__width {
+    width:50px;
+}
+
+
 .title__inputbar {
     width: 100%;
+    background-color: white;
+}
+
+.email__inputbar {
+    width: 95%;
     background-color: white;
 }
 
@@ -48,7 +58,7 @@ h1 {
       width: 100%;
 }
 
-.message__write {
+.message__write {  //
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -57,31 +67,23 @@ h1 {
     gap: 20px;
 }
 
-.box__style {
+.box__style {  //
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.shadow {
+.shadow {  //
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .button__collection {
     display: flex;
+    flex-direction:row;
     align-items: center;
     justify-content:space-between;
-
-    padding-top: 15px;
-}
-
-.message__file {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .button__group {
     display:flex;
-    flex-direction:row;
     justify-content: center;
     gap: 10px;
 }
