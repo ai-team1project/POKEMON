@@ -14,5 +14,4 @@ public class AnimationNewList {
     private String imageUrl; // 이미지
     private String pageUrl; // 이동하는 a 태그 같은
     private String sub_image;
-    private String next_title; // 그 다음 정보
 }

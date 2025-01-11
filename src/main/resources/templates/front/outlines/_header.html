@@ -24,7 +24,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://pokemoncard.co.kr/main">
                         <div>
                             <i class="icon card-game"></i>
                             <th:block th:text="#{카드_게임}"></th:block>
@@ -55,6 +55,12 @@
                     <a th:href="@{/pokemon/list}">
                         <i class="icon catalog"></i>
                         <th:block th:text="#{포켓몬_도감}"></th:block>
+                    </a>
+                </li>
+                <li>
+                    <a th:if="${(@memberUtil.isLogin() && !@memberUtil.isAdmin()) || (@memberUtil.isLogin() && @memberUtil.isAdmin())}" th:href="@{/member/logout}">
+                        <i class="icon logout"></i>
+                        <th:block th:text="#{로그아웃}"></th:block>
                     </a>
                 </li>
                 <li>
