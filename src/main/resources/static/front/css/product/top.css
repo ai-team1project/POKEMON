@@ -1,0 +1,69 @@
+.product__top {
+   width: 100vw;
+   height: 80vh;
+   background-color: #2b2b2b;
+ }
+
+.product__top__cover {
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
+   width: 1127px;
+   height: 750px;
+}
+
+.product__top__album {
+   width: 1127px;
+   height: 500px;
+}
+
+.product__top__album > img {
+   width: 100%;
+   height: 100%;
+}
+
+.product__top__info {
+   display: flex;
+   justify-content: space-between;
+   height: 110px;
+   padding: 5px 110px 0px 70px;
+   background-color: black;
+   position: relative;
+   text-align: left;
+}
+
+.product__top__tit {
+   color: #fff;
+   font-size: 30px;
+   font-weight: 700;
+}
+
+.product__top__info > img {
+   position: absolute;
+   top: 40px;
+   right: 50px;
+}
+
+.product__top .swiper-button-next,
+.product__top .swiper-button-prev {
+   color: #000000;
+   background-color: rgb(255, 255, 255); /* 버튼 배경 투명도 */
+   border-radius: 50%;
+   width: 85px;
+   height: 85px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-100%);
+   z-index: 10;
+}
+
+.product__top .swiper-button-next {
+   right: 100px;
+}
+
+.product__top .swiper-button-prev {
+   left: 100px;
+}
