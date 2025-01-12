@@ -39,7 +39,6 @@
             <script th:each="jsPath : ${addScript}"
                     th:src="@{/admin/js/{path}.js(path=${jsPath})}"></script>
         </th:block>
-
     </head>
     <body>
         <header th:replace="~{admin/outlines/_header::common}"></header>

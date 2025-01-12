@@ -3,6 +3,9 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{front/layouts/main}">
 <link rel="stylesheet" th:href="@{/front/css/pokemon/list.css}">
+<head>
+    <script src="/front/js/pokemon/pokemon_list.js" defer></script>
+</head>
 <main layout:fragment="content">
 
     <th:block th:replace="~{front/pokemon/_search::search}"></th:block>
