@@ -6,36 +6,9 @@
     color: #000;
 }
 
-html {
-    font-size: 13px; /* 1rem - 13px */
-}
-
-body {
-    margin: 120px 0 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul, ol {
-    list-style: none;
-}
-
-ul, ol, dl, dt, dd {
-    margin: 0;
-    padding: 0;
-}
-
-img {
-    border: 0;
-}
-/* 기본 스타일 초기화 E */
-
 /* 공통 스타일 S */
 .layout-width {
     max-width: 1250px;
-    min-width: 1100px;
     width: 100%;
     margin: 0 auto;
 }
@@ -43,11 +16,11 @@ img {
 main {
     min-height: 500px;
 }
-/* 공통 스타일 E */
 
 /* 사이트 상단 헤더 S */
 header {
     display: flex;
+    flex-wrap: wrap; /* 화면 좁아졌을 때 자동으로 줄 바꿈 */
     width: 100%;
     height: 120px;
     justify-content: space-between;
@@ -57,22 +30,20 @@ header {
     z-index: 10;
     top: 0;
     left: 0;
-    flex-wrap: wrap; /* flex-wrap 추가 */
-    padding: 0 15px; /* 좌우 여백 추가 */
+    padding: 0 15px;
 }
 
 header .main-menu {
     width: 100%;
-    max-width: 835px;
-    min-width: 450px;
     display: flex;
     justify-content: space-between;
     padding: 0;
     margin: 0;
+    display:none
 }
 
 header .main-menu > li {
-    flex-grow: 1;
+    flex: 1; /* 고정된 너비 대신 비율로 설정 */
     border-right: 1px solid #ebebeb;
     text-align: center;
 }
@@ -81,11 +52,24 @@ header .main-menu > li:first-of-type {
     border-left: 1px solid #ebebeb;
 }
 
+/* 메뉴 열기 */
+.main-menu.open {
+    display: block;
+}
+
+/* 토글 버튼 활성화 스타일 */
+.toggle-btn.active {
+    /* X 아이콘 스타일 추가 (햄버거 -> X 변환) */
+    content: "✖"; /* 햄버거 아이콘을 X로 변경 */
+    font-size: 30px;
+    color: #000;
+}
+
 header .main-menu > li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
+    height: 100%;
     font-size: 1.23rem;
     font-weight: 500;
     transition: all 0.5s;
@@ -116,6 +100,7 @@ header .main-menu > li:nth-of-type(5) a:hover {
     background: #793da7;
 }
 
+/* 아이콘 스타일 */
 header .main-menu > li:nth-of-type(1) a:hover i {
     background: url("../images/icon_news_w.png") no-repeat center center;
 }
@@ -136,14 +121,51 @@ header .main-menu > li:nth-of-type(5) a:hover i {
     background: url("../images/icon_ball_w.png") no-repeat center center;
 }
 
-/* 로고 영역 */
+
+header .icon.news {
+    background:url("../images/icon_news.png") no-repeat center center;
+}
+
+header .icon.game {
+    background:url("../images/icon_game.png") no-repeat center center;
+}
+
+header .icon.card-game {
+    background:url("../images/icon_card.png") no-repeat center center;
+}
+
+header .icon.animation {
+    background:url("../images/icon_ani.png") no-repeat center center;
+}
+
+header .icon.products {
+    background:url('../images/icon_ball.png') no-repeat center center;
+}
+
+header .icon.catalog {
+    background:url("../images/icon_ball_c.png") no-repeat center center;
+}
+
+header .icon.login {
+    background:url("../images/icon_login.png") no-repeat center center;
+}
+
+header .icon.logout {
+    background:url("../images/icon_logout.png") no-repeat center center;
+}
+
+header .icon.search {
+    background: url("../images/icon_search.png") no-repeat center center;
+}
+
 header > .left {
     display: flex;
-    flex-grow: 1;
     justify-content: center;
+    flex-grow: 1;
 }
 
 header > .left .logo {
+    width: 100%; /* 로고가 부모 컨테이너에 맞춰 크기 변경 */
     max-width: 350px;
     min-width: 250px;
     display: flex;
@@ -161,7 +183,7 @@ header .main-menu .icon {
 /* 오른쪽 영역 스타일 */
 header > .right {
     display: flex;
-    width: 520px;
+    width: 100%; /* 오른쪽 영역이 화면 크기에 맞게 확장되도록 */
     justify-content: flex-end;
 }
 
@@ -173,6 +195,7 @@ header > .right > ul {
 
 header > .right li {
     margin: 0 15px;
+    white-space: nowrap;
 }
 
 header > .right li a {
@@ -202,54 +225,6 @@ header .move-to-store::after {
     left: -15px;
     transform: skew(-45deg);
 }
-
-/* 메뉴 토글 버튼 및 메뉴를 위한 스타일 추가 S */
-.menu-toggle {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 11;
-}
-
-.menu-toggle.active {
-    transform: rotate(90deg);
-}
-
-.main-menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.main-menu li {
-    padding: 10px;
-    background-color: #333;
-}
-
-.main-menu li a {
-    color: white;
-    font-size: 1.23rem;
-    padding: 10px;
-    display: block;
-}
-
-.main-menu li a:hover {
-    background-color: #555;
-}
-
-.menu-toggle.active + .main-menu {
-    display: block;
-}
-/* 메뉴 토글 버튼 및 메뉴를 위한 스타일 추가 E */
-
-/* 사이트 상단 헤더 E */
 
 /* 사이트 하단 풋터 S */
 footer {
@@ -284,17 +259,14 @@ footer {
 }
 
 .top .ft-logo {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: 23px;
 }
 
 .ft-logo > img {
     width: 100%;
     height: 100%;
-}
-
-.ft-menu {
-    display: flex;
 }
 
 .ft-bar {
@@ -367,7 +339,6 @@ footer {
 .ft-text {
     color: #fff;
 }
-/* 사이트 하단 풋터 E */
 
 /* 페이지네이션 S */
 .pagination {

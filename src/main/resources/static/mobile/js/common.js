@@ -1,16 +1,11 @@
-// 메뉴 토글 버튼과 메뉴 리스트 요소 가져오기
-const menuToggle = document.getElementById('menuToggle');
-const mainMenu = document.getElementById('mainMenu');
+// 토글 메뉴 기능
+function toggleMenu() {
+    const menu = document.querySelector('.main-menu');
+    const toggleBtn = document.querySelector('.toggle-btn');
 
-// 버튼 클릭 시 메뉴 토글 및 버튼 모양 변경
-menuToggle.addEventListener('click', function() {
-    // 메뉴의 display 상태를 토글
-    if (mainMenu.style.display === 'block') {
-        mainMenu.style.display = 'none';
-    } else {
-        mainMenu.style.display = 'block';
-    }
+    // 메뉴 열고 닫기
+    menu.classList.toggle('open');
 
-    // 버튼이 클릭될 때마다 'active' 클래스를 토글하여 버튼 모양 변경
-    menuToggle.classList.toggle('active');
-});
+    // 버튼 아이콘 변경 (햄버거 <-> X 아이콘)
+    toggleBtn.classList.toggle('active');
+}
