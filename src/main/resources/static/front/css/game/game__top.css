@@ -12,7 +12,11 @@
   width: 1127px;
   height: 845px;
 }
-
+.game__top__tit {
+   color: #fff;
+   font-size: 30px;
+   font-weight: 700;
+}
 .game__top__album {
   width: 1127px;
   height: 627px;
@@ -31,15 +35,14 @@
   color: #fff;
   font-size: 20px;
   font-weight: 700;
-
-  position: relative;
+   position: relative;
   text-align: left;
 }
 
 .game__top__tit > img {
   position: absolute;
-  top: 85px;
-  right: 50px;
+  top: 40px;
+     right: 50px;
 }
 
 .game__top .swiper-button-next,
