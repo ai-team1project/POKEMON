@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{front/layouts/main}">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>소식</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" th:href="@{/mobile/css/style.css}">
+    <link rel="stylesheet" th:href="@{/mobile/css/news/layout.css}" />
+    <link rel="stylesheet" th:href="@{/mobile/css/news/search.css}" />
+    <link rel="stylesheet" th:href="@{/mobile/css/news/link.css}" />
+    <link rel="stylesheet" th:href="@{/mobile/css/news/card_deck.css}" />
+    <script src="/mobile/js/news/card.js" defer></script>
+    <script src="/mobile/js/news/more.js" defer></script>
+
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+            integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+
+</head>
+<body>
+<main layout:fragment="content">
+    <!--<header th:replace="~{front/outlines/_header::common}"></header>-->
+
+    <div class="container">
+        <section class="news__search">
+            <span>소식</span>
+            <div class="search__bar">
+                <div class="input__bar">
+                    <input type="text" placeholder="검색어를 입력해주세요" />
+                </div>
+                <button class="glassbox">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </section>
+        <section class="link">
+            <a class="link__logo" href="https://pokemonkorea.co.kr/">
+                <img th:src="@{/front/images/main_logo.png}" alt="" />
+            </a>
+            <span >
+          <i class="fa-solid fa-chevron-right"></i>
+        </span>
+            <a class="text" href="https://pokemonkorea.co.kr/news">소식</a>
+        </section>
+        <section class="card__deck">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="category" th:href="@{/news}">전체</a>
+                    </li>
+                    <li>
+                        <a class="category" th:href="@{/news/notice}">공지</a>
+                    </li>
+                    <li>
+                        <a class="category" th:href="@{/news/event}">이벤트</a>
+                    </li>
+                    <li>
+                        <a class="category" th:href="@{/news/game}">게임</a>
+                    </li>
+                    <li>
+                        <a class="category" th:href="@{/news/cardgame}">카드 게임</a>
+                    </li>
+                    <li>
+                        <a class="category" th:href="@{/news/any-movie}">애니&영화</a>
+                    </li>
+                    <li>
+                        <a class="category" th:href="@{/news/product}">상품</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="grid-layout">
+               <article class="card" th:each="newsList : ${newsList}" >
+                <!-- <article th:each="newsList : ${newsList}" th:class="'card__' + ${newsList.sub_title.replaceAll(' ', '')}"> -->
+
+                    <a
+                            th:href="${newsList.pageUrl}"
+                            target="_self"
+                    >
+
+                        <div class="card__album">
+                            <img
+                                    class="card__album__img"
+                                    th:src="${newsList.imageUrl}"
+                                    alt=""
+                            />
+                        </div>
+                        <div class="card__title">
+                            <h1 class="card__head" th:text="${newsList.title}"></h1>
+                            <div class="card__sub">
+                                <ul class="card__sub__title">
+                                    <li th:text="${newsList.sub_title}"></li>
+                                </ul>
+                                <button class="card__sub__button">
+                                    <img th:src="@{/front/images/icon_go.png}" alt="" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                </article>
+            </div>
+            <div class="more">
+                <button>
+                    <span>더보기</span>
+                    <span class="more__arrow">
+                <i class="fa-solid fa-chevron-down"></i>
+                </span>
+                </button>
+            </div>
+        </section>
+
+        <!--<footer th:replace="~{front/outlines/_footer::common}"></footer>-->
+    </div>
+</main>
+</body>
+</html>

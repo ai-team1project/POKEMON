@@ -1,0 +1,63 @@
+/* 기본 스타일 */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+/* 토글 버튼 스타일 */
+.toggle-btn {
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    user-select: none;
+    transition: transform 0.3s ease; /* 버튼 회전 애니메이션 */
+    margin-right: 10px;  /* 버튼과 텍스트 간의 여백 추가 */
+}
+
+/* 토글 내용 스타일 */
+.terms-content {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    display: none;  /* 초기에는 숨김 */
+}
+
+/* 토글 버튼 상태 변경 */
+.toggle-btn.open {
+    transform: rotate(180deg);  /* 버튼 회전 */
+}
+
+/* "모두 선택" 항목 스타일 */
+.terms-check-all {
+    margin-bottom: 20px;
+}
+
+/* 텍스트와 버튼이 잘 정렬되도록 스타일 */
+.terms-content ul {
+    padding-left: 20px; /* 내부 항목에 여백 추가 */
+}
+
+/* 부모 요소에서 공간을 자동으로 분배 */
+.terms-check-all, .toggle-btn {
+    display: inline-flex; /* 인라인 플렉스 컨테이너 */
+    align-items: center;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+}
+
+/* 텍스트와 버튼의 배치가 자연스럽게 이루어지도록 */
+.terms-check-all span {
+    font-size: 16px;
+    color: #333;
+}
+
+/* 기본적으로 좌우 여백을 자동으로 부여하여 적절히 배치되도록 설정 */
+.terms-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;  /* 내용이 화면을 벗어나지 않도록 설정 */
+}

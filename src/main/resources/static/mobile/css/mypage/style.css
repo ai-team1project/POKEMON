@@ -1,0 +1,105 @@
+.profile__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1 {
+    padding: 30px 100px;
+    border-bottom: 3px solid #efefef;
+    text-align: center;
+    font-size: 28px;
+}
+
+dt {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.profile__top {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 50px 50px;
+    width: 100%;
+}
+
+.profile__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.profile__gap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile__row {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* 너비를 더 유연하게 설정 */
+}
+
+.profile__right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.file-upload {
+    width: 100px;
+    height: 40px;
+}
+
+.profile-image {
+    width: 250px;
+    height: 300px;
+    border: 2px solid #000;
+    object-fit: cover;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.address__input {
+    width: 100%;
+    max-width: 462px;
+}
+
+.address__sub__input {
+    width: 100%;
+    max-width: 340px;
+}
+
+.button__center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.edit__button {
+    width: 100%;
+    max-width: 70px;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.edit__button:hover {
+    background-color: #0056b3;
+}

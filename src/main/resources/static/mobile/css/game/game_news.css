@@ -1,12 +1,14 @@
-/* Grid 레이아웃 */
-.grid-layout {
+/* 뉴스 그리드 레이아웃 */
+.news-grid-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 최소 280px, 최대 1fr 크기 */
-  grid-gap: 10px;
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 화면에 맞게 4개의 열을 자동으로 배치 */
+  grid-auto-rows: auto; /* 자동으로 행의 크기 조정 */
+  grid-gap: 10px; /* 아이템 간 간격 */
+  width: 100%; /* 부모 요소의 너비를 충분히 확보 */
+  padding: 0 10px; /* 그리드의 양옆 여백 */
 }
 
-/* 게임 항목 리스트 */
+/* 게임 리스트 항목 */
 .news__game__list {
   list-style: none;
   display: flex;
@@ -14,7 +16,7 @@
   justify-content: center;
   margin: 0 auto;
   align-items: center;
-  width: 100%;
+  gap: 20px;
 }
 
 /* 개별 게임 항목 */
@@ -22,91 +24,95 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 300px; /* 항목 최대 너비 */
-  margin: 10px;
+  width: 280px; /* 기본 너비 280px */
+  max-width: 100%; /* 최대 너비 100%로 설정 */
+  transition: transform 0.3s ease; /* 마우스 오버 시 애니메이션 효과 */
 }
 
 /* '더보기' 버튼 */
 .news__more {
-  width: 100%;
-  max-width: 300px;
-  height: 55px;
+  width: 280px; /* 버튼 너비 */
+  height: 55px; /* 버튼 높이 */
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   margin-top: 30px;
-  transform: skew(-20deg);
+  transform: skew(-20deg); /* 버튼 스키우기 */
   border: 1px solid transparent;
+  cursor: pointer; /* 커서를 포인터로 변경 */
 }
 
 .news__more__text {
   color: black;
   font-size: 18px;
   font-weight: 700;
-  transform: skew(20deg);
+  transform: skew(20deg); /* 텍스트 스키우기 */
 }
 
-/* 뉴스 카드 레이아웃 */
+/* 뉴스 항목 */
 .game__news {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 최소 280px 크기 */
-  grid-gap: 10px;
+  display: flex;
   background-color: black;
+  height: 70%;
   margin-top: 40px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  padding-top: 30px;
 }
 
+/* 카드 텍스트 */
 .card__text {
+  flex-grow: 1;
   background-color: #fff;
   text-align: left;
   border-bottom: 5px solid red;
-  padding: 10px;
+  padding: 20px;
 }
 
+/* 카드 제목 */
 .card__title {
   color: #000;
   font-size: 18px;
   font-weight: 800;
-  padding: 10px;
   text-align: left;
 }
 
+/* 카드 하위 정보 */
 .card__sub {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-top: auto;
-  padding: 10px;
+  padding: 20px;
 }
 
+/* 카드 날짜 */
 .card__sub__date {
   font-size: 14px;
   color: #666;
 }
 
-/* 뉴스 앨범 이미지 */
+/* 뉴스 앨범 */
 .news__album {
-  width: 100%;
+  width: 100%; /* 앨범 너비를 100%로 설정 */
 }
 
 .news__album > img {
-  width: 100%;
-  height: auto;
+  width: 100%; /* 이미지 너비를 100%로 설정 */
+  height: auto; /* 이미지 비율에 맞게 자동 높이 설정 */
+  object-fit: cover; /* 이미지가 요소를 덮도록 크기 조정 */
 }
 
-/* 원형 버튼 */
+/* 원형 버튼 (예: 스크롤 이동 등) */
 .round__go {
   position: relative;
   margin-left: 265px;
   bottom: 10px;
   right: 25px;
+  transform: translateX(-50%); /* 정확히 중앙에 위치 */
   width: 42px;
   height: 25px;
   display: flex;
@@ -114,8 +120,5 @@
   justify-content: center;
   background-color: red;
   border-radius: 20px;
-  font-size: 12px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+  cursor: pointer; /* 커서가 포인터로 변경 */
 }

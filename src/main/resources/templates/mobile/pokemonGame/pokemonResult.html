@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>게임 종료</title>
+    <style>
+
+        @font-face {
+        font-family: 'Ramche';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+
+    body {
+         font-family: 'Ramche', sans-serif; /* 폰트 적용 */
+        background-color: #ffebcd;
+        text-align: center;
+        padding: 30px;
+    }
+
+    h1 {
+        color: #ff6347;
+        font-size: 36px;
+        margin: 50px 0;
+
+    }
+
+    .pokemon-img {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+    }
+
+    .result-message {
+        font-size: 24px;
+        color: #333;
+        margin-top: 20px;
+    }
+
+    .button {
+        background-color: #ff6347;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .button:hover {
+        background-color: #ff4500;
+    }
+
+    .footer {
+        margin-top: 30px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .footer a {
+        color: #ff6347;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+
+<h1>포켓몬 배틀 종료</h1>
+
+<!-- 귀여운 포켓몬 이미지 (승리 시와 패배 시 구분) -->
+<img th:src="${pokemonGame.playerHealth <= 0 ? 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png' : 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'}" alt="게임 종료 포켓몬" class="pokemon-img">
+
+<div class="result-message">
+    <!-- 게임 결과에 따른 메시지 표시 -->
+    <p th:if="${pokemonGame.playerHealth <= 0}">패배했습니다! 😢</p>
+    <p th:if="${pokemonGame.computerHealth <= 0}">승리했습니다! 🎉</p>
+</div>
+
+<!-- 게임 다시 시작 버튼 -->
+<a href="/pokemonGame" class="button">다시 시작</a>
+
+<div class="footer">
+    <p>게임을 종료하고 싶다면 <a href="/">홈으로 돌아가기</a></p>
+</div>
+
+</body>
+</html>

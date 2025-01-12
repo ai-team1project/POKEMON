@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'Ramche';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    max-width: 1250px;
+    margin: 0 auto;
+    font-family: 'Ramche';
+}
+
+.heart {
+    font-size: 25px;
+    position: absolute;
+    right: 220px;
+    cursor: pointer;
+}
+
+.xi-heart:before {
+    color: red;
+    cursor: pointer;
+}
+
+.left__img {
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon__list__info {
+    margin: 30px;
+}
+
+.right__tit {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.item-no {
+    font-weight: 500;
+    color: #8e8e8e;
+}
+
+.item-nm {
+    font-weight: 700;
+}
+
+.spec__upper {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+    font-size: 16px;
+}
+
+.spec__type {
+    display: flex;
+}
+
+.spec__tall {
+    display: flex;
+}
+
+.pokemon__list__classification {
+    display: flex;
+}
+
+.pokemon__list__weight {
+    display: flex;
+}
+
+.pokemon__list__characteristic {
+    display: flex;
+}
+
+.text {
+    margin-left: 4px;
+}
+
+/* 위에 nav S */
+nav {
+    display: flex;
+    max-width: 1250px;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 70px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* 위에 nav E */
+
+/* 모달 스타일 */
+.flavor-modal {
+    display: none; /* 처음에는 숨겨둠 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* 반투명 배경 */
+}
+
+.flavor-modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 70%;
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.flavor-modal .flavor-text {
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.show-button {
+    background-color: #ff6347;
+    color: white;x
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.show-button:hover {
+    background-color: #ff4500;
+}

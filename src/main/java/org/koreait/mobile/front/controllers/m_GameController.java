@@ -10,6 +10,6 @@ public class m_GameController {
 
     @GetMapping("/m.game")
     public String game(){
-        return "mobile/m.game/game" ;
+        return "mobile/game/game" ;
     }
 }

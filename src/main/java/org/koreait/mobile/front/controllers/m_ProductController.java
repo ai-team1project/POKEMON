@@ -23,6 +23,6 @@ public class m_ProductController {
         productGoodsList.add(new m_Product("[성수미술관] 포켓몬 도안", "식품 및 기타", "https://data1.pokemonkorea.co.kr/newdata/2024/11/2024-11-21_13-47-51-31339-1732164471.jpg", "https://pokemonkorea.co.kr/goods/view/15455"));
         model.addAttribute("productGoodsList", productGoodsList);
 
-        return "front/product/product";
+        return "mobile/product/product";
     }
 }

@@ -24,7 +24,7 @@ public class m_AnimationController {
         model.addAttribute("animationNewList", animationNewList);
 
 
-        return "front/animation/animation";
+        return "mobile/animation/animation";
     }
 
 }

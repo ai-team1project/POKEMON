@@ -1,0 +1,64 @@
+a {
+  color: black;
+  text-decoration-line: none;
+}
+
+.news__search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+
+  background-image: url("/front/images/news_nav_bg.jpg");
+  background-size: cover; /* 배경 이미지가 화면 크기에 맞게 조정됨 */
+  background-position: center; /* 이미지 중앙 정렬 */
+}
+
+.news__search > span {
+  color: white;
+  font-size: 3rem; /* 상대적인 크기 변경 */
+  font-weight: bold;
+}
+
+.search__bar {
+  display: flex;
+  flex-wrap: wrap; /* 작은 화면에서 입력창과 버튼이 줄바꿈되도록 */
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.input__bar {
+  width: 100%;
+  background-color: white;
+  padding: 15px 30px;
+  display: flex;
+}
+
+.glassbox {
+  padding: 15px;
+  background-color: #d63936;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+.glassbox > i {
+  font-size: 1.5rem; /* 상대적인 크기로 변경 */
+  color: white;
+}
+
+.news__search input {
+  outline: none;
+  border: none;
+  font-size: 17px;
+  color: #6c757d;
+  width: 100%;
+  max-width: 600px; /* 입력창이 너무 커지지 않도록 제한 */
+}
+
+.news__search > input:focus {
+  outline: none;
+}
