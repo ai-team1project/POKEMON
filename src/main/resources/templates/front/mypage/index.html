@@ -9,12 +9,20 @@
     <link rel="stylesheet" href="/front/css/mypage/menu.css" />
     <link rel="stylesheet" href="/front/css/mypage/mypage__right.css" />
     <script src="/front/js/mypage/mypage.js" defer></script>
+
+    <script>
+        const executeAction = () => {
+            const selectedValue = document.getElementById("actions").value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        };
+    </script>
 </head>
 
 <main layout:fragment="content">
     <section class="mypage">
         <div class="mypage__left">
-            <!-- 닉네임을 Thymeleaf 방식으로 동적으로 출력 -->
             <h3 th:text="${nickName} + '님의 마이페이지'"></h3>  <!-- 닉네임 출력 -->
 
             <div class="mypage__album">
@@ -24,20 +32,18 @@
                 />
             </div>
 
-            <!-- 닉네임을 Thymeleaf 방식으로 동적으로 출력 -->
             <span class="mypage__info" th:text="${nickName} + '님의 마이페이지에 오신 것을 환영합니다!'"></span> <!-- 닉네임 출력 -->
 
             <div class="option__list">
                 <span>포켓몬스터의 세계에 잘 왔다!</span>
                 <div>
                     <select id="actions" class="option__count">
-                        <option value="wishlist">태초마을</option>
-                        <option value="game">게임</option>
-                        <option value="chat">찜하기</option>
-                        <option value="message">쪽지확인하기</option> <!-- 'chat' 중복 수정 -->
-                        <option value="shop">쇼핑몰</option> <!-- 'chat' 중복 수정 -->
+                        <option value="/">태초마을</option>
+                        <option value="/pokemonGame">게임</option>
+                        <option value="/mypage/wishlist">찜하기</option>
+                        <option value="/message">쪽지확인하기</option> <!-- 'chat' 중복 수정 -->
                     </select>
-                    <button id="execute" class="option__btn">실행</button>
+                    <button id="execute" class="option__btn" onclick="executeAction()">실행</button>
                 </div>
             </div>
         </div>
