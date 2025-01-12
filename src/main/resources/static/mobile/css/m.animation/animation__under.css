@@ -1,0 +1,89 @@
+.animation__under {
+  display: flex;
+  flex-direction: column;
+  max-width: 1250px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 50px 0 130px;
+}
+
+.animation__under > ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  padding: 0 20px 13px 20px;
+  font-size: 25px;
+  font-weight: 700;
+  border-bottom: 2px solid #eee;
+}
+
+.animation__under__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 1fr 비율로 자동 크기 조정 */
+  grid-template-rows: auto; /* 세로 크기는 자동 조정 */
+  gap: 20px; /* 각 카드 간의 간격 */
+  width: 100%; /* 부모에 맞춰 너비가 100%로 설정 */
+  max-width: 1250px; /* 최대 크기 설정 */
+  margin: 0 auto;
+}
+
+.animation__under__card {
+  width: 100%; /* 부모의 100% 크기 */
+  height: 400px; /* 고정 높이 */
+  margin: 20px 0;
+  padding: 0 9px;
+  position: relative; /* 자식 요소 위치 설정을 위한 relative */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.animation__under__card__album {
+  position: absolute;
+  width: 100%; /* 부모 요소에 맞춰 크기 설정 */
+  height: 100%; /* 부모 요소에 맞춰 크기 설정 */
+}
+
+.animation__under__card__album > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지하며 크기 맞추기 */
+}
+
+.animation__under__contain__info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%; /* 부모 크기에 맞게 자동 크기 조정 */
+  height: 100%; /* 부모 크기에 맞게 자동 크기 조정 */
+  background-color: rgba(0, 0, 0, 0.7); /* 배경색 */
+  padding: 10px 25px;
+  position: absolute;
+  bottom: 0;
+  left: 9px;
+  right: 0;
+  transform: translateY(100%); /* 처음엔 텍스트 영역이 보이지 않도록 설정 */
+  z-index: 2; /* 텍스트가 배경 위에 올라오도록 */
+  transition: transform 0.3s ease; /* 호버 시 애니메이션 추가 */
+}
+
+.animation__under__contain__info > h3 {
+  font-size: 23px;
+  font-weight: 700;
+  color: white; /* 텍스트 색상 */
+}
+
+.animation__under__contain__inner {
+  word-wrap: break-word; /* 단어가 상자 밖으로 넘치지 않도록 */
+  word-break: break-word; /* 길게 이어진 단어도 줄바꿈 */
+  overflow: hidden; /* 상자 밖으로 텍스트가 넘지 않도록 */
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+}
+
+.animation__under__card:hover .animation__under__contain__info {
+  transform: translateY(0); /* 호버 시 텍스트가 보이도록 */
+}

@@ -1,0 +1,129 @@
+a {
+  text-decoration-line: none;
+}
+
+.animation__new__list {
+  width: 100vw;
+  background-color: #f7f7f7;
+  padding: 45px 0 70px;
+}
+
+.animation__new__list > h2 {
+  margin-top: 80px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* Grid Container로 설정하여 열과 행을 유동적으로 배치 */
+.animation__new__container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* 최소 280px 크기로 자동 배치 */
+  grid-template-rows: repeat(auto-fill, minmax(340px, 1fr)); /* 카드 크기 자동 조정 */
+  gap: 10px;
+}
+
+/* 카드 스타일 */
+.animation__new__card {
+  width: 100%; /* 카드가 부모 컨테이너에 맞게 확장 */
+  height: 340px;
+  margin: 15px 0;
+  padding: 0px 10px;
+}
+
+/* 앨범 이미지 */
+.animation__new__card__album {
+  width: 100%;
+  height: 180px;
+}
+
+.animation__new__card__album > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 카드 하단 정보 영역 */
+.animation__new__content {
+  width: 100%;
+  height: 135px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  border-bottom: 4px solid #005984;
+}
+
+/* 카드 정보 */
+.aanimation__new__info {
+  padding: 10px;
+}
+
+/* 상단 영역의 카드 배치 */
+.animation__upper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 하단 영역 */
+.animation__card__under {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 버튼 스타일 */
+.animation__btn {
+  background-color: #005984;
+  border: none;
+  width: 52px;
+  height: 32px;
+  border-radius: 20px;
+  position: relative;
+  top: 5px;
+}
+
+/* '더보기' 버튼 */
+.animation__more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 55px;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border: 4px solid transparent;
+  margin: 0 auto;
+  background-color: black;
+  transform: skew(-20deg);
+  margin-top: 40px;
+}
+
+/* '더보기' 텍스트 */
+.animation__more__text {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  transform: skew(20deg);
+}
+
+/* '더보기' 이미지 */
+.animation__more__image {
+  width: 10px;
+  height: 18px;
+  position: absolute;
+  right: 55px;
+  transform: skew(20deg);
+}
+
+.animation__more__image > img {
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
