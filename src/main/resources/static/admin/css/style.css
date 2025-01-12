@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-* { font-family: "Noto Sans KR", sans-serif; box-sizing: border-box; outline: none; color: #000; }
+* { font-family: "Noto Sans KR", sans-serif; box-sizing: border-box; outline: none;  }
 
 /* 기본 스타일 초기화 S */
 html { font-size: 13px; } /* 1rem - 13px */
@@ -46,10 +46,12 @@ textarea {
 }
 
 .table-cols th {
-    background: #FFCA05;
+    background: #3D60AA;
     padding: 10px 20px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
     text-align: left;
+
+    color: white;
 }
 .table-cols td {
     padding: 10px;
@@ -67,7 +69,7 @@ textarea {
 }
 
 .table-rows thead th {
-    background: #212121;
+    background: #3D60AA;
     color: #fff;
     padding: 7px 10px;
     font-size: 1.15rem;
@@ -143,8 +145,9 @@ textarea {
 }
 
 .btn.black {
-    background: #000;
+    background: #3D60AA;
     color: #fff;
+    border: 2px solid #3D60AA;
 }
 
 .button-group {
@@ -163,7 +166,7 @@ textarea {
 }
 
 .submit-btn {
-    background: #FFCA05;
+    background: #3D60AA;
     color: #fff;
     min-width: 250px;
     height: 45px;
@@ -190,8 +193,9 @@ textarea {
 }
 
 .sbtn.black {
-    background: #000;
+    background: #3D60AA;
     color: #fff;
+    border:none;
 }
 /* 버튼 공통 E */
 
@@ -264,13 +268,13 @@ main {
 /* 주메뉴 */
 main > aside {
     width: 210px;
-    background: #FFCA05;
+    background: #3D60AA;
 }
 
 main > aside .menu {
     display: block;
     height: 70px;
-    border-bottom: 1px solid #3765AC;
+    border-bottom: 1px solid #fff;
     line-height: 69px;
     padding: 0 30px;
     font-size: 1.65rem;
@@ -279,12 +283,12 @@ main > aside .menu {
 }
 
 main > aside .menu.on {
-    color: #fff;
-    background: #3D60AA;
+    color: #000;
+    background: #fff;
 }
 
 main > aside .menu.on * {
-    color: #fff;
+    color: #000;
 }
 
 main > section {
@@ -374,7 +378,7 @@ h2 {
 }
 
 .pagination > a.on {
-    background: #000;
+    background: #3D60AA;
     color: #fff;
 }
 /* 페이징 공통 E */
