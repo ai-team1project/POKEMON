@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pokemon Battle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+        }
+
+        h1 {
+            color: #ff6347;
+        }
+
+        .pokemon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px;
+        }
+
+        .pokemon {
+            width: 200px;
+            margin: 20px;
+        }
+
+        .button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #ff4500;
+        }
+
+        .status {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>포켓몬 배틀</h1>
+
+<!-- 사용자와 컴퓨터 포켓몬을 구분하여 나란히 배치 -->
+<div class="pokemon-container">
+    <!-- 사용자 포켓몬 이미지 -->
+    <div class="pokemon">
+        <h3>사용자 포켓몬</h3>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="사용자 포켓몬" class="pokemon-img">
+    </div>
+
+    <!-- 컴퓨터 포켓몬 이미지 -->
+    <div class="pokemon">
+        <h3>컴퓨터 포켓몬</h3>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="컴퓨터 포켓몬" class="pokemon-img">
+    </div>
+</div>
+
+<!-- 체력 정보 표시 -->
+<p>플레이어 체력: <span th:text="${pokemonGame.playerHealth}">100</span></p>
+<p>컴퓨터 체력: <span th:text="${pokemonGame.computerHealth}">100</span></p>
+
+<!-- 게임 진행 버튼 -->
+<form action="/pokemonGame/action" method="post">
+    <input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+    <button name="action" value="attack" class="button">공격</button>
+    <button name="action" value="defend" class="button">방어</button>
+</form>
+
+<!-- 상태 표시 -->
+<div class="status">
+    <p th:if="${pokemonGame.gameOver}">게임 종료</p>
+</div>
+
+</body>
+</html>
