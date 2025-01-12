@@ -2,6 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{front/layouts/mypage}">
+
+
+<head>
+    <link rel="stylesheet" th:href="@{/front/css/pokemon/list.css}">
+    <script src="/front/js/pokemon/pokemon_list.js" defer></script>
+    <script src="/front/js/mypage/wishlist.js" defer></script>
+</head>
+
+
 <section layout:fragment="content">
     <h1 th:text="#{나의_WISH}"></h1>
     <nav>

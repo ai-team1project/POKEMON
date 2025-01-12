@@ -1,0 +1,24 @@
+h1 {
+    margin: 0;
+}
+
+.search__row {
+    display: flex;
+    gap: 20px;
+}
+
+.item {
+    width: 527px;
+    display: flex;
+    gap: 20px;
+}
+
+.subject {
+    display: flex;
+    gap: 20px;
+}
+
+.info {
+    display: flex;
+    gap: 20px;
+}

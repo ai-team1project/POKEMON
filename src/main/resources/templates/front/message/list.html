@@ -2,23 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{front/layouts/mypage}">
+
+<head>
+    <link rel="stylesheet" th:href="@{/front/css/style.css}">
+    <link rel="stylesheet" href="/front/css/message/list.css" />
+</head>
+
 <section layout:fragment="content">
+    <div class="message__container">
     <h1 th:text="#{쪽지함}"></h1>
 
-    <a th:href="@{/message}" th:text="#{쪽지_보내기}"></a>
-
     <form name="frmSearch" method="GET" th:action="@{/message/list}" autocomplete="off" th:object="${messageSearch}">
-
-        <div class="search-box">
-            <select name="sopt" th:field="*{sopt}">
-                <option value="SUBJECT" th:text="#{제목}"></option>
-                <option value="ALL" th:text="#{제목+내용}"></option>
-            </select>
-            <input type="text" name="skey" th:field="*{skey}" th:placeholder="#{검색어를_입력하세요.}">
-            <button type="submit" th:text="#{조회하기}"></button>
-        </div>
-
-
+        <div class="search__row">
         <div class="tab-group">
             <label class="tab">
                 <input type="radio" name="mode" value="receive" th:field="*{mode}" onclick="frmSearch.submit()">
@@ -28,6 +23,16 @@
                 <input type="radio" name="mode" value="send" th:field="*{mode}" onclick="frmSearch.submit()">
                 <th:block th:text="#{보낸_쪽지}"></th:block>
             </label>
+        </div>
+
+        <div class="search-box">
+            <select name="sopt" th:field="*{sopt}">
+                <option value="SUBJECT" th:text="#{제목}"></option>
+                <option value="ALL" th:text="#{제목+내용}"></option>
+            </select>
+            <input type="text" name="skey" th:field="*{skey}" th:placeholder="#{검색어를_입력하세요.}">
+            <button type="submit" th:text="#{조회하기}"></button>
+        </div>
         </div>
     </form>
 
@@ -45,7 +50,10 @@
         </li>
         <li th:unless="${items != null && !items.isEmpty()}" class="no-data" th:text="#{조회된_쪽지가_없습니다.}"></li>
     </ul>
+       <!-- <a th:href="@{/message}" th:text="#{쪽지_보내기}"></a> -->
+    </div>
 
     <th:block th:replace="~{common/_pagination::pagination}"></th:block>
+
 </section>
 </html>
