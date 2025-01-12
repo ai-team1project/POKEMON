@@ -45,6 +45,13 @@
      right: 50px;
 }
 
+.game__top__tit  {
+    color: white;
+
+}
+
+
+
 .game__top .swiper-button-next,
 .game__top .swiper-button-prev {
   color: #000000;

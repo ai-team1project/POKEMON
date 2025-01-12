@@ -6,7 +6,7 @@ a {
   width: 100vw;
   background-image: url("https://pokemonkorea.co.kr/img/bg_pattern.jpg");
   background-repeat: repeat;
-  padding: 100px 0 100px;
+  padding: 25px 0 100px;
 }
 
 .new__list > h2 {
