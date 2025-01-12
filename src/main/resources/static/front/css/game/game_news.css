@@ -1,21 +1,97 @@
-.news-grid-layout {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개의 열 */
-  grid-auto-rows: auto; /* 자동으로 행의 크기 조정 */
-  grid-gap: 10px; /* 아이템 간 간격 */
-  width: 100%; /* 부모 요소의 너비를 충분히 확보 */
+a {
+  text-decoration-line: none;
 }
 
+.game__news {
+  width: 100vw;
+  background-image: url("https://pokemonkorea.co.kr/img/game/new_bg.jpg");
+  background-repeat: repeat;
+  padding: 25px 0 100px;
+}
 
+.game__news > h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+}
 
-.news__game__list {
-list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin:0 auto;
-    align-items: center;
-    gap:20px;
+.game__news__container {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.game__news__card {
+  width: 290px;
+  height: 340px;
+
+  margin: 15px 0;
+
+  padding: 0px 10px;
+}
+
+.game__news__card__album {
+  width: 290px;
+  height: 180px;
+}
+
+.game__news__card__album > img {
+  width: 100%;
+  height: 100%;
+}
+
+.game__news__card__container {
+  width: 290px;
+  height: 190px;
+
+  background-color: white;
+  color: black;
+
+  font-size: 20px;
+
+  border-bottom: 4px solid #007bff;
+}
+
+.game__news__card__info {
+  padding: 10px;
+}
+
+.game__news__upper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game__news__under {
+  display: flex;
+  gap: 10px;
+
+  font-size: 14px;
+
+  color: #666;
+
+}
+
+.nuw__btn {
+  background-color: #007bff;
+  border: none;
+  width: 52px;
+  height: 32px;
+  border-radius: 20px;
+
+  position: relative;
+  top: 9px;
+}
+
+.new__more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 .game__li__list {
