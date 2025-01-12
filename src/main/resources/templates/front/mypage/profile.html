@@ -3,6 +3,11 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{front/layouts/main}">
 
+<head>
+    <link rel="stylesheet" th:href="@{/front/css/style.css}">
+    <link rel="stylesheet" href="/front/css/mypage/style.css" />
+</head>
+
 <main layout:fragment="content">
     <form name="frmProfile" method="POST" th:action="@{/mypage/profile}" th:object="${requestProfile}" autocomplete="off">
         <input type="hidden" name="_method" value="PATCH">
