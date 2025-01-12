@@ -1,16 +1,21 @@
 @font-face {
-    font-family: 'Ramche';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+     font-family: 'DungGeunMo';
+     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
 }
+
+* {
+
+ font-family: 'DungGeunMo' !important;
+}
+
 
 .details {
     display: flex;
     flex-direction: column;
     max-width: 1250px;
     margin: 0 auto;
-    font-family: 'Ramche';
 }
 
 .heart {
