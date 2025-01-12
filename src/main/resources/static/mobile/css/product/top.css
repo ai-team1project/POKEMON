@@ -1,0 +1,74 @@
+.product__top {
+   width: 100vw;
+   height: 80vh;
+   background-color: #2b2b2b;
+}
+
+.product__top__cover {
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
+   width: 100%; /* 부모 크기에 맞게 유동적으로 설정 */
+   max-width: 1127px; /* 최대 너비 설정 */
+   height: 750px;
+}
+
+.product__top__album {
+   width: 100%; /* 부모 크기에 맞게 유동적으로 설정 */
+   height: 500px;
+}
+
+.product__top__album > img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover; /* 이미지가 영역에 맞게 자르기 */
+}
+
+.product__top__info {
+   display: flex;
+   flex-direction: column; /* 세로 정렬로 설정 */
+   justify-content: space-between;
+   height: 110px;
+   padding: 5px 10px 0px 10px; /* 좌우 패딩을 좀 더 여유롭게 설정 */
+   background-color: black;
+   position: relative;
+   text-align: left;
+   flex-wrap: wrap; /* 화면이 좁아질 경우 요소들이 자동으로 줄바꿈 */
+}
+
+.product__top__tit {
+   color: #fff;
+   font-size: 30px;
+   font-weight: 700;
+   margin-bottom: 10px; /* 텍스트와 이미지 사이 여백 추가 */
+}
+
+.product__top__info > img {
+   position: absolute;
+   top: 40px;
+   right: 50px;
+}
+
+.product__top .swiper-button-next,
+.product__top .swiper-button-prev {
+   color: #000000;
+   background-color: rgb(255, 255, 255);
+   border-radius: 50%;
+   width: 85px;
+   height: 85px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%); /* 버튼이 수직 중앙에 위치하도록 */
+   z-index: 10;
+}
+
+.product__top .swiper-button-next {
+   right: 100px;
+}
+
+.product__top .swiper-button-prev {
+   left: 100px;
+}

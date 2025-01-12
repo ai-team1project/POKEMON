@@ -22,52 +22,51 @@
             </div>
 
             <!-- 버튼 클릭 시 모달 창 표시 -->
-            <button class="show-button" onclick="toggleFlavorText()">이 포켓몬이 궁금해!</button>
+            <div class="pokemon__list__info__btn">
+                <button class="show-button" onclick="toggleFlavorText()">이 포켓몬이 궁금해!</button>
+            </div>
 
             <!-- 모달 창 -->
             <div id="flavor-modal" class="flavor-modal">
                 <div class="flavor-modal-content">
                     <span class="close-btn" onclick="toggleFlavorText()">&times;</span>
+                    <!-- flavorText와 Pokemon 정보 함께 표시 -->
                     <div class="flavor-text" th:text="*{flavorText}"></div>
+
+                    <!-- Pokemon의 타입, 분류, 특성 정보 -->
+                    <div class="spec-info">
+                        <ul class="spec__upper">
+                            <li class="spec__type">
+                                <div class="tit" th:text="#{타입 :}"></div>
+                                <div class="text">
+                                        <span th:each="type : *{_types}"
+                                              th:text="${#messages.msg(type)}"></span>
+                                </div>
+                            </li>
+
+                            <li class="pokemon__list__classification">
+                                <div class="tit" th:text="#{분류 :}"></div>
+                                <div class="text" th:text="*{genus}"></div>
+                            </li>
+
+                            <li class="pokemon__list__characteristic">
+                                <div class="tit" th:text="#{특성 :}"></div>
+                                <div class="text">
+                                    <span th:each="ability : *{_abilities}" th:text="${ability}"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!--// spec-info-->
                 </div>
-            </div>
-
-            <div class="spec-info">
-                <ul class="spec__upper">
-                    <li class="spec__type">
-                        <div class="tit" th:text="#{타입 :}"></div>
-                        <div class="text">
-                                <span th:each="type : *{_types}"
-                                      th:text="${#messages.msg(type)}"></span>
-                        </div>
-                    </li>
-
-                    <li class="pokemon__list__classification">
-                        <div class="tit" th:text="#{분류 :}"></div>
-                        <div class="text" th:text="*{genus}"></div>
-                    </li>
-
-                    <li class="pokemon__list__characteristic">
-                        <div class="tit" th:text="#{특성 :}"></div>
-                        <div class="text">
-                            <span th:each="ability : *{_abilities}" th:text="${ability}"></span>
-                        </div>
-                    </li>
-                </ul>
-
-            </div> <!--// spec-info -->
-        </div> <!--// right -->
+            </div> <!--// flavor-modal-->
+        </div> <!--// pokemon__list__info-->
     </section>
 
     <script>
-        function toggleFlavorText() {
-            var modal = document.getElementById("flavor-modal");
+        const toggleFlavorText = () => {
+            const modal = document.getElementById("flavor-modal");
             // 모달의 display 속성을 토글하여 표시/숨김 처리
-            if (modal.style.display === "block") {
-                modal.style.display = "none";
-            } else {
-                modal.style.display = "block";
-            }
+            modal.style.display = modal.style.display === "block" ? "none" : "block";
         }
     </script>
 </main>
