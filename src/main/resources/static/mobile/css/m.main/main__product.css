@@ -1,0 +1,81 @@
+.main__product {
+  width: 100vw;
+  height: 100vh;
+  padding: 10vh 0; /* vh 단위로 상하 패딩을 설정하여 화면 크기에 비례하도록 */
+}
+
+.main__product > h2 {
+  font-size: 5vw; /* 화면 너비에 비례한 폰트 크기 */
+  font-weight: 700;
+  text-align: center;
+  color: black;
+}
+
+.main__product__container {
+  display: flex;
+  gap: 5vw; /* 화면 크기에 비례한 간격 */
+  max-width: 1250px;
+  margin: 0 auto;
+  width: 90%; /* 화면 크기에 따라 너비 조정 */
+  flex-wrap: wrap; /* 화면 크기가 작아지면 자동으로 줄바꿈 */
+}
+
+.main__product__left,
+.main__product__right {
+  width: 45%; /* 화면 너비에 비례하여 왼쪽과 오른쪽 영역의 너비 설정 */
+  height: auto; /* 높이를 비례적으로 설정 */
+}
+
+.main__product__tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main__product__tit > a {
+  color: black;
+  position: relative;
+  top: 3vh; /* 상단 여백을 vh 단위로 설정하여 화면 크기에 비례하도록 */
+}
+
+.main__product__tit > h3 {
+  font-size: 3vw; /* 화면 크기에 비례한 폰트 크기 */
+  font-weight: 700;
+}
+
+.main__product__tit > a > img {
+  position: relative;
+  top: 2px;
+  width: 20px; /* 아이콘 크기 설정 */
+  height: auto;
+}
+
+.main__product__content {
+  width: 100%;
+  padding: 2vw;
+  border-bottom: 1px solid #eee;
+}
+
+.main__product__content > a {
+  display: flex;
+  gap: 4vw; /* 간격을 화면 크기에 비례하도록 설정 */
+  text-decoration-line: none;
+}
+
+.main__product__album {
+  width: 40%; /* 앨범 너비를 화면에 비례하게 설정 */
+  height: auto;
+}
+
+.main__product__album > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지하면서 부모 요소에 맞게 이미지 조정 */
+}
+
+.main__product__info {
+  font-size: 2.5vw; /* 화면 크기에 비례한 폰트 크기 */
+  font-weight: 700;
+  color: black;
+  max-width: 60%; /* 내용이 너무 넓어지지 않도록 최대 너비 설정 */
+}

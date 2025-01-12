@@ -1,0 +1,92 @@
+.main__under {
+  width: 100vw;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* 검은색 배경에 50% 투명도 */
+  z-index: 1; /* 오버레이가 이미지 위에 오도록 설정 */
+}
+
+.main__under__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 화면 크기에 따라 가로 2개로 설정 */
+  grid-template-rows: repeat(2, 1fr); /* 세로 2개 */
+  gap: 3vw; /* 각 카드 간의 간격을 화면 크기에 비례하도록 설정 */
+  width: 90%;
+  margin: 0 auto;
+  padding: 5vh 0; /* 상하 패딩을 vh 단위로 설정하여 화면 크기에 비례하도록 */
+}
+
+.main__nuder__card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer; /* 커서를 포인터로 변경 */
+  transition: transform 0.3s ease;
+}
+
+.main__nuder__card:hover {
+  transform: scale(1.05); /* 마우스를 올리면 카드 크기가 커지도록 설정 */
+}
+
+.main__under__album {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.main__under__album > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지하며 부모 요소에 맞게 조정 */
+}
+
+.main__under__info {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw; /* 텍스트 간의 간격을 화면 크기에 비례하도록 설정 */
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 텍스트가 카드의 중앙에 오도록 설정 */
+  z-index: 2; /* 텍스트가 이미지 위에 오도록 설정 */
+  color: white;
+  font-size: 5vw; /* 폰트 크기를 화면 크기에 비례하도록 설정 */
+  font-weight: 500;
+  transition: opacity 0.3s ease; /* 부드러운 투명도 효과 */
+}
+
+.main__under__info > span {
+  font-size: 4vw; /* 화면 크기에 비례한 폰트 크기 */
+}
+
+.main__nuder__card:hover .main__under__info {
+  opacity: 1; /* 마우스를 올리면 정보 표시 */
+}
+
+.main__under__info > button {
+  width: fit-content;
+  border: white;
+  padding: 1vw 2vw;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 3vw;
+  border-radius: 18px;
+  transition: background 0.3s ease;
+}
+
+.main__under__info > button:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* 버튼에 마우스를 올리면 배경색이 바뀌도록 설정 */
+}

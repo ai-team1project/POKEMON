@@ -1,4 +1,3 @@
-
 .game__top {
   width: 99vw;
   height: 80vh;
@@ -9,13 +8,14 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 1127px;
-  height: 845px;
+  width: 90%; /* 화면 너비에 비례하도록 설정 */
+  max-width: 1127px; /* 최대 너비 설정 */
+  height: auto; /* 높이는 콘텐츠에 맞게 자동 조정 */
 }
 
 .game__top__album {
-  width: 1127px;
-  height: 627px;
+  width: 100%;
+  height: 50vh; /* 높이를 화면 높이에 비례하도록 설정 */
 }
 
 .game__top__album > img {
@@ -24,31 +24,30 @@
 }
 
 .game__top__info {
-  height: 110px;
-  padding: 50px 110px 41px 70px;
-
+  height: 15vh; /* 높이를 화면 높이에 비례하도록 설정 */
+  padding: 5vw 8vw 4vw 5vw; /* 패딩을 화면 비율에 맞게 조정 */
   background-color: black;
   color: #fff;
-  font-size: 20px;
+  font-size: 4vw; /* 텍스트 크기를 화면 비율에 맞게 조정 */
   font-weight: 700;
-
   position: relative;
   text-align: left;
 }
 
 .game__top__tit > img {
   position: absolute;
-  top: 85px;
-  right: 50px;
+  top: 10vw; /* 이미지 위치를 화면 크기에 비례하도록 설정 */
+  right: 5vw;
 }
 
+/* Swiper 버튼 */
 .game__top .swiper-button-next,
 .game__top .swiper-button-prev {
   color: #000000;
   background-color: rgb(255, 255, 255); /* 버튼 배경 투명도 */
   border-radius: 50%;
-  width: 85px;
-  height: 85px;
+  width: 10vw; /* 버튼 크기를 화면 비율에 맞게 설정 */
+  height: 10vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,10 +57,11 @@
   z-index: 10;
 }
 
+/* 버튼 위치 */
 .game__top .swiper-button-next {
-  right: 100px;
+  right: 5vw; /* 화면 비율에 맞게 오른쪽 위치 조정 */
 }
 
 .game__top .swiper-button-prev {
-  left: 100px;
+  left: 5vw; /* 화면 비율에 맞게 왼쪽 위치 조정 */
 }
