@@ -87,3 +87,12 @@ h1 {
     justify-content: center;
     gap: 10px;
 }
+
+.layout-width {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        max-width: 1250px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+}
