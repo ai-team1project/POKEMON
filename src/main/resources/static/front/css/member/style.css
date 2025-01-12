@@ -71,6 +71,7 @@ main {
   font-size: 20px;
 
   transform: skew(-20deg);
+  cursor: pointer;
 }
 
 .auto-login {
@@ -218,6 +219,7 @@ h2 {
     color: #fff;
     background: #454545;
     border: 1px solid #454545;
+    cursor: pointer;
 }
 
 .gray {
