@@ -1,295 +1,394 @@
-/* 공통 스타일 */
-* {
-  font-family: "Noto Sans KR", sans-serif;
-  box-sizing: border-box;
-  outline: none;
-  color: #000;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* { font-family: "Noto Sans KR", sans-serif; box-sizing: border-box; outline: none; color: #000; }
 
-html {
-  font-size: 2.5vw; /* 기본 폰트 크기 */
-}
+/* 기본 스타일 초기화 S */
+html { font-size: 13px; } /* 1rem - 13px */
+body { margin: 120px 0 0; }
+a { text-decoration: none; }
+ul, ol { list-style: none; }
+ul, ol, dl, dt, dd { margin: 0; padding: 0; }
+img { border: 0; }
+/* 기본 스타일 초기화 E */
 
-body {
-  margin: 10vh 0 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-ul, ol, dl, dt, dd {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  border: 0;
-  max-width: 100%;
-  height: auto;
-}
-
-/* 공통 스타일 */
-.layout-width {
-  max-width: 90vw;
-  min-width: 85vw;
-  width: 100%;
-}
-
+/* 공통 스타일 S */
+.layout-width { max-width: 1250px; min-width: 1100px; width: 100%; }
 main {
-  min-height: 50vh;
+    min-height: 500px;
 }
+/* 공통 스타일 E */
 
-/* 사이트 상단 헤더 */
+/* 사이트 상단 헤더 S */
 header {
-  display: flex;
-  width: 100%;
-  height: 12vh; /* 고정된 높이 대신 vh 사용 */
-  justify-content: space-between;
-  background: #fff;
-  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  padding: 0 5vw;
+    display: flex;
+    width: 100%;
+    height: 120px;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
 }
 
-header .main-menu {
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-}
-
+header .main-menu { max-width: 835px; min-width: 450px; width: 100%; display: flex; }
 header .main-menu > li {
-  flex: 1;
-  border-right: 1px solid #ebebeb;
+    width: 0;
+    flex-grow: 1;
+    border-right: 1px solid #ebebeb;
 }
-
-header .main-menu > li:first-of-type {
-  border-left: 1px solid #ebebeb;
-}
+header .main-menu > li:first-of-type { border-left: 1px solid #ebebeb; }
 
 header .main-menu > li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: 2vw;
-  font-weight: 500;
-  transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 100%;
+    font-size: 1.23rem;
+    font-weight: 500;
+    transition: all 0.5s;
 }
 
-header .main-menu > li a:hover {
-  color: #fff;
+header .main-menu > li a:hover, header .main-menu > li a:hover * {
+    color: #fff;
 }
 
 header .main-menu > li:nth-of-type(1) a:hover {
-  background: #ffb040;
+    background: #ffb040;
 }
 
 header .main-menu > li:nth-of-type(2) a:hover {
-  background: #d63836;
+    background: #d63836;
 }
 
 header .main-menu > li:nth-of-type(3) a:hover {
-  background: #1855a0;
+    background: #1855a0;
 }
 
 header .main-menu > li:nth-of-type(4) a:hover {
-  background: #264462;
+    background: #264462;
 }
 
 header .main-menu > li:nth-of-type(5) a:hover {
-  background: #793da7;
+    background: #793da7;
 }
 
-/* 로고 부분 유동적으로 조정 */
-header > .left {
-  display: flex;
-  flex-grow: 1;
+header .main-menu > li:nth-of-type(1) a:hover i {
+    background: url("../images/icon_news_w.png") no-repeat center center;
 }
 
-header > .left .logo {
-  max-width: 30vw;     /* 최대 너비는 30% */
-  min-width: 150px;    /* 최소 너비는 150px */
-  width: 100%;         /* 너비는 부모 요소에 맞추기 */
-  height: auto;        /* 비율에 맞춰 높이 자동 조정 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+header .main-menu > li:nth-of-type(2) a:hover i {
+    background: url("../images/icon_game_w.png") no-repeat center center;
 }
+
+header .main-menu > li:nth-of-type(3) a:hover i {
+    background: url("../images/icon_card_w.png") no-repeat center center;
+}
+
+header .main-menu > li:nth-of-type(4) a:hover i {
+    background: url("../images/icon_ani_w.png") no-repeat center center;
+}
+
+header .main-menu > li:nth-of-type(5) a:hover i {
+    background: url("../images/icon_ball_w.png") no-repeat center center;
+}
+
+header > .left { display: flex; flex-grow: 1; }
+header > .left .logo { max-width: 350px; min-width: 250px; display: flex; align-items: center; justify-content: center; }
 
 header .main-menu .icon {
-  display: block;
-  width: 5vw;
-  height: 4vw;
-  margin: 0 auto;
+    display: block;
+    width: 31px;
+    height: 27px;
+    margin: 0 auto;
 }
 
+header > .right .icon {
+    display: block;
+    width: 38px;
+    height: 38px;
+    margin: 0 auto;
+}
+
+header .icon.news {
+    background:url("../images/icon_news.png") no-repeat center center;
+}
+
+header .icon.game {
+    background:url("../images/icon_game.png") no-repeat center center;
+}
+
+header .icon.card-game {
+    background:url("../images/icon_card.png") no-repeat center center;
+}
+
+header .icon.animation {
+    background:url("../images/icon_ani.png") no-repeat center center;
+}
+
+header .icon.products {
+    background:url('../images/icon_ball.png') no-repeat center center;
+}
+
+header .icon.catalog {
+    background:url("../images/icon_ball_c.png") no-repeat center center;
+}
+
+header .icon.login {
+    background:url("../images/icon_login.png") no-repeat center center;
+}
+
+header .icon.logout {
+    background:url("../images/icon_logout.png") no-repeat center center;
+}
+
+header .icon.search {
+    background: url("../images/icon_search.png") no-repeat center center;
+}
+
+
 header > .right {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    width: 520px;
+    justify-content: flex-end;
 }
 
 header > .right > ul {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header > .right li {
-  margin: 0 2vw;
+    margin: 0 15px;
+    white-space: nowrap;
 }
 
-header > .right li a {
-  font-size: 1.5vw;
-  color: #222;
+header >.right li a {
+    font-size: 1.077rem;
+    color: #222;
 }
 
 header .move-to-store {
-  display: block;
-  width: 20vw;
-  height: 12vh;
-  background: #FFDE00 url("../images/a-store.png") no-repeat center center;
-  background-size: cover;
-  padding: 0 2vw;
-  margin-left: 3vw;
+    position: relative;
+    display: block;
+    width: 190px;
+    height: 120px;
+    background: #FFDE00 url("../images/a-store.png") no-repeat center center;
+    background-size: 100%;
+    padding: 0 15px 0 7px;
+    margin-left: 45px;
 }
 
-/* 사이트 하단 풋터 */
+header .move-to-store::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    position: absolute;
+    top: -4px;
+    left: -15px;
+    transform: skew(-45deg);
+}
+
+/* 사이트 하단 풋터 S */
 footer {
-  height: 40vh;
-  background: black;
+    height: 40vh;
+    background:black;
 }
 
 .top {
-  background: black;
+    background: black;
 }
 
 .topp {
-  max-width: 90vw;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5vw 0;
-  color: #fff;
-  font-size: 1.5vw;
-  font-weight: 400;
+    max-width:1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .ft-menu {
-  display: flex;
-  gap: 2vw;
+    display:flex;
+    gap:15px;
 }
 
 .ft-menu > li > a {
-  text-decoration-line: none;
-  color: white;
+    text-decoration-line:none;
+    color:white;
 }
 
 .top .ft-logo {
-  width: 20vw;
-  height: 3vh;
+    width: 200px,
+    height: 23px;
 }
 
 .ft-logo > img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.ft-menu {
+   display: flex;
 }
 
 .ft-bar {
-  margin-left: 2vw;
-  color: gray;
+    margin-left: 15px;
+    color: gray;
 }
 
 .middlee {
-  max-width: 90vw;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 5vw 0;
-  font-size: 1.2vw;
-  color: white;
+    max-width:1250px;
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    font-size: 13px;
+    color: white;
 }
 
 .middle {
-  background: #1a1a1a;
+    background: #1a1a1a;
 }
 
 .middleTit {
-  display: flex;
-  flex-direction: column;
-  gap: 2vw;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .sns {
-  display: flex;
+    display:flex;
 }
 
 .sns > li a > img {
-  width: 4vw;
-  height: 4vw;
-  margin-left: 2vw;
+    width: 43px;
+    height: 43px;
+    margin-left: 15px;
 }
 
 .bottomm {
-  max-width: 90vw;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-  font-size: 1.4vw;
-  background: black;
-  margin-top: 2vw;
-  align-items: center;
+    max-width:1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 14px;
+    background:black;
+    margin-top: 20px;
+    align-items: center;
 }
 
+.bottom {
+    background:black;
+}
+
+
 .bottom-left {
-  display: flex;
-  flex-direction: column;
-  gap: 1vw;
+    display:flex;
+    flex-direction: column;
+    gap:3px;
 }
 
 .bottom .right {
-  display: flex;
-  flex-direction: column;
-  gap: 1vw;
+    display:flex;
+    flex-direction: column;
+    gap:3px;
 }
 
-.right-bot {
-  padding-top: 3vw;
+.right-bot{
+    padding-top:30px;
 }
 
 .ft-text {
-  color: #fff;
+    color: #fff;
 }
+/* 사이트 하단 풋터 E */
 
-/* 페이지네이션 */
+/* 페이지네이션 S */
 .pagination {
-  text-align: center;
-  margin: 2vw 0;
+    text-align: center;
+    margin: 20px 0;
 }
 
 .pagination a {
-  display: inline-block;
-  min-width: 7vw;
-  height: 7vw;
-  border: 1px solid #000;
-  line-height: 6vw;
-  font-size: 2vw;
-  border-radius: 0.3vw;
+    display: inline-block;
+    min-width: 45px;
+    height: 45px;
+    border: 1px solid #000;
+    line-height: 43px;
+    font-size: 1.56rem;
+    border-radius: 3px;
 }
 
 .pagination a + a {
-  margin-left: 1vw;
+    margin-left: 3px;
 }
 
 .pagination a.on {
-  background: #000;
-  color: #fff;
+    background: #000;
+    color: #fff;
 }
+/* 페이지네이션 E */
+
+/* 미디어 쿼리 S */
+@media (max-width: 1024px) {
+    html { font-size: 12px; }
+
+    header { height: 100px; }
+    header .main-menu { flex-wrap: wrap; }
+    header .main-menu > li { border-right: none; border-bottom: 1px solid #ebebeb; }
+    header > .right { width: auto; justify-content: flex-start; }
+    header > .right > ul { flex-wrap: wrap; gap: 10px; }
+    header .move-to-store { width: 170px; }
+
+    footer .topp { flex-direction: column; align-items: flex-start; }
+    footer .middlee { flex-direction: column; align-items: flex-start; }
+    footer .bottomm { flex-direction: column; align-items: flex-start; }
+    footer .sns { flex-wrap: wrap; }
+
+    .pagination a {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html { font-size: 11px; }
+
+    header { height: 80px; }
+    header .main-menu { flex-direction: column; }
+    header .main-menu > li { height: 60px; border-right: none; }
+    header .move-to-store { width: 150px; height: 100px; }
+
+    footer .topp, footer .middlee, footer .bottomm { padding: 15px 0; }
+    footer .sns > li a > img { width: 35px; height: 35px; }
+    footer .ft-logo { width: 150px; }
+
+    .pagination a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html { font-size: 10px; }
+
+    header { height: 70px; }
+    header .main-menu { font-size: 1rem; }
+    header .move-to-store { display: none; }
+
+    footer .topp, footer .middlee, footer .bottomm { flex-direction: column; align-items: center; }
+    footer .sns > li a > img { width: 30px; height: 30px; margin-left: 10px; }
+    footer .ft-logo { width: 120px; }
+
+    .pagination a {
+        font-size: 1rem;
+    }
+}
+/* 미디어 쿼리 E */
