@@ -1,11 +1,13 @@
+.news-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개의 열 */
+  grid-auto-rows: auto; /* 자동으로 행의 크기 조정 */
+  grid-gap: 10px; /* 아이템 간 간격 */
+  width: 100%; /* 부모 요소의 너비를 충분히 확보 */
+}
 
 
-.grid-layout{
- display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);/* 3개의 열, 각각 1fr 비율 */
-    grid-gap: 10px;
-    }
+
 .news__game__list {
 list-style: none;
     display: flex;
@@ -13,6 +15,7 @@ list-style: none;
     justify-content: center;
     margin:0 auto;
     align-items: center;
+    gap:20px;
 
 }
 .game__li__list {
