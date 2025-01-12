@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* 공통 스타일 */
 * {
   font-family: "Noto Sans KR", sans-serif;
   box-sizing: border-box;
@@ -29,6 +29,8 @@ ul, ol, dl, dt, dd {
 
 img {
   border: 0;
+  max-width: 100%;
+  height: auto;
 }
 
 /* 공통 스타일 */
@@ -106,14 +108,17 @@ header .main-menu > li:nth-of-type(5) a:hover {
   background: #793da7;
 }
 
+/* 로고 부분 유동적으로 조정 */
 header > .left {
   display: flex;
   flex-grow: 1;
 }
 
 header > .left .logo {
-  max-width: 30vw;
-  min-width: 20vw;
+  max-width: 30vw;     /* 최대 너비는 30% */
+  min-width: 150px;    /* 최소 너비는 150px */
+  width: 100%;         /* 너비는 부모 요소에 맞추기 */
+  height: auto;        /* 비율에 맞춰 높이 자동 조정 */
   display: flex;
   align-items: center;
   justify-content: center;
