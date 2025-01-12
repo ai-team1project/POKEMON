@@ -7,10 +7,21 @@ list-style: none;
     justify-content: center;
     margin-top:100px;
     align-items: center;
-
+    flex-direction:row;
 
 }
-
+.grid-layout{
+ display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);/* 3개의 열, 각각 1fr 비율 */
+    grid-gap: 10px;
+    }
+.series{
+display:flex;
+align-items:center;
+justify-content:center;
+margin-top:50px;
+}
 .container{
 
     height: 100vh;
@@ -66,7 +77,8 @@ list-style: none;
     grid-gap: 10px;}
 /* 게임 시리즈 링크 스타일 */
 .game__series {
-
+    display:flex;
+    flex-direction:column;
     color: black;
     text-decoration: none;
     cursor: pointer;
