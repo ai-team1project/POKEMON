@@ -9,7 +9,10 @@
  font-family: 'DungGeunMo' !important;
 }
 
-
+.layout-width {max-width: none;min-width: none;}
+main {
+    min-height: 500px;
+}
 
 .items {
     display: grid;
