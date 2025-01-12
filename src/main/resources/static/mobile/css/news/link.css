@@ -1,0 +1,50 @@
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+
+  gap: 10px;
+  padding: 20px 100px;
+
+  border-bottom: 1.5px solid #e9ecef;
+}
+
+.link i {
+    color: #e9ecef
+}
+
+.text {
+    color: #666;
+}
+
+.link__logo {
+  text-decoration: none;
+
+  display: flex;
+  width: 65px;
+  height: 30px;
+}
+
+.link__logo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.link > span {
+  color: #666;
+}
+
+.text {
+  text-decoration: none;
+}
+
+.link > .text:visited {
+  color: #666;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  height: 30px;
+}

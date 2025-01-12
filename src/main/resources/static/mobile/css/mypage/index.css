@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Ramche';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mypage {
+  width: 100%; /* 화면 크기에 맞게 확장 */
+  max-width: 1250px; /* 최대 너비 제한 */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* 레이아웃이 좁아지면 요소가 줄어들도록 설정 */
+  margin-top: 170px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+}
+
+.mypage__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* 기본적으로 100%를 차지하게 설정 */
+  max-width: 625px; /* 최대 너비 625px로 제한 */
+  background-color: #ebedea; /* 배경색 */
+  padding: 40px;
+  box-sizing: border-box; /* padding을 요소 크기 안에 포함시킴 */
+}
+
+.mypage__left > h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.mapage__album {
+  width: 100%; /* 부모에 맞게 크기 조정 */
+  max-width: 200px; /* 최대 크기 제한 */
+  height: 200px;
+  margin: 40px 0;
+}
+
+.mapage__album > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율을 유지하면서 크기 맞추기 */
+}
+
+.option__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 20px;
+  width: 100%; /* 부모 요소에 맞게 확장 */
+}
+
+.option__count, .option__btn {
+  width: fit-content; /* 내용에 맞게 크기 조정 */
+}

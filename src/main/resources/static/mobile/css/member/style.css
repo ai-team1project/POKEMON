@@ -1,0 +1,236 @@
+/* 기본 스타일 */
+main {
+    background: #f7f7f7;
+    padding: 120px 0 280px;
+}
+
+/* 로그인 S */
+.login__layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;  /* 화면에 맞춰 크기 조정 */
+}
+
+.login-box {
+    width: 100%;
+    max-width: 470px;  /* 최대 너비 설정 */
+    margin: 0 auto;
+}
+
+.login__logo__album {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.login-logo {
+    display: block;
+    margin: 0 auto;
+    width: 100%;  /* 로고 크기가 부모에 맞춰 조정 */
+}
+
+.input__box {
+    outline: none;
+    border: none;
+    font-size: 17px;
+    color: #6c757d;
+    width: 100%;
+}
+
+.input__mapper {
+    width: 100%;
+    max-width: 450px;
+    background-color: white;
+    padding: 15px 30px;
+    display: flex;
+    border: 1px solid #ced4da;
+}
+
+.login__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0;
+    border: none;
+    background-color: black;
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transform: skew(-20deg);
+}
+
+.auto-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.auto-login > input {
+    color: #666;
+    margin: 2px 0 0 0;
+}
+
+.auto-login > label {
+    color: #666;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px 150px;
+    border-bottom: 1px solid #d0d0d0;
+    font-size: 15px;
+    color: #d0d0d0;
+}
+
+.links > a {
+    width: 95px;
+    color: #666;
+}
+
+.login_agree {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 15px;
+    background-color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 23px;
+    font-size: 18px;
+}
+
+.agree_arrow {
+    font-size: 10px;
+    font-weight: 700;
+}
+/* 로그인 E */
+
+/* 회원가입 S */
+.join__container {
+    height: auto;
+    max-width: 580px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.join__content {
+    padding: 30px 25px 55px;
+}
+
+.content__form {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #bbb;
+}
+
+h2 {
+    font-size: 26px;
+    margin: 4px 0 25px;
+    height: 27px;
+}
+
+.auth-box {
+    padding: 0 0 10px 0;
+}
+
+.auth-code {
+    width: 100%;
+    max-width: 300px;
+}
+
+.timer {
+    display: block;
+    padding-right: 10px;
+}
+
+.auth__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth__message {
+    display: flex;
+    align-items: center;
+}
+
+.auth-btn {
+    cursor: pointer;
+}
+
+.row > input,
+.row > select {
+    margin: 0 0 10px 0;
+    width: 100%;
+    max-width: 530px;
+    height: 53px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    border: 1px solid #bbb;
+    font-size: 14px;
+}
+
+.join__password {
+    display: block;
+    margin: 2px 0 10px 0;
+    font-size: 12px;
+    color: #767676;
+}
+
+.birthDt-pointer {
+    cursor: pointer;
+}
+
+.address-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.address-row > input {
+    width: 100%;
+    max-width: 350px;
+}
+
+.search-address {
+    width: 100%;
+    max-width: 170px;
+    height: 53px;
+    padding: 10px;
+    font-weight: 400;
+    color: #fff;
+    background: #454545;
+    border: 1px solid #454545;
+}
+
+.gray {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+.join__btn {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 20px;
+    padding: 17px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    background: #da343c;
+    border: 1px solid #da343c;
+    transform: skew(-20deg);
+    cursor: pointer;
+}
+/* 회원가입 E */

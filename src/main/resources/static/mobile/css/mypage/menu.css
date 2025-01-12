@@ -1,0 +1,31 @@
+/* 오른쪽 메뉴 */
+.menu {
+  position: fixed;  /* 고정 위치로 설정 */
+  top: 167px;       /* 원하는 고정된 위쪽 간격 */
+  right: 5%;        /* 오른쪽 간격을 상대적으로 설정 (5%로 설정) */
+  width: 100px;     /* 메뉴 크기 */
+  max-width: 200px; /* 최대 크기 설정 (너무 커지지 않도록 제한) */
+  box-sizing: border-box;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 버튼 간 간격 */
+}
+
+.menu__btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #f7d913;
+  cursor: pointer;
+  font-size: 18px;  /* 글자 크기를 약간 줄여서 반응형 조정 */
+  font-weight: bold;
+  text-align: center;
+}
+
+.menu__btn:hover {
+  background-color: #e6c10e; /* hover 시 색상 변경 */
+}

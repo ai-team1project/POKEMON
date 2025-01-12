@@ -1,0 +1,216 @@
+/* 카테고리 */
+
+.card__deck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 100px 0;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.card__deck > nav {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card__deck ul {
+  padding-bottom: 50px;
+  border-bottom: 1.5px solid #e9ecef;
+
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+}
+
+.category:hover {
+  color: #6c757d;
+}
+
+.category:active {
+  color: black;
+  border-bottom: 5px solid #d63836;
+  padding: 15px 25px;
+}
+
+.category {
+  text-decoration: none;
+  color: #b3b3b3;
+
+  font-size: 23px;
+  font-weight: bold;
+  padding: 15px 25px;
+}
+
+/* 카드 레이아웃 */
+.grid-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* 2개의 열, 각 열은 1fr (fractional unit) */
+  grid-gap: 30px 20px; /* 그리드 항목 간 간격 */
+
+  position: relative;
+  z-index: 0;
+}
+
+/* 카드 */
+.card > a {
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  position: relative;
+  z-index: 1;
+  border-bottom: 5px solid #0080ff;
+
+  transition: all 0.3s;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* 카드 이미지 */
+
+.card__album {
+  width: 297.5px;
+  height: 182px;
+}
+
+.card__album__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 카드 텍스트 */
+.card__title {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+}
+
+.card__head {
+  font-weight: bolder;
+  font-size: 20px;
+
+   display: -webkit-box;                /* 텍스트를 박스 형태로 배치 */
+   -webkit-box-orient: vertical;        /* 텍스트가 세로로 쌓이도록 설정 */
+   -webkit-line-clamp: 2;               /* 최대 두 줄까지만 표시 */
+   overflow: hidden;                    /* 넘치는 텍스트는 숨김 */
+   text-overflow: ellipsis;             /* 잘린 텍스트 끝에 '...'을 추가 */
+   line-height: 1.5em;                  /* 줄 높이 설정 */
+   max-height: 3em;                     /* 두 줄의 최대 높이 설정 (line-height * 2) */
+   position: relative;                  /* 자식 요소를 정확히 위치시키기 위해 relative 설정 */
+}
+
+
+
+.card__sub {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+}
+
+.card__sub__title > li {
+    font-size: 14px;
+    color: #666;
+}
+
+.card__sub > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0;
+  border-bottom: none;
+  gap: 0;
+
+  font-size:13px;
+}
+
+.card__sub__date:before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 0.8em;
+  margin: 0 10px;
+  border-left: 1px solid #9b9fa8;
+  opacity: 0.5;
+}
+
+
+.card__sub__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #0080ff;
+
+  border: none;
+  border-radius: 15px;
+  padding: 10px 13px;
+}
+
+/* 더보기 */
+.more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+
+  border: none;
+  background-color: #343a40;
+
+  width: 400px;
+  padding: 12px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+
+  transform: skew(-20deg);
+}
+
+.more > button {
+  background-color: transparent;
+  all: unset; /* 모든 기본 스타일을 초기화 */
+  display: inline-block; /* 기본적인 블록 스타일 설정 */
+  cursor: pointer; /* 클릭 가능한 느낌 */
+  font: inherit; /* 부모 요소의 글꼴 상속 */
+  color: inherit; /* 부모 요소의 텍스트 색상 상속 */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transform: skew(20deg);
+}
+
+.more span {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.more__arrow > i {
+color:white;
+}

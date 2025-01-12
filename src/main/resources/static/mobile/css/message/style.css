@@ -1,0 +1,95 @@
+/* 기본 스타일 */
+.message__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    width: 100%;  /* 화면에 맞춰 크기 조정 */
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.message_top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message__notice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.message__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.title__width {
+    width: 50px;
+}
+
+.title__inputbar,
+.email__inputbar {
+    width: 100%;  /* 화면에 맞춰 크기 조정 */
+    background-color: white;
+    box-sizing: border-box;  /* 패딩이 포함되도록 설정 */
+}
+
+.email__inputbar {
+    max-width: 95%;  /* 최대 너비 설정 */
+}
+
+.title__inputbar > input {
+    outline: none;
+    font-size: 17px;
+    color: #6c757d;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.message__write {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.box__style {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.button__collection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button__group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}

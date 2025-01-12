@@ -1,0 +1,69 @@
+.mypage__right {
+  width: 625px; /* 고정 너비 */
+  padding: 40px; /* 내부 여백 */
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.pokemon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  animation: shake 2s infinite;
+}
+
+/* 포켓몬이 제자리에서 흔들리는 애니메이션 */
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-10px, 0); /* 왼쪽으로 살짝 이동 */
+  }
+  50% {
+    transform: translate(10px, 0); /* 오른쪽으로 살짝 이동 */
+  }
+  75% {
+    transform: translate(-10px, 0); /* 왼쪽으로 다시 이동 */
+  }
+  100% {
+    transform: translate(0, 0); /* 원래 위치로 돌아옴 */
+  }
+}
+
+/* 각 포켓몬의 위치를 지정 (반응형 조정) */
+#pikachu {
+  top: 15%;
+  left: 8%;
+}
+
+#charmander {
+  top: 25%;
+  left: 30%;
+}
+
+#squirtle {
+  top: 40%;
+  left: 55%;
+}
+
+#clefairy {
+  top: 45%;
+  left: 75%;
+}
+
+#wugtrio {
+  top: 15%;
+  left: 65%;
+}
+
+#meowth {
+  top: 50%;
+  left: 30%;
+}
+
+#ditto {
+  top: 5%;
+  left: 45%;
+}

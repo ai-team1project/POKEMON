@@ -1,0 +1,79 @@
+/* 기본 스타일 */
+.agreemain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f1f3f5;
+    box-sizing: border-box;
+    width: 100%; /* 화면 크기에 맞춰 자동으로 크기 조정 */
+    padding: 20px;
+}
+
+.u_list {
+    border-bottom: 2px solid black;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    max-width: 800px; /* 최대 너비 설정 */
+}
+
+.agreesection {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px 60px;
+    width: 100%;  /* 부모 요소에 맞게 크기 조정 */
+    max-width: 700px;  /* 최대 너비 설정 */
+    height: auto;
+    background: #ffffff;
+    font-size: 18px;
+    box-sizing: border-box;  /* 모든 패딩 및 마진 포함 */
+}
+
+.title {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.agree {
+    text-align: left;
+}
+
+.text {
+    transform: skew(20deg);
+    color: #ffffff;
+}
+
+.next_step {
+    width: 80%;
+    transform: skew(-15deg);
+    height: 55px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;  /* 가로 중앙 정렬 및 위 아래 마진 추가 */
+    font-size: 20px;
+    border: 1px solid transparent;
+    font-weight: bold;
+    font-style: normal;
+    cursor: pointer;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.terms-check-all {
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* 텍스트와 버튼이 적절히 정렬되도록 설정 */
+.agreesection .title,
+.agreesection .agree {
+    width: 100%; /* 부모 요소에 맞게 자동으로 크기 조정 */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
