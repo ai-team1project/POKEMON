@@ -1,0 +1,54 @@
+.main__swiper {
+  display: flex;
+  justify-content: center;
+  width: 100vw; /* 전체 화면 너비로 설정 */
+  overflow: hidden; /* 가로 스크롤 방지 */
+}
+
+body {
+  overflow-x: hidden; /* 전체 페이지 가로 스크롤 방지 */
+}
+
+.main__album {
+  width: 100%; /* 전체 너비로 설정하여 화면 크기에 맞게 조정 */
+  height: auto; /* 높이는 비율에 맞게 자동 조정 */
+  max-width: 1691px; /* 최대 너비는 원래 크기로 제한 */
+}
+
+.main__album > img {
+  width: 100%; /* 이미지의 너비를 100%로 설정하여 부모 요소에 맞게 자동으로 조정 */
+  height: auto; /* 비율에 맞게 높이 자동 조정 */
+}
+
+/* Swiper 버튼 공통 스타일 */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000000; /* 화살표 아이콘 색상 */
+  background-color: #ffffff; /* 버튼 배경색 */
+  border-radius: 50%; /* 원형 버튼 */
+  width: 10vw; /* 버튼 너비를 화면 크기에 비례하도록 설정 */
+  height: 10vw; /* 버튼 높이를 화면 크기에 비례하도록 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* 이미지 위에 위치 */
+  position: absolute; /* 절대 위치로 설정하여 화면에 고정 */
+  top: 50%; /* 버튼을 이미지 중앙에 배치 */
+  transform: translateY(-50%); /* 버튼을 정확히 중앙에 맞춤 */
+}
+
+/* 위치 조정 */
+.swiper-button-next {
+  right: 5vw; /* 화면 크기에 맞춰 버튼 오른쪽 여백 설정 */
+}
+
+.swiper-button-prev {
+  left: 5vw; /* 화면 크기에 맞춰 버튼 왼쪽 여백 설정 */
+}
+
+/* 화살표 아이콘 크기 조정 */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 5vw; /* 화살표 크기를 화면 크기에 비례하도록 설정 */
+  color: #000000;
+}

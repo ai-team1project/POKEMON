@@ -3,19 +3,27 @@
 <head>
     <title>Pokemon Battle</title>
     <style>
+        @font-face {
+            font-family: 'Ramche';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Ramche', sans-serif; /* 폰트 적용 */
             text-align: center;
             background-color: #f0f8ff;
         }
 
         h1 {
             color: #ff6347;
+            margin-top: 100px;
         }
 
         .pokemon-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             margin: 30px;
         }
@@ -23,6 +31,11 @@
         .pokemon {
             width: 200px;
             margin: 20px;
+        }
+
+        .pokemon-img {
+            width: 250px;
+            height: 250px;
         }
 
         .button {

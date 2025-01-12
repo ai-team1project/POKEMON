@@ -1,0 +1,96 @@
+.product {
+  width: 100vw;
+}
+
+.product__container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 55px 0 70px;
+}
+
+.product__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 화면 크기에 맞게 카드의 수와 크기를 자동으로 조정 */
+  gap: 15px;
+  padding: 10px;
+}
+
+a {
+  color: black;
+  text-decoration-line: none;
+}
+
+.product__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* 카드 너비를 부모 컨테이너에 맞게 조정 */
+  max-width: 300px; /* 최대 너비 제한 */
+  height: 500px;
+  margin: 5px;
+}
+
+.product__card__image {
+  width: 100%; /* 이미지가 카드에 맞게 너비 조정 */
+  height: 400px;
+}
+
+.product__card__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-items: center;
+}
+
+.product__title {
+  font-size: 18px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.product__title__theme {
+  display: block;
+  margin: 20px 0 10px;
+  font-size: 14px;
+  color: #666;
+  text-align: left;
+}
+
+.product__title__text {
+  font-size: 20px;
+  color: #000;
+  text-align: left;
+}
+
+.more {
+  width: 300px;
+  height: 55px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  transform: skew(-20deg);
+  border: 1px solid transparent;
+}
+
+.more__text {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  transform: skew(20deg);
+}
+
+.more__image {
+  position: absolute;
+  right: 55px;
+  width: 10px;
+  height: 18px;
+  transform: skew(20deg);
+}
+
+.more__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

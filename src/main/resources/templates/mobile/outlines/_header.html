@@ -2,18 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메뉴 토글 예제</title>
-    <link rel="stylesheet" href="styles.css">
+
+
 </head>
 <body>
+
 <header th:fragment="common">
     <div class="left">
-        <a th:href="@{/}" class="logo">
-            <img th:src="@{/front/images/main_logo.png}">
+        <!-- 메뉴 토글 버튼 -->
+        <a th:href="@{/m}" class="logo">
+            <img th:src="@{/mobile/images/main_logo.png}">
         </a>
-        <button class="menu-toggle" id="menuToggle">☰</button> <!-- 토글 버튼 추가 -->
+        <div class="menu-toggle" id="menuToggle">☰</div> <!-- 메뉴 토글 버튼 -->
+
+        <!-- 메뉴 리스트 -->
         <ul class="main-menu" id="mainMenu">
             <li>
                 <a th:href="@{/m.news}">
@@ -55,16 +57,17 @@
                     </div>
                 </a>
             </li>
-        </ul>
-    </div>
-    <div class="right">
-        <ul>
             <li>
                 <a th:href="@{/m.pokemon/list}">
                     <i class="icon catalog"></i>
                     <th:block th:text="#{포켓몬_도감}"></th:block>
                 </a>
             </li>
+            <a href="#" class="move-to-store"></a>
+        </ul>
+    </div>
+    <div class="right">
+        <ul>
             <li>
                 <a th:unless="${@memberUtil.isLogin()}" th:href="@{/member/login}">
                     <i class="icon login"></i>
@@ -88,10 +91,9 @@
                 </a>
             </li>
         </ul>
-        <a href="#" class="move-to-store"></a>
     </div>
 </header>
 
-<script th:src="@{/mobile/js/common.js} "></script>
+
 </body>
 </html>

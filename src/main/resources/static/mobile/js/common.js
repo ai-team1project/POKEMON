@@ -1,8 +1,11 @@
-// JavaScript (script.js)
-document.getElementById('menuToggle').addEventListener('click', function() {
-    const menu = document.getElementById('mainMenu');
+// 토글 메뉴 기능
+function toggleMenu() {
+    const menu = document.querySelector('.main-menu');
+    const toggleBtn = document.querySelector('.toggle-btn');
 
-    // 메뉴가 숨겨져 있으면 보이도록, 보이면 숨기도록 토글
+    // 메뉴 열고 닫기
     menu.classList.toggle('open');
-});
-ㅎ
+
+    // 버튼 아이콘 변경 (햄버거 <-> X 아이콘)
+    toggleBtn.classList.toggle('active');
+}

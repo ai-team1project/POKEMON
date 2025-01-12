@@ -1,7 +1,7 @@
 .items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3개 열 설정 */
-    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);  /* 가로 3개 열 */
+    grid-template-rows: repeat(7, 1fr);     /* 세로 7개 행 */
     grid-gap: 10px;  /* 이미지 간의 간격 */
     max-width: 1250px;
     margin: 0 auto;

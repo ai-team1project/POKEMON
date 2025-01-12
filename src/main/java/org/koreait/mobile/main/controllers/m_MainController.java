@@ -1,11 +1,11 @@
-package org.koreait.main.controllers;
+package org.koreait.mobile.main.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.koreait.front.common.BaseModel;
 import org.koreait.global.libs.Utils;
-import org.koreait.main.entitise.MainAnimation;
-import org.koreait.main.entitise.MainGame;
 import org.koreait.main.entitise.MainSwiper;
+import org.koreait.mobile.main.entitise.m_MainGame;
+import org.koreait.mobile.main.entitise.m_MainAnimation;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,12 +17,12 @@ import java.util.List;
 @Controller
 @RequestMapping("/")
 @RequiredArgsConstructor
-public class MainController {
+public class m_MainController {
 
     private final Utils utils;
 
 
-    @GetMapping("/")
+    @GetMapping("/m")
     // 메인 페이지
     public String index(Model model) {
         // MainList
@@ -55,21 +55,21 @@ public class MainController {
 
         model.addAttribute("newNews", newNews);
 
-        // MainGame
-        List<MainGame> mainGame = new ArrayList<>();
-        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "포켓몬 카드 게임 Pocket」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
-        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「포켓몬스터스칼렛・바이올렛 제로의 비보...", "https://data1.pokemonkorea.co.kr/newdata/2024/01/2024-01-03_10-14-01-31819-1704244441.png", "https://pokemonkorea.co.kr/sv_dlc"));
-        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「돌아온 명탐정 피카츄」 절찬 판매 중!", "https://data1.pokemonkorea.co.kr/newdata/2023/10/2023-10-20_09-34-24-16231-1697762064.png", "https://pokemonkorea.co.kr/detective_pikachu"));
-        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「포켓몬스터스칼렛・바이올렛」 공식 사이트", "https://data1.pokemonkorea.co.kr/newdata/2023/08/2023-08-09_11-22-23-13966-1691547743.png", "https://pokemonkorea.co.kr/sv"));
-        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「Pokémon Sleep」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2023/07/2023-07-19_11-36-13-69331-1689734173.png", "https://www.pokemonsleep.net/ko/"));
-        mainGame.add(new MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「Pokémon Sleep」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2023/07/2023-07-14_12-10-49-57812-1689304249.png", "https://www.pokemongoplusplus.com/ko/"));
+
+        List<m_MainGame> mainGame = new ArrayList<>();
+        mainGame.add(new m_MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "포켓몬 카드 게임 Pocket」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-30_11-52-38-76676-1730256758.png", "https://pokemonkorea.co.kr/pokemon_tcg_pocket"));
+        mainGame.add(new m_MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「포켓몬스터스칼렛・바이올렛 제로의 비보...", "https://data1.pokemonkorea.co.kr/newdata/2024/01/2024-01-03_10-14-01-31819-1704244441.png", "https://pokemonkorea.co.kr/sv_dlc"));
+        mainGame.add(new m_MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「돌아온 명탐정 피카츄」 절찬 판매 중!", "https://data1.pokemonkorea.co.kr/newdata/2023/10/2023-10-20_09-34-24-16231-1697762064.png", "https://pokemonkorea.co.kr/detective_pikachu"));
+        mainGame.add(new m_MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「포켓몬스터스칼렛・바이올렛」 공식 사이트", "https://data1.pokemonkorea.co.kr/newdata/2023/08/2023-08-09_11-22-23-13966-1691547743.png", "https://pokemonkorea.co.kr/sv"));
+        mainGame.add(new m_MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「Pokémon Sleep」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2023/07/2023-07-19_11-36-13-69331-1689734173.png", "https://www.pokemonsleep.net/ko/"));
+        mainGame.add(new m_MainGame("https://pokemonkorea.co.kr/img/main/game_object2.png",  "「Pokémon Sleep」 절찬 배포 중!", "https://data1.pokemonkorea.co.kr/newdata/2023/07/2023-07-14_12-10-49-57812-1689304249.png", "https://www.pokemongoplusplus.com/ko/"));
         model.addAttribute("mainGame", mainGame);
 
 
-        List<MainAnimation> mainAnimation = new ArrayList<>();
-        mainAnimation.add(new MainAnimation("TV 애니메이션 포켓몬스터」테라스탈 데뷔 절찬 방영 중",  "https://data1.pokemonkorea.co.kr/newdata/2024/11/2024-11-20_15-01-23-30520-1732082483.png", "https://pokemonkorea.co.kr/pokemonLR"));
-        mainAnimation.add(new MainAnimation("포켓몬스터 금은편: 은빛산 이야기 8월 10일 (토) 첫 방송! ",  "https://data1.pokemonkorea.co.kr/newdata/2024/08/2024-08-01_13-53-25-35881-1722488005.png", "https://www.pokemonkorea.co.kr/2024_3rd_project"));
-        mainAnimation.add(new MainAnimation("「극장판 포켓몬스터 AG: 뮤와 파동의 용사 루카리오」2025년 1월 22일 개봉 예정",  "https://data1.pokemonkorea.co.kr/newdata/2024/12/2024-12-23_18-07-49-53506-1734944869.png", "https://pokemonkorea.co.kr/2025_M8"));
+        List<m_MainAnimation> mainAnimation = new ArrayList<>();
+        mainAnimation.add(new m_MainAnimation("TV 애니메이션 포켓몬스터」테라스탈 데뷔 절찬 방영 중",  "https://data1.pokemonkorea.co.kr/newdata/2024/11/2024-11-20_15-01-23-30520-1732082483.png", "https://pokemonkorea.co.kr/pokemonLR"));
+        mainAnimation.add(new m_MainAnimation("포켓몬스터 금은편: 은빛산 이야기 8월 10일 (토) 첫 방송! ",  "https://data1.pokemonkorea.co.kr/newdata/2024/08/2024-08-01_13-53-25-35881-1722488005.png", "https://www.pokemonkorea.co.kr/2024_3rd_project"));
+        mainAnimation.add(new m_MainAnimation("「극장판 포켓몬스터 AG: 뮤와 파동의 용사 루카리오」2025년 1월 22일 개봉 예정",  "https://data1.pokemonkorea.co.kr/newdata/2024/12/2024-12-23_18-07-49-53506-1734944869.png", "https://pokemonkorea.co.kr/2025_M8"));
 
         model.addAttribute("mainAnimation", mainAnimation);
 
@@ -113,6 +113,6 @@ public class MainController {
 
 
         // utils.tpl("main/index") 로 템플릿 경로 반환
-        return utils.tpl("main/index");
+        return "mobile/main/index";
     }
 }

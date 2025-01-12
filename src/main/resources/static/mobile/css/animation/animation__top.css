@@ -1,0 +1,76 @@
+.animation__top {
+  width: 100vw;
+  height: 80vh;
+  background-color: rgba(247, 255, 199, 0.5);
+}
+
+.animation__top__cover {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%; /* 부모 크기에 맞춰 자동으로 크기 조정 */
+  max-width: 1127px; /* 최대 크기 설정 */
+  height: 100%; /* 부모 크기에 맞춰 높이 자동 조정 */
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.animation__top__album {
+  width: 100%; /* 부모 크기에 맞춰 이미지 크기 조정 */
+  height: 55vh; /* 화면 높이에 비례하여 크기 조정 */
+}
+
+.animation__top__album > img {
+  width: 100%; /* 이미지가 부모에 맞게 크기 조정 */
+  height: 100%; /* 이미지가 부모에 맞게 크기 조정 */
+}
+
+.animation__top__info {
+  height: 130px;
+  padding: 43px 110px 41px 32px;
+  background-color: black;
+  color: #fff;
+  font-size: 27px;
+  font-weight: 700;
+  position: relative;
+  text-align: left;
+}
+
+.animation__top__tit {
+  color: white;
+  font-size: 32px;
+  position: relative;
+  top: -50px;
+}
+
+.animation__top__tit > img {
+  position: absolute;
+  top: 35px;
+  right: -70px;
+}
+
+.animation__top .swiper-button-next,
+.animation__top .swiper-button-prev {
+  color: #000000;
+  background-color: rgb(255, 255, 255); /* 버튼 배경 투명도 */
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.animation__top .swiper-button-next {
+  right: 100px;
+}
+
+.animation__top .swiper-button-prev {
+  left: 100px;
+}
