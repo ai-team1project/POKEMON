@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <th:block th:fragment="items">
-        <ul class="items">
-            <li th:if="${#lists.isEmpty(items)}" class="no-data">
-                <h3 th:text="#{검색결과가_없습니다.}"></h3>
-                <div th:text="#{다른_키워드로_검색해주세요.}"></div>
-            </li>
-            <li th:unless="${#lists.isEmpty(items)}" class="item" th:each="item : ${items}" th:object="${item}">
-                <th:block th:utext="${@wishService.showWish(item.seq, 'POKEMON', myPokemons)}"></th:block>
-                <a th:href="@{/pokemon/view/{seq}(seq=*{seq})}">
-                    <th:block th:utext="*{@utils.showImage(frontImage, 390, 390, 'image')}"></th:block>
-                    <div class="item-no"
-                         th:text="*{#strings.concat('No.', #numbers.formatInteger(seq, 4))}"></div>
-                    <div clas="item-nm" th:text="*{name}"></div>
 
-                    <div class="item-types">
-                        <div class="type" th:each="type : *{_types}"
-                             th:text="${#messages.msg(type)}"></div>
+<th:block th:fragment="items">
+    <ul class="items">
+        <li th:if="${#lists.isEmpty(items)}" class="no-data">
+            <h3 th:text="#{검색결과가_없습니다.}"></h3>
+            <div th:text="#{다른_키워드로_검색해주세요.}"></div>
+        </li>
+        <li th:unless="${#lists.isEmpty(items)}" class="item" th:each="item : ${items}" th:object="${item}">
+            <a th:href="@{/pokemon/view/{seq}(seq=*{seq})}">
+                <!-- 이미지 가운데 정렬을 위해 부모에 flex 사용 -->
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <th:block th:utext="*{@utils.showImage(frontImage, 200, 200, 'image')}"></th:block>
+                </div>
+
+                <div class="pokemon__upper">
+                    <div class="item-no"
+                         th:text="*{#strings.concat('No.', #numbers.formatInteger(seq, 4))}">
                     </div>
-                </a>
-            </li> <!--// item -->
-        </ul>
-    </th:block>
+                    <div class="item-nm" th:text="*{name}"></div>
+                </div>
+
+                <div class="item-types">
+                    <div class="type" th:each="type : *{_types}"
+                         th:text="${#messages.msg(type)}"
+                         th:attr="data-type=${type}">
+                    </div>
+                </div>
+            </a>
+            <th:block th:utext="${@wishService.showWish(item.seq, 'POKEMON', myPokemons)}"></th:block>
+        </li> <!--// item -->
+    </ul>
+</th:block>
 </html>
