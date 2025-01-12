@@ -1,54 +1,58 @@
-
+/* 게임 선물 영역 */
 .game__gift {
   width: 100vw;
-
   background-image: url("https://pokemonkorea.co.kr/img/game/gift_bg.jpg");
-
+  background-size: cover; /* 배경 이미지가 화면에 맞게 조정 */
+  background-position: center;
   padding: 70px 0;
 }
 
 .game__gift > h2 {
   text-align: center;
-
   color: rgb(0, 0, 0);
-
   margin-bottom: 40px;
-  font-size: 50px;
+  font-size: 6vw; /* 반응형 글꼴 크기 */
   font-weight: 700;
 }
 
+/* 게임 선물 스와이퍼 영역 */
 .game__gift__swiper {
-  width: 290px;
+  width: 90%; /* 화면 너비의 90% */
+  max-width: 400px; /* 최대 너비 제한 */
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   background-color: white;
 }
 
+/* 링크 설정 */
 .game__gift__swiper > a {
-  width: 300px;
+  width: 100%; /* 부모의 너비를 따르도록 */
 }
 
+/* 이미지 설정 */
 .game__gift__swiper > img {
   width: 100%;
   height: 290px;
+  object-fit: cover; /* 이미지 비율 유지 */
   padding: 0 0 12px;
 }
 
+/* 정보 영역 */
 .game__gift__info {
   display: flex;
   flex-direction: column;
   text-align: center;
-
   width: 100%;
   color: black;
   margin-top: 20px;
 }
 
+/* 정보 제목 */
 .info__tit {
   width: fit-content;
   border-radius: 16px;
-  font-size: 14px;
+  font-size: 3vw; /* 반응형 글꼴 크기 */
   font-weight: 500;
   background-color: #000;
   color: white;
@@ -57,19 +61,21 @@
   padding: 7px 11px;
 }
 
+/* 정보 서브 */
 .info__sub {
   margin-top: 8px;
-  font-size: 20px;
+  font-size: 4vw; /* 반응형 글꼴 크기 */
   font-weight: 300;
 }
 
+/* 스와이퍼 버튼 */
 .game__gift .swiper-button-next,
 .game__gift .swiper-button-prev {
   color: #000000;
   background-color: rgb(255, 255, 255); /* 버튼 배경 투명도 */
   border-radius: 50%;
-  width: 85px;
-  height: 85px;
+  width: 10vw; /* 반응형 버튼 크기 */
+  height: 10vw; /* 반응형 버튼 크기 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,10 +85,12 @@
   z-index: 10;
 }
 
+/* 다음 버튼 위치 */
 .game__gift .swiper-button-next {
-  right: 250px;
+  right: 10vw; /* 화면 크기에 따라 위치 조정 */
 }
 
+/* 이전 버튼 위치 */
 .game__gift .swiper-button-prev {
-  left: 250px;
+  left: 10vw; /* 화면 크기에 따라 위치 조정 */
 }

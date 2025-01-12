@@ -1,57 +1,73 @@
-
+/* 게임 탑 영역 */
 .game__top {
-  width: 99vw;
-  height: 80vh;
-  background-color: rgba(247, 255, 199, 0.5);
+  width: 100vw; /* 화면 너비의 100% */
+  height: 80vh; /* 화면 높이의 80% */
+  background-color: rgba(247, 255, 199, 0.5); /* 반투명 배경 */
 }
 
+/* 게임 탑 커버 영역 */
 .game__top__cover {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 1127px;
-  height: 845px;
+  width: 90%; /* 화면 너비의 90% */
+  max-width: 1127px; /* 최대 너비를 설정 */
+  height: 80%; /* 높이를 80%로 설정 */
 }
+
+/* 타이틀 */
 .game__top__tit {
-   color: #fff;
-   font-size: 30px;
-   font-weight: 700;
+  color: #fff;
+  font-size: 5vw; /* 화면 크기에 비례하는 글꼴 크기 */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
+/* 앨범 영역 */
 .game__top__album {
-  width: 1127px;
-  height: 627px;
+  width: 100%; /* 부모 요소의 너비를 100%로 설정 */
+  height: 50vh; /* 화면 높이의 50% */
 }
 
 .game__top__album > img {
-  width: 100%;
-  height: 100%;
+  width: 100%; /* 이미지 너비 100% */
+  height: 100%; /* 이미지 높이 100% */
+  object-fit: cover; /* 비율을 유지하면서 이미지 채우기 */
 }
 
+/* 게임 정보 영역 */
 .game__top__info {
-  height: 110px;
-  padding: 50px 110px 41px 70px;
-
+  height: 20vh; /* 높이를 화면 높이의 20%로 설정 */
+  padding: 5vw 10vw 2vw 5vw; /* 패딩을 화면 크기에 맞게 비례 설정 */
   background-color: black;
   color: #fff;
-  font-size: 20px;
+  font-size: 3vw; /* 화면 크기에 비례하는 글꼴 크기 */
   font-weight: 700;
-   position: relative;
+  position: relative;
   text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+/* 타이틀 이미지 위치 */
 .game__top__tit > img {
   position: absolute;
-  top: 40px;
-  right: 50px;
+  top: 3vw; /* 타이틀에서 이미지 위치를 화면 크기에 맞게 설정 */
+  right: 3vw;
+  max-width: 25%; /* 이미지 크기를 최대 25%로 제한 */
 }
 
+/* 스와이퍼 버튼 */
 .game__top .swiper-button-next,
 .game__top .swiper-button-prev {
-  color: #000000;
-  background-color: rgb(255, 255, 255); /* 버튼 배경 투명도 */
+  color: #000;
+  background-color: rgb(255, 255, 255); /* 버튼 배경 */
   border-radius: 50%;
-  width: 85px;
-  height: 85px;
+  width: 10vw; /* 버튼 크기를 화면 크기에 비례 */
+  height: 10vw; /* 버튼 크기를 화면 크기에 비례 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,10 +77,12 @@
   z-index: 10;
 }
 
+/* 다음 버튼 위치 */
 .game__top .swiper-button-next {
-  right: 100px;
+  right: 5vw; /* 화면 크기에 비례하는 위치 */
 }
 
+/* 이전 버튼 위치 */
 .game__top .swiper-button-prev {
-  left: 100px;
+  left: 5vw; /* 화면 크기에 비례하는 위치 */
 }

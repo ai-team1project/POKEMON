@@ -1,132 +1,128 @@
-
 /* 전체 게임 리스트 항목 */
 .game__list {
-list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top:30px;
-    align-items: center;
-
-
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  align-items: center;
 }
+
+/* 게임 그리드 레이아웃 */
 .game-grid-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개의 열 */
-  grid-template-rows: repeat(4, 1fr);    /* 4개의 행 */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 최소 300px, 최대 1fr */
   grid-gap: 10px; /* 아이템 간 간격 */
   width: 100%; /* 부모 요소의 너비를 100%로 설정 */
 }
 
-
-.series{
-display:flex;
-align-items:center;
-justify-content:center;
-
-margin-top:250px;
+/* 게임 시리즈 */
+.series {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
 }
-.container{
 
-    height: 100vh;
-
-
-
+/* 컨테이너 높이 설정 */
+.container {
+  height: 100vh;
 }
+
 /* 각 게임 항목 (li) */
 .li__list {
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease; /* 마우스 오버 시 애니메이션 */
-    max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease; /* 마우스 오버 시 애니메이션 */
+  max-width: 100%; /* 유동적인 크기 설정 */
+  flex: 1 1 30%; /* 기본적으로 30% 비율로 크기 조정, 화면 크기에 맞게 자동으로 조정 */
+  margin: 10px;
+  box-sizing: border-box;
 }
-
-
 
 /* 게임 제목 및 설명 */
 .game__bot_text {
-    margin-top: 10px;
-    margin-left: 30px;
-    font-size: 12px;
-    font-weight: 400;
-    color: #555; /* 텍스트 색상 */
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #555; /* 텍스트 색상 */
 }
 
 .game__bot_text .game__title {
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 5px; /* 제목 아래 여백 */
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px; /* 제목 아래 여백 */
 }
 
 .game__bot_text .test__mute {
-    color: #888; /* 설명 텍스트의 색상 */
+  color: #888; /* 설명 텍스트의 색상 */
 }
 
 /* 이미지 앨범 */
 .album {
-    width: 100%; /* 앨범의 너비를 100%로 설정 */
-    margin-bottom: 10px; /* 이미지와 텍스트 사이의 여백 */
+  width: 100%; /* 앨범의 너비를 100%로 설정 */
+  margin-bottom: 10px; /* 이미지와 텍스트 사이의 여백 */
 }
 
 .album > img {
-    width: 100%; /* 이미지의 너비를 100%로 설정 */
-    height: auto;
+  width: 100%; /* 이미지의 너비를 100%로 설정 */
+  height: auto;
 }
-.grid-layout{
- display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);/* 3개의 열, 각각 1fr 비율 */
-    grid-gap: 10px;}
+
 /* 게임 시리즈 링크 스타일 */
 .game__series {
-    display:flex;
-    flex-direction:column;
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-    display: block;
-    width: 100%; /* 전체 링크 영역을 차지하도록 설정 */
+  display: flex;
+  flex-direction: column;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  width: 100%; /* 전체 링크 영역을 차지하도록 설정 */
 }
 
 /* 게임 시리즈 링크에 마우스를 올렸을 때 스타일 */
 .game__series:hover {
-    color: red;
-    text-decoration: none;
+  color: red;
+  text-decoration: none;
 }
-a{
-    text-decoration: none;
-    cursor: pointer;
+
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
+
+/* '더보기' 버튼 */
 .more {
-    width: 300px;
-    height: 55px;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 30px;
-    transform: skew(-20deg);
-    border: 1px solid transparent;
-  }
+  width: 100%;
+  max-width: 300px; /* 최대 너비 설정 */
+  height: 55px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  transform: skew(-20deg);
+  border: 1px solid transparent;
+}
 
-  .more__text {
-    color: white;
-    font-size: 18px;
-    font-weight: 700;
-    transform: skew(20deg);
-  }
+.more__text {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  transform: skew(20deg);
+}
 
-  .more__image {
-    position: absolute;
-    right: 55px;
-    width: 10px;
-    height: 18px;
-    transform: skew(20deg);
-  }
+.more__image {
+  position: absolute;
+  right: 55px;
+  width: 10px;
+  height: 18px;
+  transform: skew(20deg);
+}
 
-  .more__image > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.more__image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
