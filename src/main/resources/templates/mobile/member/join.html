@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{front/layouts/main}">
+<main layout:fragment="content" class="main__join">
+    <section class="join">
+        <div class="join__container">
+            <div class="join__content">
+                <form name="frmJoin" method="POST" th:action="@{/member/join_ps}" autocomplete="off" th:object="${requestJoin}">
+                    <div class="content__form">
+                        <h2 th:text="#{회원가입}"></h2>
+                        <div class="row">
+                            <input type="text" name="email" th:field="*{email}" th:placeholder="#{이메일 주소를 입력해주세요.}" th:readonly="${authCodeVerified}">
+                            <div class="error" th:each="err : ${#fields.errors('email')}" th:text="${err}"></div>
+                        </div>
+                        <div class="row auth-box">
+                            <div th:if="${!authCodeVerified}" class="auth__container">
+                                <input class="auth-code" type="number" id="auth-code" disabled>
+                                <div class="auth__message">
+                                    <span class="timer">03:00</span>
+                                    <button type="button" id="verify-auth-code" class="dn auth-btn" th:text="#{인증하기}"></button>
+                                    <button type="button" id="send-auth-code" class="auth-btn" th:text="#{인증코드 전송}" th:data-text="#{인증코드 재전송}" th:disabled="*{#strings.isEmpty(email)}"></button>
+                                </div>
+
+                            </div>
+                            <div class="message" th:classappend="${!authCodeVerified} ? 'dn'">
+                                <th:block th:if="${authCodeVerified}" th:text="#{인증되었습니다.}"></th:block>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="text" name="name" th:field="*{name}" th:placeholder="#{회원명을 입력하세요.}">
+                            <div class="error" th:each="err : ${#fields.errors('name')}" th:text="${err}"></div>
+                        </div>
+                        <div class="row">
+                            <input class="mb0" type="password" name="password" th:field="*{password}" th:placeholder="#{비밀번호}">
+
+                            <div class="error" th:each="err : ${#fields.errors('password')}" th:text="${err}"></div>
+                        </div>
+                        <span class="join__password">* 영문, 숫자, 특수문자를 혼합하여 8~20자의 비밀번호를 입력해주세요.</span>
+                        <div class="row">
+                            <input type="password" name="confirmPassword" th:field="*{confirmPassword}" th:placeholder="#{위에 입력한 비밀번호와 동일한 비밀번호를 입력해주세요.}">
+
+                            <div class="error" th:each="err : ${#fields.errors('confirmPassword')}" th:text="${err}"></div>
+                        </div>
+                    </div>
+                    <div class="content__form">
+                        <div class="row">
+                            <input type="text" name="nickName" th:field="*{nickName}" th:placeholder="#{닉네임을 입력하세요.}">
+
+                            <div class="error" th:each="err : ${#fields.errors('nickName')}" th:text="${err}"></div>
+                        </div>
+                        <div class="row">
+                            <input class="gray" type="text" name="birthDt" th:field="*{birthDt}" th:placeholder="#{생년월일을 입력해주세요. 예)2000-01-01}">
+                            <select class="birthDt-pointer" name="gender" th:field="*{gender}">
+                                <option value='' th:text="#{성별}"></option>
+                                <option value='FEMALE' th:text="#{여성}"></option>
+                                <option value='MALE' th:text="#{남성}"></option>
+                            </select>
+
+                            <div class="error" th:each="err : ${#fields.errors('birthDt')}" th:text="${err}"></div>
+                            <div class="error" th:each="err : ${#fields.errors('gender')}" th:text="${err}"></div>
+                        </div>
+                    </div>
+                    <div class="content__form">
+                        <section class="address-box">
+                            <div class="row address-row">
+                                <button type='button' class='search-address' th:text="#{주소찾기}"></button>
+                                <input class="gray" type="text" name="zipCode" th:field="*{zipCode}" th:placeholder="#{우편번호를 입력해주세요.}" readonly>
+
+                                <div class="error" th:each="err : ${#fields.errors('zipCode')}" th:text="${err}"></div>
+                            </div>
+                            <div class="row">
+                                <input class="gray" type="text" name="address" th:field="*{address}" th:placeholder="#{기존주소를 입력해주세요.}" readonly>
+
+                                <div class="error" th:each="err : ${#fields.errors('address')}" th:text="${err}"></div>
+                            </div>
+                            <div class="row">
+                                <input type="text" name="addressSub" th:field="*{addressSub}" th:placeholder="#{상세주소를 입력해주세요.}">
+
+                                <div class="error" th:each="err : ${#fields.errors('addressSub')}" th:text="${err}"></div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="error global" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
+                    <button class="join__btn" type="submit" th:text="#{가입}"></button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+</html>

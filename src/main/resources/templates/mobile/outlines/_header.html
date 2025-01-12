@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head>
-
-
-</head>
-<body>
-
 <header th:fragment="common">
     <div class="left">
-        <!-- 메뉴 토글 버튼 -->
-        <a th:href="@{/m}" class="logo">
+        <a th:href="@{/}" class="logo">
             <img th:src="@{/mobile/images/main_logo.png}">
         </a>
-        <div class="menu-toggle" id="menuToggle">☰</div> <!-- 메뉴 토글 버튼 -->
-
-        <!-- 메뉴 리스트 -->
-        <ul class="main-menu" id="mainMenu">
+        <ul class="main-menu">
             <li>
                 <a th:href="@{/m.news}">
                     <div>
@@ -34,7 +24,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a th:href="@{pokemonGame}">
                     <div>
                         <i class="icon card-game"></i>
                         <th:block th:text="#{카드_게임}"></th:block>
@@ -57,24 +47,29 @@
                     </div>
                 </a>
             </li>
+        </ul>
+    </div>
+    <div class="right">
+        <ul>
             <li>
                 <a th:href="@{/m.pokemon/list}">
                     <i class="icon catalog"></i>
                     <th:block th:text="#{포켓몬_도감}"></th:block>
                 </a>
             </li>
-            <a href="#" class="move-to-store"></a>
-        </ul>
-    </div>
-    <div class="right">
-        <ul>
             <li>
-                <a th:unless="${@memberUtil.isLogin()}" th:href="@{/member/login}">
+                <a th:if="${(@memberUtil.isLogin() && !@memberUtil.isAdmin()) || (@memberUtil.isLogin() && @memberUtil.isAdmin())}" th:href="@{/m.member/logout}">
+                    <i class="icon logout"></i>
+                    <th:block th:text="#{로그아웃}"></th:block>
+                </a>
+            </li>
+            <li>
+                <a th:unless="${@memberUtil.isLogin()}" th:href="@{/m.member/login}">
                     <i class="icon login"></i>
                     <th:block th:text="#{로그인}"></th:block>
                 </a>
 
-                <a th:if="${@memberUtil.isLogin() && !@memberUtil.isAdmin()}" th:href="@{/mypage}">
+                <a th:if="${@memberUtil.isLogin() && !@memberUtil.isAdmin()}" th:href="@{/m.mypage}">
                     <i class="icon login"></i>
                     <th:block th:text="#{MYPAGE}"></th:block>
                 </a>
@@ -91,9 +86,7 @@
                 </a>
             </li>
         </ul>
+        <a href="#" class="move-to-store"></a>
     </div>
 </header>
-
-
-</body>
 </html>

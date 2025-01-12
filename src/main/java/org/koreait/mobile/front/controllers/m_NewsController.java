@@ -60,6 +60,6 @@ public class m_NewsController {
         model.addAttribute("newsList", newsList);
 
 
-        return "front/news/news";
+        return "mobile/news/news";
     }
 }
