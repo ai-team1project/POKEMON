@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" th:href="@{/admin/css/outline/header.css}" />
+</head>
+
     <header th:fragment="common">
         <div class="left">
-            <a th:href="@{/admin}" class="logo">
+            <a th:href="@{/}" class="logo">
+                <div class="logo__album">
                 <img th:src="@{/admin/images/logo.png}">
+                </div>
             </a>
         </div>
         <div class="right">

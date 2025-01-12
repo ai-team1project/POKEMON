@@ -1,0 +1,13 @@
+.left {
+    width:200px;
+}
+
+.logo__album {
+    width: 100%;
+}
+
+.logo__album > img {
+    width: 100%;
+    object-fit: contain;
+}
+
