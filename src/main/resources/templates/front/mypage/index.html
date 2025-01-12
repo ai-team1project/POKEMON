@@ -2,26 +2,31 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{front/layouts/main}">
+
 <head>
     <link rel="stylesheet" th:href="@{/front/css/style.css}">
     <link rel="stylesheet" href="/front/css/mypage/index.css" />
     <link rel="stylesheet" href="/front/css/mypage/menu.css" />
-    <link rel="stylesheet" href="/front/css/mypage/mypage__right.css" />    
-
+    <link rel="stylesheet" href="/front/css/mypage/mypage__right.css" />
+    <script src="/front/js/mypage/mypage.js" defer></script>
 </head>
 
 <main layout:fragment="content">
     <section class="mypage">
         <div class="mypage__left">
-            <h3>님의 미니홈피</h3>
-            <div class="mapage__album">
+            <!-- 닉네임을 Thymeleaf 방식으로 동적으로 출력 -->
+            <h3 th:text="${nickName} + '님의 마이페이지'"></h3>  <!-- 닉네임 출력 -->
+
+            <div class="mypage__album">
                 <img
-                       src="https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000604.png"
+                        src="https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000604.png"
                         alt="포켓몬 이미지"
                 />
             </div>
-            <span class="mypage__info">의 미니홈피에 오신 것을 환영합니다!
-        </span>
+
+            <!-- 닉네임을 Thymeleaf 방식으로 동적으로 출력 -->
+            <span class="mypage__info" th:text="${nickName} + '님의 마이페이지에 오신 것을 환영합니다!'"></span> <!-- 닉네임 출력 -->
+
             <div class="option__list">
                 <span>포켓몬스터의 세계에 잘 왔다!</span>
                 <div>
@@ -29,7 +34,8 @@
                         <option value="wishlist">태초마을</option>
                         <option value="game">게임</option>
                         <option value="chat">찜하기</option>
-                        <option value="chat">쇼핑몰</option>
+                        <option value="message">쪽지확인하기</option> <!-- 'chat' 중복 수정 -->
+                        <option value="shop">쇼핑몰</option> <!-- 'chat' 중복 수정 -->
                     </select>
                     <button id="execute" class="option__btn">실행</button>
                 </div>
@@ -50,7 +56,7 @@
         <div class="menu">
             <div class="menu__list">
                 <button class="menu__btn" data-content="home">Home</button>
-                <button class="menu__btn" data-content="profile">Profile</button>
+                <button class="menu__btn" data-content="profile" onclick="window.location.href='/mypage/profile';">Profile</button>
             </div>
         </div>
     </section>

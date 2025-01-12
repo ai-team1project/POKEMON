@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Ramche';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    font-family: 'Ramche';
+}
+
+.image {
+    display: flex;
+}
+
+.pokemon__list__info {
+    margin: 30px;
+}
+
+.right__tit {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 15px;
+}
+
+.spec__upper {
+    display: flex;
+    justify-content: space-around;
+
+    margin: 15px;
+
+    font-size: 16px;
+}
+
+.spec__type {
+    display: flex;
+
+}
+
+.spec__tall {
+    display: flex;
+
+}
+
+.pokemon__list__classification {
+    display: flex;
+
+}
+
+.pokemon__list__weight {
+
+    display: flex;
+}
+
+.pokemon__list__characteristic {
+    display: flex;
+
+}
+
+.text {
+    margin-left: 4px;
+}
+
+/* 위에 nav S */
+nav {
+    display: flex;
+    max-width: 1250px;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+/* 포켓몬 뷰 하트 S */
+.details > .left> .wish-btn > .xi-heart-o:before {
+    font-size: 25px;
+    position: absolute;
+    right: 220px;
+    cursor: pointer;
+}
+
+.details > .left> .wish-btn on > .xi-heart{
+    font-size: 25px;
+    position: absolute;
+    right: 220px;
+    cursor: pointer;
+}
+/* 포켓몬 뷰 하트 E */
+
+
+
+
+/* 위에 nav E */
