@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{front/layouts/main}">
 <html>
 <head>
     <meta charset="UTF-8" />
@@ -10,15 +12,14 @@
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" th:href="@{/front/css/style.css}" />
-    <link rel="stylesheet" th:href="@{/front/css/game/game_news.css}" />
+    <link rel="stylesheet" href="front/css/game/game_news.css" />
     <link rel="stylesheet" th:href="@{/front/css/game/game.css}" />
     <link rel="stylesheet" th:href="@{/front/css/game/game__top.css}" />
     <link rel="stylesheet" th:href="@{/front/css/game/game__gift.css}" />
     <script th:src="@{front/js/game/game.js}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
-<body>
-<header th:replace="~{front/outlines/_header::common}"></header>
+<body layout:fragment="content">
 <section class="game__top">
     <!-- Swiper -->
     <div class="swiper">
@@ -99,31 +100,94 @@
     </div>
 </section>
 <main class="container">
-    <a href="https://pokemonkorea.co.kr/game/view/13681" class="game__series">
-        <ul class="game__list">
-            <li class="li__list">
-                <h3>포켓몬 게임 시리즈</h3>
-                <div class="album">
-                    <img
-                            src="	https://data1.pokemonkorea.co.kr/newdata/2023/10/2023-10-19_17-21-56-62775-1697703716.png"
-                    />
+    <h3>포켓몬 게임 시리즈</h3>
+    <div class="game__series__container">
+                <div class="game__series">
+                    <div class="album">
+                        <img src="	https://data1.pokemonkorea.co.kr/newdata/2023/10/2023-10-19_17-21-56-62775-1697703716.png"/>
+                    </div>
+                    <div class="game__bot_text">
+                            <h3 class="game__title">
+                                포켓몬스터스칼렛・바이올렛 제로의 비보
+                            </h3>
+                            <p class="test__mute">포켓몬게임 시리즈</p>
+                        </div>
                 </div>
-                <div class="game__bot_text">
-                    <h3 class="game__title">
-                        포켓몬스터스칼렛・바이올렛 제로의 비보
-                    </h3>
-                    <p class="test__mute">포켓몬게임 시리즈</p>
-                </div>
-            </li>
-        </ul>
-    </a>
+                <div class="game__series">
+                        <div class="album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2022/11/2022-11-04_12-19-55-25803-1667531995.png"
+                            />
+                        </div>
+                        <div class="game__bot_text">
+                            <h3 class="game__title">
+                                포켓몬스터스칼렛・바이올렛
+                            </h3>
+                            <p class="test__mute">포켓몬게임 시리즈</p>
+                        </div>
+                    </div>
+                <div class="game__series">
+                        <div class="album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2022/02/2022-02-24_17-12-43-30924-1645690363.png"
+                            />
+                        </div>
+                        <div class="game__bot_text">
+                            <h3 class="game__title">
+                                Pokémon LEGENDS 아르세우스
+                            </h3>
+                            <p class="test__mute">포켓몬게임 시리즈</p>
+                        </div>
+                    </div>
+
+                <div class="game__series">
+                        <div class="album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2022/02/2022-02-24_17-26-38-96721-1645691198.png"
+                            />
+                        </div>
+                        <div class="game__bot_text">
+                            <h3 class="game__title">
+                                포켓몬스터 브릴리언트 다이아몬드・샤이닝 펄
+                            </h3>
+                            <p class="test__mute">포켓몬게임 시리즈</p>
+                        </div>
+                    </div>
+                <div class="game__series">
+                        <div class="album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2020/09/2020-02-19_11-43-20-19867-1582080200.png"
+                            />
+                        </div>
+                        <div class="game__bot_text">
+                            <h3 class="game__title">
+                                포켓몬스터소드・실드 익스팬션 패스
+                            </h3>
+                            <p class="test__mute">포켓몬게임 시리즈</p>
+                        </div>
+                    </div>
+                <div class="game__series">
+                        <div class="album">
+                            <img
+                                    src="https://data1.pokemonkorea.co.kr/newdata/2020/09/2020-02-19_11-36-41-65934-1582079801.png"
+                            />
+                        </div>
+                        <div class="game__bot_text">
+                            <h3 class="game__title">
+                                포켓몬스터소드・실드
+                            </h3>
+                            <p class="test__mute">포켓몬게임 시리즈</p>
+                        </div>
+                    </div>
+
+    </div>
 
     <a href="#">
         <div class="more">
             <span class="more__text">더보기</span>
         </div>
     </a>
-
+</main>
     <section class="game__gift">
         <h2>지금 선물중인 포켓몬&도구</h2>
         <div class="swiper">
@@ -132,7 +196,7 @@
                 <!-- Slides -->
                 <div class="swiper-slide">
                     <article class="game__gift__swiper">
-                        <a href="">
+                        <a href="https://pokemonkorea.co.kr/sv/menu170?number=2618&mode=view">
                             <img
                                     src="https://data1.pokemonkorea.co.kr/newdata/2022/11/2022-11-04_13-45-06-69002-1667537106.png"
                                     alt=""
@@ -141,45 +205,21 @@
                                 <span class="info__tit">지금 선물중인 도구</span>
                                 <span class="info__sub">몬스터볼 100개</span>
                             </div>
+                        </a>
                     </article>
-                    </a>
                 </div>
                 <div class="swiper-slide">
                     <article class="game__gift__swiper">
-                        <a href="">
+                        <a href="https://pokemonkorea.co.kr/sv/menu170?number=2729&mode=view">
                             <img src="https://data1.pokemonkorea.co.kr/newdata/2022/11/2022-11-09_10-48-33-97360-1667958513.png" alt="">
                             <div class="game__gift__info">
                                 <span class="info__tit">지금 선물중인 도구</span>
                                 <span class="info__sub">스마트로토무 커버</span>
                             </div>
+                        </a>
                     </article>
-                    </a>
                 </div>
-                <div class="swiper-slide">
-                    <article class="game__gift__swiper">
-                        <a href="">
-                            <img
-                                    src="https://data1.pokemonkorea.co.kr/newdata/2022/11/2022-11-04_13-45-06-69002-1667537106.png"
-                                    alt=""
-                            />
-                            <div class="game__gift__info">
-                                <span class="info__tit">지금 선물중인 도구</span>
-                                <span class="info__sub">몬스터볼 100개</span>
-                            </div>
-                    </article>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <article class="game__gift__swiper">
-                        <a href="">
-                            <img src="https://data1.pokemonkorea.co.kr/newdata/2022/11/2022-11-09_10-48-33-97360-1667958513.png" alt="">
-                            <div class="game__gift__info">
-                                <span class="info__tit">지금 선물중인 도구</span>
-                                <span class="info__sub">스마트로토무 커버</span>
-                            </div>
-                    </article>
-                    </a>
-                </div>
+                <
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -190,39 +230,125 @@
         </div>
     </section>
 
-    <div class="game__news">
-        <a href="#">
-            <ul class="news__game__list">
-                <li class="game__li__list">
-                    <div class="news__album">
+    <section class="game__news">
+        <h2>게임소식</h2>
+        <div class="game__news__container">
+            <a href="https://pokemonkorea.co.kr/ptc2025">
+                <article class="game__news__card">
+                    <div class="game__news__card__album">
                         <img
-                                src="https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-18_14-26-14-24714-1729229174.png"
+                                src="https://data1.pokemonkorea.co.kr/newdata/2025/01/2025-01-06_15-12-51-19253-1736143971.png"
+                                alt=""
                         />
                     </div>
-                    <div class="card__text">
-                        <h3 class="card__title">
-                            게임도감을 완성하고 색이 다른 「메로엣타」를 손에 넣자!
-                        </h3>
-                        <div class="card__sub">
-                            <p class="card__sub__date">2024년 10월 18일</p>
-                        </div>
-                        <div class="round__go">
-                            <img
-                                    src="https://pokemonkorea.co.kr/img/icon/icon_go.png"
-                                    alt=""
-                            />
+                    <div class="game__news__card__container">
+                        <div class="game__news__card__info">
+                            <div class="game__news__upper">
+                                <p> 「포켓몬 트레이너스 컵 2025」 개최 결정!</p>
+                            </div>
+                            <div class="game__news__under">
+                                <p>2025년 01월 06일</p>
+                                <button class="nuw__btn">
+                                    <img
+                                            src="https://pokemonkorea.co.kr/img/icon/icon_go.png"
+                                            alt=""
+                                    />
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </li>
-            </ul>
-        </a>
-        <a href="#">
-            <div class="news__more">
-                <span class="news__more__text">더보기</span>
-            </div>
-        </a>
-    </div>
-    <footer th:replace="~{front/outlines/_footer::common}"></footer>
-</main>
+                </article>
+            </a>
+            <a href="https://pokemonkorea.co.kr/pokemonhome/menu300?number=3582&mode=view">
+                <article class="game__news__card">
+                    <div class="game__news__card__album">
+                        <img
+                                src="https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-18_14-26-14-24714-1729229174.png"
+                                alt=""
+                        />
+                    </div>
+                    <div class="game__news__card__container">
+                        <div class="game__news__card__info">
+                            <div class="game__news__upper">
+                                <p> 게임도감을 완성하고 색이 다른 「메로엣타」를 손에 넣자!</p>
+                            </div>
+                            <div class="game__news__under">
+                                <p>2024년 10월 18일</p>
+                                <button class="nuw__btn">
+                                    <img
+                                            src="https://pokemonkorea.co.kr/img/icon/icon_go.png"
+                                            alt=""
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a href="https://pokemonkorea.co.kr/news/5/14723">
+                <article class="game__news__card">
+                    <div class="game__news__card__album">
+                        <img
+                                src="https://data1.pokemonkorea.co.kr/newdata/2024/07/2024-07-29_09-13-01-50407-1722211981.png"
+                                alt=""
+                        />
+                    </div>
+                    <div class="game__news__card__container">
+                        <div class="game__news__card__info">
+                            <div class="game__news__upper">
+                                <p>「포켓몬스터스칼렛・바이올렛」에서 「로드의 뜨아거」를 손에 넣자!</p>
+                            </div>
+                            <div class="game__news__under">
+                                <p>2024년 07월 29일</p>
+                                <button class="nuw__btn">
+                                    <img
+                                            src="https://pokemonkorea.co.kr/img/icon/icon_go.png"
+                                            alt=""
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a href="https://pokemonkorea.co.kr/news/5/14539">
+                <article class="game__news__card">
+                    <div class="game__news__card__album">
+                        <img
+                                src="https://data1.pokemonkorea.co.kr/newdata/2024/05/2024-05-20_09-30-10-27380-1716165010.png"
+                                alt=""
+                        />
+                    </div>
+                    <div class="game__news__card__container">
+                        <div class="game__news__card__info">
+                            <div class="game__news__upper">
+                                <p> 「포켓몬스터스칼렛・바이올렛」에서 「도트의 꾸왁스」를 손에 넣자!</p>
+                            </div>
+                            <div class="game__news__under">
+                                <p>2024년 05월 20일</p>
+                                <button class="nuw__btn">
+                                    <img
+                                            src="https://pokemonkorea.co.kr/img/icon/icon_go.png"
+                                            alt=""
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+        </div>
+        <div class="new__more">
+            <a href="https://pokemonkorea.co.kr/news">
+                <div class="new__more__text">더보기</div>
+                <div class="new__more__image">
+                    <img src="https://pokemonkorea.co.kr/img/icon/icon_more.png" />
+                </div>
+            </a>
+        </div>
+    </section>
+
+
 </body>
 </html>
