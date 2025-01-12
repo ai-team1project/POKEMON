@@ -13,8 +13,24 @@ public class PokemonGameService {
     private PokemonGame pokemonGame;
     private final Random random = new Random(); // 롬복과 관계없지만 초기화 최적화
 
-    public PokemonGame pokemonGame() {
-        pokemonGame = new PokemonGame(100, 100, false); // 체력 초기화
+    // 포켓몬 이미지 배열을 추가합니다.
+    private final String[] pokemonImages = {
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",  // 이상해씨
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",  // 꼬부기
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",  // 파이리
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",  // 파이리
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",  // 이상해씨
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"   // 꼬부기
+    };
+
+    // 게임 시작 시 포켓몬 이미지 랜덤으로 선택
+    public PokemonGame startGame() {
+        pokemonGame = new PokemonGame();
+        pokemonGame.setPlayerHealth(100);
+        pokemonGame.setComputerHealth(100);
+        pokemonGame.setGameOver(false);
+        pokemonGame.setPlayerPokemonImage(pokemonImages[random.nextInt(pokemonImages.length)]);
+        pokemonGame.setComputerPokemonImage(pokemonImages[random.nextInt(pokemonImages.length)]);
         return pokemonGame;
     }
 
@@ -36,5 +52,4 @@ public class PokemonGameService {
 
         return pokemonGame;
     }
-
 }

@@ -54,13 +54,13 @@
     <!-- 사용자 포켓몬 이미지 -->
     <div class="pokemon">
         <h3>사용자 포켓몬</h3>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="사용자 포켓몬" class="pokemon-img">
+        <img th:src="${pokemonGame.playerPokemonImage}" alt="사용자 포켓몬" class="pokemon-img">
     </div>
 
     <!-- 컴퓨터 포켓몬 이미지 -->
     <div class="pokemon">
         <h3>컴퓨터 포켓몬</h3>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="컴퓨터 포켓몬" class="pokemon-img">
+        <img th:src="${pokemonGame.computerPokemonImage}" alt="컴퓨터 포켓몬" class="pokemon-img">
     </div>
 </div>
 

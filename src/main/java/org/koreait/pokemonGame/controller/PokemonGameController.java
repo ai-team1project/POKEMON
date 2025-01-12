@@ -16,7 +16,7 @@ public class PokemonGameController {
 
         @GetMapping("/pokemonGame")
     public String startGame(Model model) {
-        PokemonGame pokemonGame = pokemonGameService.pokemonGame();
+        PokemonGame pokemonGame = pokemonGameService.startGame(); // 수정된 부분
         model.addAttribute("pokemonGame", pokemonGame);
         return "front/pokemonGame/pokemonGame";
     }
