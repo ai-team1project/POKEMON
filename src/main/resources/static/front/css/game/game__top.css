@@ -1,5 +1,6 @@
 
 
+
 .game__top {
   width: 99vw;
   height: 80vh;
@@ -48,6 +49,8 @@
 
 .game__top__tit  {
     color: white;
+position: absolute;
+  top: 30px;
 
 }
 

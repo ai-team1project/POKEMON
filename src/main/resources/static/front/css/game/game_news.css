@@ -55,7 +55,7 @@ a {
 
   font-size: 20px;
 
-  border-bottom: 4px solid #007bff;
+  border-bottom: 4px solid red;
 }
 
 .game__news__card__info {
@@ -70,31 +70,29 @@ a {
 
 .game__news__under {
   display: flex;
+  flex-wrap:wrap;
   gap: 10px;
-
   font-size: 14px;
-
   color: #666;
 
 }
 
 .nuw__btn {
-  background-color: #007bff;
+  background-color: red;
   border: none;
   width: 52px;
   height: 32px;
   border-radius: 20px;
-
-  position: relative;
-  top: 9px;
-}
-
-.new__more {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position: relative;
+    top:10px;
+    left:90px;
 
 }
+
+
 .game__li__list {
 
     list-style: none;
@@ -105,89 +103,24 @@ a {
 
     max-width: 100%;
 }
-.news__more {
+.new__more {
     width: 300px;
     height: 55px;
     background-color: white;
     display: flex;
+    flex-direction:row;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     margin-top: 30px;
     transform: skew(-20deg);
     border: 1px solid transparent;
+
   }
 
-  .news__more__text {
+  .new__more__text {
     color: black;
     font-size: 18px;
     font-weight: 700;
     transform: skew(20deg);
   }
-  .game__news{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 10px;
-    display: flex;
-    background-color: black;
-    height: 70%;
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center ;
-    padding-top: 30px;
-
-  }
-  .card__text {
-    flex-grow: 1;
-    background-color: #fff;
-    text-align: left;
-    border-bottom: 5px solid red;
-  }
-
-  .card__title {
-    color: #000;
-    font-size: 18px;
-    font-weight: 800;
-    padding: 20px;
-    text-align: left;
-
-  }
-
-  .card__sub {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: auto;
-    padding: 20px;
-  }
-
-  .card__sub__date {
-    font-size: 14px;
-    color: #666;
-  }
-  .news__album {
-    width: 100%; /* 앨범의 너비를 100%로 설정 */
-
-}
-
-.news__album > img {
-    width: 100%; /* 이미지의 너비를 100%로 설정 */
-    height: auto;
-}
-.round__go{
-    position: relative;
-    margin-left: 265px  ;
-    bottom: 10px;
-    right: 25px;
-    width: 42px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: red;
-    border-radius: 20px;
-
-}
