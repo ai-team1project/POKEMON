@@ -36,7 +36,8 @@
 ---
 
 ## 🚩사용자관점
-![사용자관점](https://github.com/user-attachments/assets/d7d046b2-0953-46dd-bcb7-16b3157949ab)
+![사용자관점](https://github.com/user-attachments/assets/8656635c-8a8b-4f60-b149-b5d39514a580)
+
 
 ## 🚩관리자관점
 ![관리자관점](https://github.com/user-attachments/assets/629b723a-8905-4894-bb97-93e33ca03241)
