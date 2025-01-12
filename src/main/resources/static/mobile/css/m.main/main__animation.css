@@ -4,43 +4,44 @@
   background-repeat: no-repeat;
   background-size: cover; /* 배경 이미지가 전체 섹션을 덮도록 설정 */
   padding: 80px 0 100px;
+  text-align: center;
 }
 
 .main__animation > h2 {
   margin-bottom: 60px;
-  font-size: 50px;
+  font-size: 5vw; /* 화면 크기에 따라 크기 비율 조정 */
   font-weight: 700;
-  text-align: center;
   color: white;
 }
 
 .main__animation__swiper {
   display: flex;
   flex-direction: column;
-  width: 392px;
-  height: 387px;
+  width: 80%;  /* 화면에 맞게 너비 조정 */
+  max-width: 392px;  /* 최대 너비를 392px로 제한 */
+  height: auto;
   margin: 0 auto;
-
-  margin-top: 80px;
+  margin-top: 8vw; /* 화면 크기에 비례하여 마진 조정 */
 }
 
 .main__animation__album {
-  width: 392px;
-  height: 236px;
+  width: 100%;
+  height: 60%; /* 부모에 비례한 높이 */
 }
 
 .main__animation__album > img {
   width: 100%;
   height: 100%;
+  object-fit: cover; /* 이미지 비율을 유지하면서 부모 요소에 맞게 조정 */
 }
 
 .main__animation__swiper > h3 {
   margin-top: 30px;
-  font-size: 24px;
+  font-size: 3vw;  /* 화면 크기에 맞게 텍스트 크기 조정 */
   font-weight: 700;
   color: white;
-  word-wrap: break-word; /* 긴 단어를 자동으로 줄 바꿈 */
-  word-break: break-word; /* 긴 단어를 강제로 줄 바꿈 */
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .main__animation .swiper-button-next,
@@ -48,8 +49,8 @@
   color: #000000;
   background-color: rgb(255, 255, 255); /* 버튼 배경 투명도 */
   border-radius: 50%;
-  width: 85px;
-  height: 85px;
+  width: 7vw; /* 버튼 크기를 화면에 맞게 설정 */
+  height: 7vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,9 +61,9 @@
 }
 
 .main__animation .swiper-button-next {
-  right: 250px;
+  right: 5vw; /* 오른쪽 버튼 위치 */
 }
 
 .main__animation .swiper-button-prev {
-  left: 250px;
+  left: 5vw; /* 왼쪽 버튼 위치 */
 }

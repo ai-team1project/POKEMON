@@ -16,37 +16,34 @@
   display: flex;
   max-width: 1250px;
   margin: 0 auto;
-  width: 1248px;
+  width: 100%;
   height: 404px;
 }
 
 .card__game__content {
   display: flex;
-
   justify-content: center;
-  gap: 90px;
-
+  gap: 10%;  /* 갭을 퍼센트로 주어 상대적인 크기 조정 */
 }
 
 .card__game__album {
-  width: 506px;
+  flex: 1;  /* 유연한 크기 조정 */
   height: 300px;
 }
 
 .card__game__album > img {
-  width: 100%;
-  height: 100%;
+  width: 100%;  /* 가로 크기 100%로 설정 */
+  height: 100%;  /* 세로 크기 100%로 설정 */
+  object-fit: cover; /* 비율 유지하면서 이미지 크기 조정 */
 }
 
 .card__game__info {
   display: flex;
   flex-direction: column;
   gap: 20px;
-
-  width: 331px;
-
-  word-wrap: break-word; /* 긴 단어를 자동으로 줄바꿈 */
-  white-space: normal; /* 줄바꿈 기본값 */
+  flex: 1;  /* 유연한 크기 조정 */
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .card__game__tit {
@@ -64,18 +61,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 212px;
+  width: 50%;  /* 폭을 비율로 설정 */
+  max-width: 212px;  /* 최대 폭 제한 */
   height: 55px;
-
   background-image: linear-gradient(#fff, #fff),
     linear-gradient(to left, #55bcb5, #85c083, #bec449, #f7c90e);
   background-origin: border-box;
   background-clip: content-box, border-box;
   border: 4px solid transparent;
-
   margin: 0 auto;
-
   background-color: white;
   transform: skew(-20deg);
 }
@@ -83,31 +77,27 @@
 .card__game_more__image {
   width: 10px;
   height: 18px;
-
   position: absolute;
   top: 14px;
   right: 35px;
-
   transform: skew(20deg);
 }
 
 .card__game__banner {
-  width: 1248px;
+  width: 100%;  /* 100%로 설정하여 반응형 조정 */
   height: 162px;
-
   margin-top: 30px;
 }
 
 .card__game__banner > img {
-  width: 100%;
-  height: 100%;
+  width: 100%;  /* 100%로 설정하여 반응형 조정 */
+  height: 100%;  /* 100%로 설정하여 반응형 조정 */
 }
 
-/* new__video 슬라이더 */
 .card__game .swiper-button-next,
 .card__game .swiper-button-prev {
   color: #000000;
-  background-color: rgb(255, 255, 255); /* 버튼 배경 투명도 */
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
   width: 85px;
   height: 85px;
@@ -127,4 +117,3 @@
 .card__game .swiper-button-prev {
   left: 30px;
 }
-

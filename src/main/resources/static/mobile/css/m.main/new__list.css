@@ -6,13 +6,13 @@ a {
   width: 100vw;
   background-image: url("https://pokemonkorea.co.kr/img/bg_pattern.jpg");
   background-repeat: repeat;
-  padding: 100px 0 100px;
+  padding: 10vw 0; /* 상하 패딩을 vh 단위로 설정하여 화면 크기에 비례하도록 */
 }
 
 .new__list > h2 {
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 50px;
+  margin-bottom: 5vh;
+  font-size: 8vw; /* 폰트 크기를 화면 크기에 비례하도록 설정 */
   font-weight: 700;
 }
 
@@ -21,123 +21,101 @@ a {
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 기본적으로 2개의 열로 설정 */
   grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
+  gap: 5vw; /* 카드 간의 간격을 화면 크기에 비례하도록 설정 */
 }
 
 .new__card {
-  width: 290px;
-  height: 340px;
-
-  margin: 15px 0;
-
-  padding: 0px 10px;
+  width: 100%;
+  height: auto;
+  padding: 0 2vw; /* 좌우 패딩을 vw 단위로 설정 */
 }
 
 .new__card__album {
-  width: 290px;
-  height: 180px;
+  width: 100%;
+  height: 60%; /* 이미지 비율을 고정하고 부모 크기에 비례하도록 설정 */
 }
 
 .new__card__album > img {
   width: 100%;
   height: 100%;
+  object-fit: cover; /* 이미지 비율을 유지하며 잘리거나 조정됩니다 */
 }
 
 .new__card_container {
-  width: 290px;
-  height: 170px;
-
+  width: 100%;
+  height: 40%; /* 카드 하단 부분 크기를 조정 */
   background-color: white;
   color: black;
-
-  font-size: 20px;
-
+  font-size: 5vw; /* 텍스트 크기를 화면 크기에 맞게 조정 */
   border-bottom: 4px solid #007bff;
 }
 
 .new__card__info {
-  padding: 10px;
+  padding: 2vw;
   word-break: keep-all;
 }
 
 .new__upper {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 2vw; /* 텍스트 간의 간격을 화면 크기에 비례하도록 설정 */
 }
 
 .news__card__under {
   display: flex;
-  gap: 10px;
-
-  font-size: 14px;
-
+  gap: 2vw;
+  font-size: 3vw; /* 작은 화면에서는 글자 크기가 작게 설정 */
   color: #666;
-
 }
 
 .nuw__btn {
   background-color: #007bff;
   border: none;
-  width: 52px;
-  height: 32px;
+  width: 15vw; /* 버튼 크기를 화면에 비례하도록 설정 */
+  height: 7vw;
   border-radius: 20px;
-
   position: relative;
-  top: 9px;
+  top: 1.5vw;
 }
 
 .new__more {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 300px;
-  height: 55px;
-
+  width: 80vw; /* 버튼의 너비를 화면 크기에 비례하도록 설정 */
+  height: 12vw;
   background-image: linear-gradient(#fff, #fff),
     linear-gradient(to left, #55bcb5, #85c083, #bec449, #f7c90e);
-
   background-origin: border-box;
   background-clip: content-box, border-box;
-
   border: 4px solid transparent;
-
   margin: 0 auto;
   background-color: white;
-
   transform: skew(-20deg);
-
-  margin-top: 40px;
+  margin-top: 5vw; /* 위쪽 여백을 화면 크기에 비례하도록 설정 */
 }
 
 .new__more__text {
-  font-size: 18px;
+  font-size: 4vw;
   font-weight: 700;
-
   color: black;
-
   transform: skew(20deg);
 }
 
 .new__more__image {
-  width: 10px;
-  height: 18px;
-
+  width: 2vw;
+  height: 4vw;
   position: absolute;
-  right: 55px;
-
+  right: 10vw;
   transform: skew(20deg);
 }
 
 .new__more__image > img {
   position: relative;
-
-  right: 20px;
-  bottom: 20px;
-
+  right: 2vw;
+  bottom: 2vw;
   width: 100%;
   height: 100%;
 }
