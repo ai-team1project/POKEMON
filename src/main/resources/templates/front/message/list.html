@@ -50,7 +50,7 @@
         </li>
         <li th:unless="${items != null && !items.isEmpty()}" class="no-data" th:text="#{조회된_쪽지가_없습니다.}"></li>
     </ul>
-        <a th:href="@{/message}" th:text="#{쪽지_보내기}"></a>
+       <!-- <a th:href="@{/message}" th:text="#{쪽지_보내기}"></a> -->
     </div>
 
     <th:block th:replace="~{common/_pagination::pagination}"></th:block>
