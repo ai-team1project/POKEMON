@@ -1,11 +1,11 @@
 .main__game {
   width: 100vw;
-  height: 90vh;
+  height: 80vh;
   background-image: url("https://pokemonkorea.co.kr/img/main/sect_game_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
-  padding: 100px 0 140px;
+  padding: 10px 0 140px;
 }
 
 .main__game__container {
