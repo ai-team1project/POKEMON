@@ -1,0 +1,14 @@
+.search__row {
+    display: flex;
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+    gap: 10px;
+}
+
+.subject {
+    display: flex;
+    gap: 10px;
+}
