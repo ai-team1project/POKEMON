@@ -2,6 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{admin/layouts/main}">
+
+<head>
+    <link rel="stylesheet" th:href="@{/admin/css/basic/siteConfig.css}" />
+</head>
+
 <div layout:fragment="content">
     <h1>사이트 기본정보 설정</h1>
     <form name="frmConfig" method="POST" th:action="@{/admin/basic/siteConfig}" autocomplete="off" th:object="${siteConfig}">

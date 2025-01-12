@@ -1,21 +1,39 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{front/layouts/main}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" th:href="@{/admin/css/outline/menu.css}" />
+
+
     <aside th:fragment="main">
         <a th:href="@{/admin/basic}" class="menu" th:classappend="${menuCode == 'basic'} ? 'on'">
+            <span class="menu__font">
             <i class="xi-cog"></i>
-            기본설정
+            </span>
+            <span class="menu__font">기본설정</span>
         </a>
         <a th:href="@{/admin/member}" class="menu" th:classappend="${menuCode == 'member'} ? 'on'">
+            <div class="menu__font">
             <i class="xi-users"></i>
-            회원관리
+            <span>회원관리</span>
+            </div>
         </a>
         <a th:href="@{/admin/board}" class="menu" th:classappend="${menuCode == 'board'} ? 'on'">
+            <div class="menu__font">
             <i class="xi-list"></i>
-            게시판관리
+            <span>게시판관리</span>
+            </div>
         </a>
         <a th:href="@{/admin/product}" class="menu" th:classappend="${menuCode == 'product'} ? 'on'">
+            <div>
             <i class="xi-cart"></i>
             상품관리
+            </div>
         </a>
     </aside>
 </html>
